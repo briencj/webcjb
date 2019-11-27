@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="AUTHOR" content="Chris Brien">
+<meta name="DESCRIPTION" content="Design & Analysis with Mixed Models - Genstat files">
+<title>Design & Analysis with Mixed Models - Genstat files</title>
+<script>
+<!--//JavaScript Copyright Ben Ruciak (ruciak@adelaide.on.net)
+
+// Web site production by The Liquid Paradigm Factory (georgeous@senet.com.au) 
+
+// Project Management and template customisation by Margaret Lavelle, University of South Australia
+
+// Further customization by Chris Brien, University of South Australia
+
+// browser test:
+
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+
+if ((browserName == "Netscape" && browserVer >= 3) || 
+    (browserName == "Microsoft Internet Explorer" && browserVer >= 4)) version = "n3";
+else version = "n2";
+
+if (version == "n3"){
+        assess1_1 = new Image();
+        assess1_1.src = "images/Assessment1.gif";
+        assess1_2 = new Image();
+        assess1_2.src = "images/Assessment2.gif";       
+
+        computing1_1 = new Image();
+        computing1_1.src = "images/Computing1.gif";
+        computing1_2 = new Image();
+        computing1_2.src = "images/Computing2.gif"; 
+
+        soln1_1 = new Image();
+        soln1_1.src = "images/Exercisesoln1.gif";
+        soln1_2 = new Image();
+        soln1_2.src = "images/Exercisesoln2.gif"; 
+
+        subjinfo1_1 = new Image();
+        subjinfo1_1.src = "images/SubjectInfo1.gif";
+        subjinfo1_2 = new Image();
+        subjinfo1_2.src = "images/SubjectInfo2.gif"; 
+
+        subjnotes1_1 = new Image();
+        subjnotes1_1.src = "images/SubjectNotes1.gif";
+        subjnotes1_2 = new Image();
+        subjnotes1_2.src = "images/SubjectNotes2.gif"; 
+
+        weekly1_1 = new Image();
+        weekly1_1.src = "images/WeeklyProg1.gif";
+        weekly1_2 = new Image();
+        weekly1_2.src = "images/WeeklyProg2.gif"; 
+}
+
+//-->
+<!--
+
+ function ImgFunc(imgDocID,imgObjName) {
+
+if (version == "n3")
+	document.images[imgDocID].src = eval(imgObjName + ".src")
+;
+}
+
+//-->
+</script>
+</head>
+
+<BODY TEXT="#000080" LINK="#0000ff" VLINK="#800080" BGCOLOR="#ffffff">
+
+<p><a NAME="top"></a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+        <td valign="top" width="90" bgcolor="#010F87"><p align="center"><br>
+        <a href="dammassess.html"
+           OnMouseOver="ImgFunc('assess1_1','assess1_2');return true"
+           OnMouseOut="ImgFunc('assess1_1','assess1_1');">
+           <img IMG NAME="assess1_1" SRC="images/Assessment1.gif"
+                BORDER="0" ALT="Assessment" WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="dammcomp.html"
+           OnMouseOver="ImgFunc('computing1_1','computing1_2');return true"
+           OnMouseOut="ImgFunc('computing1_1','computing1_1');">
+           <img IMG NAME="computing1_1" SRC="images/Computing1.gif"
+                BORDER="0" ALT="Computing notes and files" 
+                WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="dammsoln.html"
+           OnMouseOver="ImgFunc('soln1_1','soln1_2');return true"
+           OnMouseOut="ImgFunc('soln1_1','soln1_1');">
+           <img IMG NAME="soln1_1" SRC="images/Exercisesoln1.gif"
+                BORDER="0" ALT="Exercise solutions" WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="dammsubj.html"
+           OnMouseOver="ImgFunc('subjinfo1_1','subjinfo1_2');return true"
+           OnMouseOut="ImgFunc('subjinfo1_1','subjinfo1_1');">
+           <img IMG NAME="subjinfo1_1" SRC="images/SubjectInfo1.gif"
+                BORDER="0" ALT="Subject Information" WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="dammnotes.html"
+           OnMouseOver="ImgFunc('subjnotes1_1','subjnotes1_2');return true"
+           OnMouseOut="ImgFunc('subjnotes1_1','subjnotes1_1');">
+           <img IMG NAME="subjnotes1_1" SRC="images/SubjectNotes1.gif"
+                BORDER="0" ALT="Subject Notes" WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="dammweek.html"
+           OnMouseOver="ImgFunc('weekly1_1','weekly1_2');return true"
+           OnMouseOut="ImgFunc('weekly1_1','weekly1_1');">
+           <img IMG NAME="weekly1_1" SRC="images/WeeklyProg1.gif"
+                BORDER="0" ALT="Weekly program" WIDTH="90" HEIGHT="40">
+        </a></p>
+        </td>
+        <td width=600 valign="top"><blockquote>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+  <td align="center"><p><IMG SRC="images/NameESALQ.gif" 
+            ALT="Logo ESALQ" HEIGHT=19 WIDTH=303></p></td>
+  <td align="center"><p><img src="images/NameUniSA.gif" 
+       width=237 alt="University of South Australia" border="0"></p>
+   </td>
+</tr>
+</table>
+<!--Start page content-->
+<H1>Data and program files for <I>The Design & Mixed-Model Analysis of Experiments</I></H1>
+
+<P>You can download an individual data file by holding down the shift key and clicking on its name.  This will cause the Save As dialog box to be displayed and you can save the file to your hard disk or a floppy disk. </P>
+
+<UL>
+  <LI>Genstat program files</LI>
+  <UL>
+    <LI><A HREF="analyses/ProMeanOp.gen">ProMeanOp.gen</A></LI>
+    <LI><A HREF="analyses/RCBDCott.gen">RCBDCott.gen</A></LI>
+    <LI><A HREF="analyses/Rocket.gen">Rocket.gen</A></LI>
+    <LI><A HREF="analyses/VoterGen1.gen">VoterGen1.gen</A></LI>
+    <LI><A HREF="analyses/VoterGen250.gen">VoterGen250.gen</A></LI>
+  </UL>
+  <LI>Genstat spreadsheet files</LI>
+  <UL>
+    <LI><A HREF="analyses/CRDDrug.gsh">CRDDrug.gsh</A></LI>
+    <LI><A HREF="analyses/CRDMelon.gsh">CRDMelon.gsh</A></LI>
+    <LI><A HREF="analyses/Fac2Salm.gsh">FAC2Salm.gsh</A></LI>
+    <LI><A HREF="analyses/Fac2ByPr.gsh">FAC2ByPr.gsh</A></LI>
+    <LI><A HREF="analyses/HousePrice.gsh">HousePrice.gsh</A></LI>
+    <LI><A HREF="analyses/IRON.GSH">IRON.GSH</A></LI>
+    <LI><A HREF="analyses/LSTurn.gsh">LSTurn.gsh</A></LI>
+    <LI><A HREF="analyses/RCBDCott.gsh">RCBDCott.gsh</A></LI>
+    <LI><A HREF="analyses/RCBDInse.gsh">RCBDinse.gsh</A></LI>
+    <LI><A HREF="analyses/RCBDRhub.gsh">RCBDRhub.gsh</A></LI>
+  </UL>
+  <LI>Excel spreadsheet files</LI>
+  <UL>
+    <LI><A HREF="analyses/Voter.xls">Voter.xls</A></LI>
+    <LI><A HREF="analyses/ANOVAPower.xls">ANOVAPower.xls</A></LI>
+  </UL>
+</UL>
+
+<!--End page content-->
+        <p>&nbsp;</p>
+        </blockquote>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" bgcolor="#010F87">
+        <p align="center"><br></p>
+        </td>
+        <td align="center" width=600 valign="bottom" bgcolor="#BEFBBB">
+            <A HREF="dammassess.html"><font size="2">Assessment</font></a>
+            <font size="2">| </font>
+            <A HREF="dammcomp.html">
+                         <font size="2">Computing notes &amp; files</font></a>
+            <font size="2">| </font>
+            <A HREF="dammsoln.html">
+                                 <font size="2">Exercise solutions</font></a>
+          <br>
+            <a href="index.html"><font size="2">Subject home page</font></a>
+            <font size="2">| </font>
+            <a href="dammsubj.html">
+                              <font size="2">Subject information</font></a>
+            <font size="2">| </font>
+            <a href="dammnotes.html">
+                              <font size="2">Subject notes</font></a>
+            <font size="2">| </font>
+            <A HREF="dammweek.html"><font size="2">Weekly program</font></a>
+          <br>
+            <a href="#top"><font size="2">Top of Page</font></a>
+          <HR>
+            <font size="2">For queries relating to this subject contact</font>
+            <a href="http://www.unisa.edu.au/contact/unisapost.asp?CName=chris.brien">
+            <font size="2">Chris Brien</font></a>
+            <font size="2"><br></font>
+            <a href="http://www.unisa.edu.au/cpyright/liable.htm">
+            <font size="2">Liability</font></a><font size="2"> | </font>
+            <a href="http://www.unisa.edu.au/cpyright/intro/cr1.htm">
+            <font size="2">Copyright</font></a><font size="2"> (c) 2000 |
+            Last revised:  14th July, 2000</font>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>

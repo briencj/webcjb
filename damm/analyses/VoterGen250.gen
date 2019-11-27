@@ -1,0 +1,23 @@
+"load voter.xls from g:\disciplina\genstat so expend available"
+  question {PREAMBLE=!T('What 6-digit number do you wish to use to \
+seed the random number generator?'); \
+    MODE=v; TYPE=scalar; PRESENT=yes; UPPER=999999; RESPONSE=_seed]
+  print _seed
+  calc turnout=urand(_seed; 20)
+"generate turnout according to the model for 250 samples"
+  vari [250] f
+  for i=1...250
+    calc turnout=45+ned(urand(0; 20))*sqrt(10)
+    model turnout
+    terms expend
+    fit [print=*] expend
+    rkeep deviance=res_ss; df=res_df
+    calc f$[i]=(variance(turnout)*19-res_ss)/(res_ss/res_df)
+  endfor
+"examine computed Fs"
+  describe [selection=nobs,min,q1,q3,max] f
+  histogram f
+  calc p=1-fratio(f; 1; 18)
+  & signif=sum(p <= 0.05)
+  print signif
+

@@ -1,0 +1,837 @@
+<HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="AUTHOR" content="Chris Brien">
+<meta name="DESCRIPTION" content="Design & Analysis with Mixed Models - Example team project experiments">
+<title>Design & Analysis with Mixed Models - Example team project experiments</title>
+<script>
+<!--//JavaScript Copyright Ben Ruciak (ruciak@adelaide.on.net)
+
+// Web site production by The Liquid Paradigm Factory (georgeous@senet.com.au) 
+
+// Project Management and template customisation by Margaret Lavelle, University of South Australia
+
+// Further customization by Chris Brien, University of South Australia
+
+// browser test:
+
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+
+if ((browserName == "Netscape" && browserVer >= 3) || 
+    (browserName == "Microsoft Internet Explorer" && browserVer >= 4)) version = "n3";
+else version = "n2";
+
+if (version == "n3"){
+        assess1_1 = new Image();
+        assess1_1.src = "images/Assessment1.gif";
+        assess1_2 = new Image();
+        assess1_2.src = "images/Assessment2.gif";       
+
+        computing1_1 = new Image();
+        computing1_1.src = "images/Computing1.gif";
+        computing1_2 = new Image();
+        computing1_2.src = "images/Computing2.gif"; 
+
+        soln1_1 = new Image();
+        soln1_1.src = "images/Exercisesoln1.gif";
+        soln1_2 = new Image();
+        soln1_2.src = "images/Exercisesoln2.gif"; 
+
+        subjinfo1_1 = new Image();
+        subjinfo1_1.src = "images/SubjectInfo1.gif";
+        subjinfo1_2 = new Image();
+        subjinfo1_2.src = "images/SubjectInfo2.gif"; 
+
+        subjnotes1_1 = new Image();
+        subjnotes1_1.src = "images/SubjectNotes1.gif";
+        subjnotes1_2 = new Image();
+        subjnotes1_2.src = "images/SubjectNotes2.gif"; 
+
+        weekly1_1 = new Image();
+        weekly1_1.src = "images/WeeklyProg1.gif";
+        weekly1_2 = new Image();
+        weekly1_2.src = "images/WeeklyProg2.gif"; 
+}
+
+//-->
+<!--
+
+ function ImgFunc(imgDocID,imgObjName) {
+
+if (version == "n3")
+	document.images[imgDocID].src = eval(imgObjName + ".src")
+;
+}
+
+//-->
+</script>
+</head>
+
+<BODY TEXT="#000080" LINK="#0000ff" VLINK="#800080" BGCOLOR="#ffffff">
+
+<p><a NAME="top"></a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+        <td valign="top" width="90" bgcolor="#010F87"><p align="center"><br>
+        <a href="dammassess.html"
+           OnMouseOver="ImgFunc('assess1_1','assess1_2');return true"
+           OnMouseOut="ImgFunc('assess1_1','assess1_1');">
+           <img IMG NAME="assess1_1" SRC="images/Assessment1.gif"
+                BORDER="0" ALT="Assessment" WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="dammcomp.html"
+           OnMouseOver="ImgFunc('computing1_1','computing1_2');return true"
+           OnMouseOut="ImgFunc('computing1_1','computing1_1');">
+           <img IMG NAME="computing1_1" SRC="images/Computing1.gif"
+                BORDER="0" ALT="Computing notes and files" 
+                WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="dammsoln.html"
+           OnMouseOver="ImgFunc('soln1_1','soln1_2');return true"
+           OnMouseOut="ImgFunc('soln1_1','soln1_1');">
+           <img IMG NAME="soln1_1" SRC="images/Exercisesoln1.gif"
+                BORDER="0" ALT="Exercise solutions" WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="dammsubj.html"
+           OnMouseOver="ImgFunc('subjinfo1_1','subjinfo1_2');return true"
+           OnMouseOut="ImgFunc('subjinfo1_1','subjinfo1_1');">
+           <img IMG NAME="subjinfo1_1" SRC="images/SubjectInfo1.gif"
+                BORDER="0" ALT="Subject Information" WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="dammnotes.html"
+           OnMouseOver="ImgFunc('subjnotes1_1','subjnotes1_2');return true"
+           OnMouseOut="ImgFunc('subjnotes1_1','subjnotes1_1');">
+           <img IMG NAME="subjnotes1_1" SRC="images/SubjectNotes1.gif"
+                BORDER="0" ALT="Subject Notes" WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="dammweek.html"
+           OnMouseOver="ImgFunc('weekly1_1','weekly1_2');return true"
+           OnMouseOut="ImgFunc('weekly1_1','weekly1_1');">
+           <img IMG NAME="weekly1_1" SRC="images/WeeklyProg1.gif"
+                BORDER="0" ALT="Weekly program" WIDTH="90" HEIGHT="40">
+        </a></p>
+        </td>
+        <td width=600 valign="top"><blockquote>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+  <td align="center"><p><IMG SRC="images/NameESALQ.gif" 
+            ALT="Logo ESALQ" HEIGHT=19 WIDTH=303></p></td>
+  <td align="center"><p><img src="images/NameUniSA.gif" 
+       width=237 alt="University of South Australia" border="0"></p>
+   </td>
+</tr>
+</table>
+<!--Start page content-->
+<H1>Example team project experiments for <I>The Design & Mixed-Model Analysis of Experiments</I></H1>
+
+<CENTER><TABLE CELLSPACING=0 BORDER="6" CELLPADDING="2" WIDTH=540>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>No.</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P ALIGN="CENTER"><B>Factors</B></TD>
+    <TD VALIGN="TOP" WIDTH="38%">
+                            <P ALIGN="CENTER"><B>Response variables</B></TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>1</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>seat height (26, 30 inches), generator 
+                                   (off, on), tyre pressure (40, 55 psi)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to complete fixed course on bicycle 
+                                    and pulse rate at finish</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>2</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>brand of popcorn (ordinary, gourmet), size 
+                 of batch (1/3, 2/3 cup) popcorn to oil ratio (low, high)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>yield of popcorn</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>3</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amount of yeast, amount of sugar, liquid 
+                                (milk, water) rise temperature, rise time</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>quality of bread, especially the total 
+                                    rise</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>4</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>tee height, ball age, club type</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>distance golf ball hit on full</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>5</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>ball type, ball age, ball temperature</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>squash ball rebound distance</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>6</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>shirt on or off, flippers, goggles</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to swim 25m</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>7</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>butter, filling, bread type</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>number of meat ants on sandwich</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>8</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>direction in which radio is facing, 
+                                    antenna angle, antenna slant</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>strength of radio signal from particular 
+                                    AM station in Chicago</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>9</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>L, R or both feet, forward or back, rope 
+                                    weight</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to skip 100</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>10</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>crust thickness, garlic bread, Coke</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to deliver pizza</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>11</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>font, size, upper/lower case</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to read short passage of text</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>12</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>charge time, digits fixed, number of 
+                                    calculations performed</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>operation time for pocket calculator</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>13</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>pan (aluminium, iron), burner on stove, 
+                                    cover for pan (no, yes)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to boil water</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>14</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>aspirin  buffered? (no, yes), dose, water 
+                                    temperature</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>hours of relief from migraine 
+                                    headache</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>15</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>pack on back (no, yes), footwear (tennis 
+                              shoes, boots), run (7, 14 flights of steps)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time required to run up steps and 
+                                    heartbeat at top</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>16</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>width to height ratio of sheet of balsa 
+                                    wood, slant angle, dihedral angle, weight 
+                                    added, thickness of wood</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>length of flight of model airplane</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>17</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>level of coffee in cup, devices (nothing, 
+                                    spoon placed across top of cup facing up), 
+                                    speed of walking</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>how much coffee spilled while walking</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p>&nbsp;</p>
+
+<CENTER><TABLE CELLSPACING=0 BORDER="6" CELLPADDING="2" WIDTH=540>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>No.</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P ALIGN="CENTER"><B>Factors</B></TD>
+    <TD VALIGN="TOP" WIDTH="38%">
+                           <P ALIGN="CENTER"><B>Response variables</B></TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>18</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>type of stitch, yarn gauge, needle 
+                                    size</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>cost of knitting scarf, dollars per square 
+                                    foot</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>19</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>size of order, time of day, 
+                                    sex of server</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>cost of order of french fries, in cents 
+                                    per ounce</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>20</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>brand of gasoline, driving speed, 
+                                    temperature</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>gas mileage for car</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>21</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>stamp (first class, air mail), zip code 
+                      (used, not used), time of day when letter mailed`</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>number of days required for letter to be 
+                                    delivered to another city</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>22</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>side of face (left, right) beard history 
+                                   (shaved once in two years - sideburns, 
+                                    shaved over 600 times in two years 
+                                    - just below sideburns</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>length of whiskers three days after 
+                                    shaving</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>23</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>eyes used (both, right), location of 
+                                    observer, distance</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>number of times (out of 15) that correct 
+                                    gender of passer-by was determined by 
+                                    experimenter with poor eyesight wearing no 
+                                    glasses</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>24</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>distance to target, guns (A,B),
+                                    powders (C, D)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>number of shots that penetrated a one foot 
+                                    diameter circle on the target</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>25</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>oven temperature, length of heating, 
+                                    amount of water</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>height of cake</P>
+<P></TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>26</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>strength of developer, temperature, 
+                                    degree of agitation</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>density of photographic film</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>27</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>brand of rubber band, size, 
+                                    temperature</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>length of rubber band before it broke</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>28</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>viscosity of oil, type of pick-up shoes, 
+                                    number of teeth in gear</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>speed of H.O. sale slot racers</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>29</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>type of tyre, brand of gas, 
+                                    driver (A, B)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time for car to cover one-quarter 
+                                    mile</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>30</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature, stirring rate, 
+                                    amount of solvent</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to dissolve table salt</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>31</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amounts of cooking wine, oyster sauce, 
+                                    sesame oil</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>taste of stewed chicken</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>32</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>type of surface, object (slide rule, 
+                                 ruler, silver dollar), pushed? (yes, no)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>angle necessary to make slide</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>33</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>ambient temperature, choke setting, 
+                                    number of charges</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>number of kicks necessary to start 
+                                    motorcycle</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>34</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature, location in oven, biscuits 
+                                    covered while baking (no, yes)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to bake biscuits</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>35</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature of water, amount of grease, 
+                                    amount of water conditioner</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>quantity of suds produced in kitchen 
+                                    blender</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p>&nbsp;</p>
+
+<CENTER><TABLE CELLSPACING=0 BORDER="6" CELLPADDING="2" WIDTH=540>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>No.</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P ALIGN="CENTER"><B>Factors</B></TD>
+    <TD VALIGN="TOP" WIDTH="38%">
+                        <P ALIGN="CENTER"><B>Response variables</B></TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>36</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>person putting daughter to bed (mother, 
+                            father) bed time, place (home, grandparents)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>toys child chose to sleep with</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>37</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amount of light in room, type of music 
+                                    played, volume</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>correct answers on simple arithmetic test, 
+                                    time required to complete test, 
+                                    words remembered (from list of 15)</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>38</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amounts of added Turkish, Latakia and 
+                                    Perique tobaccos</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>bite, smoking characteristics, aroma and 
+                                    taste of tobacco mixture</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>39</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature, humidity, rock salt</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to melt ice</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>40</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>number of cards dealt at one time, 
+                               position of picker relative to the dealer</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>points in games of sheepshead, 
+                                    a card game</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>41</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amounts of flour, eggs, milk</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>taste of pancakes, consensus of group of 
+                                    four living together</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>42</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>brand of suntan lotion, altitude, 
+                                    skier</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to get sunburned</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>43</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amount of sleep the night before, 
+                                substantial exercise during the day? (no, yes)
+                                eat right before going to bed? (no yes)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>soundness of sleep, average reading from 
+                                    five persons</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>44</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>brand of tape deck used for playing music, 
+                          bass level, treble level, synthesizer (no, yes)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>clearness and quality of sound, 
+                                    and absence of noise</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>45</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>type of filter paper, beverage to be 
+                                    filtered, volume of beverage</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to filter</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>46</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>type of ski, temperature, type of wax</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to go down ski slope</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>47</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>ambient temperature for dough when rising, 
+                                amount of vegetable oil, number of onions</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>four quality characteristics of pizza</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>48</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amount of fertiliser, location of seeds 
+                                   (3 x 3 Latin square)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time for seeds to germinate</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>49</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>speed of kitchen  blender, batch size of 
+                                    malt, blending time</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>quality of ground malt for brewing 
+                                    beer</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>50</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>soft drink (A, B), container (can, 
+                                    bottle), sugar free?</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>taste of drink from paper cup</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>51</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>child's weight (13, 22 pounds), spring 
+                  tension (4, 8 cranks), swing orientation (level tilted)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>number of swings and duration of these 
+                           swings obtained from an automatic infant swing</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p>&nbsp;</p>
+
+<CENTER><TABLE CELLSPACING=0 BORDER="6" CELLPADDING="2" WIDTH=540>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>No.</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P ALIGN="CENTER"><B>Factors</B></TD>
+    <TD VALIGN="TOP" WIDTH="38%">
+                            <P ALIGN="CENTER"><B>Response variables</B></TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>52</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>orientation of football, kick (ordinary, 
+                                    soccer style), steps taken before kick, 
+                                    show (soft, hard)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>distance football was kicked</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>53</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>weight of bowling ball, spin, bowling lane 
+                                   (A, B)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>bowling pins knocked down</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>54</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>distance from basket, type of shot, 
+                                    location on floor</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>number of shots made (out of 10) with 
+                                    basketball</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>55</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature, position of glass when 
+                              pouring soft drink, amount of sugar added</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>amount of foam produced when pouring soft 
+                                    drink into glass</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>56</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>brand of epoxy glue, ratio of hardener to 
+                                    resin, thickness of application, 
+                                    smoothness of surface, curing time</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>strength of bond between two strips of 
+                                    aluminium</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>57</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amount of plant hormone, water (direct 
+                                    from tap, stood out for 24 hours), window 
+                                    in which plant was put out</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>root lengths of cuttings from purple 
+                                    passion vine after 21 days</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>58</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amount of detergent (1/4, 1/2 cup), bleach 
+                           (none, 1 cup, fabric softener (not used, used)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>ability to remove oil and grape juice 
+                                 stains</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>59</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>skin thickness, water temperature, 
+                                    amount of salt</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to cook Chinese meat dumpling</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>60</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>appearance (with and without a crutch), 
+                                    location, time</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to get a ride hitchhiking and number 
+                               of cars that passed before getting a ride</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>61</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>frequency of watering plants, 
+                                    use of plant food (no, yes),</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P> temperature of water</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>62</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>number of pills, amount of cough syrup, 
+                                    use of vaporiser</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>how well twins, who had colds, 
+                                    slept during the night</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>63</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>speed of film, light (normal, diffused), 
+                                    shutter speed</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>quality of slides made close up with flash 
+                                    attachment on camera</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>64</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>hours of illumination, water temperature, 
+                                    specific gravity of water</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>growth rate of algae in salt water 
+                                    aquarium</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>65</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature, amount of sugar, food prior 
+                                    to drink (water, salted popcorn)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>taste of Koolaid</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>66</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>blending speed, amount of water, 
+                       temperature of water, soaking time before blending</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>blending time for soy beans</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>67</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>clothes dryer (A,G) temperature setting, 
+                                    load</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time until dryer stops</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>68</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amount of milk powder added to milk, 
+                              heating temperature, incubation temperature</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>taste comparison of homemade yoghurt and 
+                                    commercial brand</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p>&nbsp;</p>
+
+<CENTER><TABLE CELLSPACING=0 BORDER="6" CELLPADDING="2" WIDTH=540>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>No.</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P ALIGN="CENTER"><B>Factors</B></TD>
+    <TD VALIGN="TOP" WIDTH="38%">
+                            <P ALIGN="CENTER"><B>Response variables</B></TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>69</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature of gas chromatograph column, 
+                                    tube type (U,J), voltage</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>size of unwanted droplet</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>70</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature , gas pressure, 
+                                    welding speed</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>strength of polypropylene weld, 
+                                    manual operation</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>71</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>concentration of lysozyme, pH, 
+                                    ionic strength, temperature</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>rate of chemical reaction</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>72</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>anhydrous barium peroxide powder, sulphur, 
+                                    charcoal dust</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>length of time fuse powder burned and 
+                                    the evenness of burning</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>73</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>air velocity, air temperature, 
+                                    rice bed depth</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to dry wild rice</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>74</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>concentration of lactose crystal, 
+                                    crystal size, rate of agitation</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>spreadability of caramel candy</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>75</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>positions of coating chamber, distribution 
+                                    plate, and lower chamber</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>number of particles caught in a fluidised 
+                                    bed collector</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>76</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>proportional band, manual reset, 
+                                    regulator pressure</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>sensitivity of a pneumatic valve control 
+                                    system for a heat exchanger</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>77</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>chloride concentration, phase ratio, total 
+                        amine concentration, amount of preservative added</TD>
+    <TD VALIGN="TOP" WIDTH="38%">&nbsp;</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>78</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature, nitrate concentration, 
+                                    amount of preservative added</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>measured nitrate concentration in sewage, 
+                                    comparison of three different methods</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>79</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>solar radiation collector size, ratio of 
+                                    storage capacity to collector size, extent 
+                                    of short-term intermittency of radiation, 
+                                    average daily radiation on three 
+                                    successive days</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>efficiency of solar space-heating system, 
+                                    a computer simulation</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>80</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>pH, dissolved oxygen content of water, 
+                                    temperature</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>extent of corrosion of iron</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>81</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amount of sulphuric acid, time of shaking 
+                               milk-acid mixture, time of final tempering</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>measurement of butterfat content of 
+                                    milk</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>82</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>mode (batch), time-sharing), job size, 
+                                    system utilisation (low, high)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>time to complete job on computer</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>83</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>flow rate of carrier gas, polarity of 
+                                    stationary liquid phase, temperature</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>two different measures of efficiency of 
+                                    operation of gas chromatograph</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>84</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>pH of assay buffer, incubation time, 
+                                    concentration of binder</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>measured cortisol level in human blood 
+                                    plasma</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>85</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>aluminium, boron, cooling time</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>extent of rock candy fracture of cast 
+                                    steel</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p>&nbsp;</p>
+
+<CENTER><TABLE CELLSPACING=0 BORDER="6" CELLPADDING="2" WIDTH=540>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>No.</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P ALIGN="CENTER"><B>Factors</B></TD>
+    <TD VALIGN="TOP" WIDTH="38%">
+                             <P ALIGN="CENTER"><B>Response variables</B></TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>86</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>magnification, read out system 
+                                    (micrometer, electronic), stage light</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>measurement of angle with photogrammetric 
+                                    instrument</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>87</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>riser height, mould hardness, 
+                                    carbon equivalent</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>changes in height, width, and length 
+                                    dimensions of cast metal</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>88</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amperage, contact tube height, 
+                                    travel speed, edge preparation</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>quality of weld made by submerged arc 
+                                    welding process</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>89</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>time, amount of magnesium oxide, 
+                                    amount of alloy</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>recovery of material by steam 
+                                    distillation</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>90</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>pH, depth, time</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>final moisture content of alfalfa 
+                                    protein</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>91</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>deodorant, concentration of chemical, 
+                                    incubation time</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>odour produced by material isolated from 
+                                    decaying manure, after treatment</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>92</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature variation, concentration of 
+                                    cupric sulphate of sulphuric acid</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>limiting currents on totalling disk 
+                                    electrode</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>93</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>air flow, diameter of bead, 
+                                    head shield (no, yes)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>measured temperature of a heated 
+                                    plate</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>94</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>voltage, warm-up procedure, bulb age</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>sensitivity of micro densitometer</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>95</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>pressure, amount of ferric chloride added, 
+                                    amount of lime added</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>efficiency of vacuum filtration of 
+                                    sludge </TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>96</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>longitudinal feed rate, transverse feed 
+                                    rate, depth of cut</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>longitudinal and thrust forces for surface 
+                                    grinding operation</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>97</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>time between preparation of sample and 
+                                    refluxing, reflux time, time between end 
+                                    of reflux and start of titrating</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>chemical oxygen demand of samples with 
+                                    same amount of waste (acetanilide)</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>98</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>speed of rotation, thrust load, 
+                                    method of lubrication</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>torque of taper roller bearings</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>99</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>type of activated carbon, amount of 
+                                    carbon, pH</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>absorption characteristics of activated 
+                                   carbon used with municipal waste water</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>100</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>amounts of nickel, manganese, carbon</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>impact strength of steel alloy</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>101</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>form (broth, gravy), added broth (no, 
+                                    yes), added fat (no, yes), type of meat 
+                                    (lamb, beef)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>percentage of panellist correctly 
+                                    identifying which samples were lamb</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>102</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>well (A, B), depth of probe, method of 
+                                    analysis, (peak height, planimeter)</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>methane concentration in completed 
+                                    sanitary landfill</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>103</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>paste (A, B), preparation of skin 
+                                    (no, yes), site (sternum, forearm</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>electrocardiogram reading</TD>
+</TR>
+</TABLE>
+</CENTER>
+<p>&nbsp;</p>
+
+<CENTER><TABLE CELLSPACING=0 BORDER="6" CELLPADDING="2" WIDTH=540>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>No.</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P ALIGN="CENTER"><B>Factors</B></TD>
+    <TD VALIGN="TOP" WIDTH="38%">
+                             <P ALIGN="CENTER"><B>Response variables</B></TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>104</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>lime dosage, time of flocculation, 
+                                    mixing speed</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>removal of turbidity and hardness from 
+                                    water</TD>
+</TR>
+<TR><TD VALIGN="TOP" WIDTH="6%"><P><B>105</B></TD>
+    <TD VALIGN="TOP" WIDTH="56%"><P>temperature difference between surface and 
+                                    bottom water, thickness of surface layer, 
+                                    jet distance to thermocline, velocity of 
+                                    jet, temperature difference between jet 
+                                    and bottom waters</TD>
+    <TD VALIGN="TOP" WIDTH="38%"><P>mixing time of an initially thermally 
+                                    stratified tank of water</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+
+<P>Source:  Hunter, W.G.  (1975)  <I>101 ways to design an experiment or some ideas about teaching design of experiments</I>.  Technical report No. <B>413</B>, Statistics Department, University of Wisconsin-Madison.</A></P>
+
+<P>Mackisack, M.  (1994) What Is the Use of Experiments Conducted By Statistics Students? <I>Journal of Statistics Education</I>, <B>2(1)</B>.</P>
+
+<!--End page content-->
+        <p>&nbsp;</p>
+        </blockquote>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" bgcolor="#010F87">
+        <p align="center"><br></p>
+        </td>
+        <td align="center" width=600 valign="bottom" bgcolor="#BEFBBB">
+            <A HREF="dammassess.html"><font size="2">Assessment</font></a>
+            <font size="2">| </font>
+            <A HREF="dammcomp.html">
+                         <font size="2">Computing notes &amp; files</font></a>
+            <font size="2">| </font>
+            <A HREF="dammsoln.html">
+                                 <font size="2">Exercise solutions</font></a>
+          <br>
+            <a href="index.html"><font size="2">Subject home page</font></a>
+            <font size="2">| </font>
+            <a href="dammsubj.html">
+                              <font size="2">Subject information</font></a>
+            <font size="2">| </font>
+            <a href="dammnotes.html">
+                              <font size="2">Subject notes</font></a>
+            <font size="2">| </font>
+            <A HREF="dammweek.html"><font size="2">Weekly program</font></a>
+          <br>
+            <a href="#top"><font size="2">Top of Page</font></a>
+          <HR>
+            <font size="2">For queries relating to this subject contact</font>
+            <a href="http://www.unisa.edu.au/contact/unisapost.asp?CName=chris.brien">
+            <font size="2">Chris Brien</font></a>
+            <font size="2"><br></font>
+            <a href="http://www.unisa.edu.au/cpyright/liable.htm">
+            <font size="2">Liability</font></a><font size="2"> | </font>
+            <a href="http://www.unisa.edu.au/cpyright/intro/cr1.htm">
+            <font size="2">Copyright</font></a><font size="2"> (c) 2000 |
+            Last revised:  14th July, 2000</font>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+</BODY>
+</HTML>

@@ -1,0 +1,8 @@
+"Rocket Performance data"
+VARIATE [VALUES=19,15,35,52,35,33,30,57,49,26] Temp
+&       [VALUES=1.2,1.5,1.5,3.3,2.5,2.1,2.5,3.2,2.8,1.5] Thrust
+TEXT [VALUES='Rocket Performance'] T & [VALUES='Temperature'] Xt
+GRAPH [TITLE=T; XTITLE=Xt] Thrust; Temp
+SCALAR MnThrust
+CALCULATE MnThrust=MEAN(Thrust)
+PRINT MnThrust; FIELDWIDTH=12; DECIMALS=2

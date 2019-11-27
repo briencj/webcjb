@@ -1,0 +1,1047 @@
+%PDF-1.2
+%‚„œ”
+5 0 obj
+<<
+/Producer (\376\377\000A\000c\000r\000o\000b\000a\000t\000 \000D\000i\000s\000t\000i\000l\000l\000e\000r\000 \0003\000.\0000\0001\000 \000f\000o\000r\000 \000W\000i\000n\000d\000o\000w\000s)
+/Creator (Microsoft Word 8.0)
+/ModDate (D:20000320221035)
+/Author (Chris Brien)
+/Title (Linear Models Tutorial 1 for Vax)
+/CreationDate (D:20000320221035)
+>>
+endobj
+6 0 obj
+<<
+/Length 5958
+>>
+stream
+BT
+/F1 1 Tf
+12 0 0 12 492.33 795.27 Tm
+0 g
+/GS1 gs
+0.004 Tc
+[(App-)7(1)]TJ
+/F2 1 Tf
+18 0 0 18 108.69 753.63 Tm
+0 Tc
+0.002 Tw
+[(THE DESIGN )40(A)29(ND MIXED-MODEL)18( )40(A)29(N)2(A)29(L)91(YSIS)]TJ
+6.0867 -1.1867 TD
+0.001 Tc
+0.001 Tw
+(OF EXPERIMENTS)Tj
+-1.58 -2.3733 TD
+0 Tc
+0.002 Tw
+[(PRA)29(C)2(TICA)29(L)18( )40(A)29(PPENDIX A)]TJ
+1.3733 -2.3733 TD
+[(GENST)71(A)102(T 5 USA)29(G)-2(E)]TJ
+/F3 1 Tf
+12 0 0 12 71.01 617.79 Tm
+0.003 Tc
+0.109 Tw
+[(The )10(answ)15(e)-1(r)6(s)3( )10(to q)9(uesti)5(ons 1\2264 w)15(e)-1(r)6(e)-1( g)9(i)5(v)13(en i)5(n)-1( the l)5(e)-1(ctur)6(e notes or)6( pr)6(ov)13(i)5(ded w)15(i)5(th the)]TJ
+0 -1.15 TD
+[(q)9(uesti)5(on.)]TJ
+/F2 1 Tf
+15 0 0 15 71.01 567.15 Tm
+-0.002 Tc
+0.004 Tw
+[(5)-6(.)-2004(Ge)-6(ne)-6(r)-5(a)-6(t)-5(i)-4(ng a)-6( Vot)-5(e)-6(r)-5( s)-6(a)-6(m)-1(ple)]TJ
+/F3 1 Tf
+12 0 0 12 92.25 538.83 Tm
+0.002 Tc
+0.22 Tw
+[(Genstat's random)-5( num)-5(ber g)8(enerator w)14(ill be used to inv)12(e)-2(stig)8(ate the )-10(sam)-5(p)-2(ling)]TJ
+T*
+0.089 Tw
+[(di)5(str)6(i)5(buti)5(on )10(of)-9( )10(the )10(F )10(stati)5(s)3(ti)5(c )10(i)5(n)-1( the case of)-9( the Voter)6( tur)6(nout data f)-9(r)6(om ex)13(ampl)5(e)]TJ
+T*
+0.289 Tw
+[(II.2. )10( )10(In )10(this )10(ex)13(ample, the r)6(e)-1(g)9(r)6(ession of)-9( v)13(o)-1(ter)6( tur)6(nout on the % adv)13(er)6(tising)]TJ
+T*
+0.004 Tc
+0.038 Tw
+[(ex)14(pendi)6(tur)7(e)0( )10(w)16(a)0(s )10(ex)14(ami)6(ned. )10( Suppose that w)16(e)0( assume that the popul)6(ati)6(on model)]TJ
+T*
+0.003 Tc
+-0.001 Tw
+[(under)6(l)5(y)13(i)5(n)-1(g)9( thi)5(s)3( data i)5(s)3( actual)5(l)5(y)]TJ
+ET
+1 i 
+256.29 450.63 2.16 -0.36 re
+f
+0 G
+0 J 0 j 0.12 w 10 M []0 d
+256.17 450.75 2.4 -0.6 re
+S
+256.29 464.43 0.36 -14.16 re
+f
+256.17 464.55 0.6 -14.4 re
+S
+256.29 464.43 2.16 -0.36 re
+f
+256.17 464.55 2.4 -0.6 re
+S
+268.17 450.63 2.16 -0.36 re
+f
+268.05 450.75 2.4 -0.6 re
+S
+269.97 464.43 0.36 -14.16 re
+f
+269.85 464.55 0.6 -14.4 re
+S
+268.17 464.43 2.16 -0.36 re
+f
+268.05 464.55 2.4 -0.6 re
+S
+BT
+/F1 1 Tf
+12 0 0 12 248.25 454.23 Tm
+0.263 Tc
+(EY)Tj
+/F4 1 Tf
+2.16 0 TD
+0 Tc
+0 Tw
+(=)Tj
+/F1 1 Tf
+0.82 0 TD
+0.004 Tc
+(45)Tj
+/F3 1 Tf
+1.19 0 TD
+0.003 Tc
+-0.001 Tw
+(  and )Tj
+/F4 1 Tf
+2.57 0 TD
+0 Tc
+0 Tw
+(s)Tj
+/F1 1 Tf
+8 0 0 8 336.69 459.39 Tm
+(2)Tj
+12 0 0 12 354.09 454.23 Tm
+0.004 Tc
+(10)Tj
+/F4 1 Tf
+-0.75 0 TD
+0 Tc
+(=)Tj
+/F3 1 Tf
+-21.07 -2.58 TD
+0.003 Tc
+0.169 Tw
+[(w)15(i)5(th )10(Y)10( )10(nor)6(mal)5(l)5(y)13( )10(di)5(str)6(i)5(buted. )10( Thi)5(s)3( model)5( say)13(s)3( that the tur)6(nout i)5(s)3( constant and)]TJ
+0 -1.15 TD
+0.619 Tw
+[(di)5(spl)5(a)-1(y)13(s)3( )10(v)13(a)-1(r)6(i)5(ati)5(on such that the standar)6(d dev)13(i)5(a)-1(ti)5(on i)5(n)-1( the tur)6(nouts i)5(s)]TJ
+ET
+2 J 0.495 w 
+93.45 396.75 m
+95.01 397.59 l
+S
+0.991 w 
+95.01 397.35 m
+97.29 393.27 l
+S
+0.495 w 
+97.53 393.27 m
+100.41 405.51 l
+100.41 405.51 m
+114.21 405.51 l
+S
+BT
+/F1 1 Tf
+12 0 0 12 100.05 393.87 Tm
+0.004 Tc
+(10)Tj
+/F4 1 Tf
+1.48 0 TD
+0 Tc
+0 Tw
+(=)Tj
+/F1 1 Tf
+0.85 0 TD
+0.003 Tc
+-0.001 Tw
+( 3.1623)Tj
+/F3 1 Tf
+3.44 0 TD
+[(.  Our)6( model)5( assumes that i)5(n)-1( the popul)5(ati)5(on the sl)5(ope i)5(s)3( z)13(e)-1(r)6(o)-1(.)]TJ
+-6.42 -2.3 TD
+0.05 Tw
+[(T)-7(he f)-10(o)-2(llow)14(i)4(ng)8( com)-5(m)-5(ands w)14(ill g)8(enerate a sam)-5(p)-2(le of)-10( 20 )-10(observ)12(a)-2(tions )-10(f)-10(r)5(om)-5( )-10(such )-10(a)]TJ
+0 -1.15 TD
+0.004 Tc
+0.048 Tw
+[(popul)6(ati)6(on )10(and )10(then )10(anal)6(y)14(s)4(e )10(data, )10(assumi)6(ng)10( the sampl)6(e)0( has the same v)14(a)0(l)6(ues of)]TJ
+T*
+0.003 Tc
+0.269 Tw
+[(the ex)13(pl)5(anator)6(y)13( v)13(a)-1(r)6(i)5(abl)5(e as that suppl)5(i)5(ed i)5(n)-1( the l)5(e)-1(ctur)6(e.  Fi)5(r)6(s)3(t w)15(e)-1( need )-10(the)]TJ
+T*
+0.004 Tc
+0.098 Tw
+[(ex)14(pendi)6(tur)7(e)0( v)14(a)0(l)6(ues that hav)14(e been obser)7(v)14(ed.  The )-10(data )-10(has )-10(been )-10(sav)14(ed )-10(i)6(n)0( )-10(the)]TJ
+T*
+0.002 Tc
+0.01 Tw
+[(Ex)12(cel spr)5(eadsheet f)-10(ile Voter)5(.)0(x)12(l)4(s in the dir)5(e)-2(ctor)5(y)12( G:\\Disciplina\\Genstat.  Use )]TJ
+/F1 1 Tf
+12 0 2.551 12 494.73 311.07 Tm
+-0.002 Tc
+0.024 Tw
+[(File)-6( >)]TJ
+-33.2934 -1.16 TD
+0.004 Tc
+(Open)Tj
+/F3 1 Tf
+12 0 0 12 121.77 297.15 Tm
+0.003 Tc
+0.009 Tw
+[( w)15(i)5(th the )]TJ
+/F1 1 Tf
+12 0 2.551 12 170.25 297.15 Tm
+-0.001 Tc
+0.013 Tw
+[(All File)-5(s)]TJ
+/F3 1 Tf
+12 0 0 12 212.37 297.15 Tm
+0.003 Tc
+0.009 Tw
+[( opti)5(on sel)5(e)-1(cted i)5(n)-1( the )]TJ
+/F1 1 Tf
+12 0 2.551 12 333.69 297.15 Tm
+0.001 Tc
+0.021 Tw
+[(Fi)3(l)3(e)-3(s of Type)]TJ
+/F3 1 Tf
+12 0 0 12 403.05 297.15 Tm
+0.003 Tc
+0.019 Tw
+[( l)5(i)5(s)3(t box)13(.  Secondl)5(y)13( the)]TJ
+-25.9 -1.16 TD
+0.004 Tc
+0.308 Tw
+[(commands hav)14(e been sav)14(e)0( i)6(n)0( Voter)7(g)10(en1.g)10(en.  Open thi)6(s)4( f)-8(i)6(l)6(e)0( )-10(and )-10(r)7(un )-10(the)]TJ
+0 -1.15 TD
+0.002 Tc
+0.13 Tw
+[(commands it contains. Giv)12(e)-2( it a six)12(-)5(dig)8(i)4(t number )-10(f)-10(o)-2(r )-10(the )-10(seed )-10(w)14(hen )-10(it )-10(asks )-10(f)-10(o)-2(r)]TJ
+T*
+0.004 Tc
+(one.)Tj
+/F5 1 Tf
+9 0 0 9 99.33 232.11 Tm
+0 Tc
+0 Tw
+("load voter.xls from g:\\disciplina\\genstat so expend available")Tj
+9.96 0 0 9.96 99.33 221.79 Tm
+0.002 Tc
+(  question {PREAMBLE=!T\('What 6-digit number do you wish to use to \\)Tj
+0 -1.0602 TD
+(seed the random number generator?'\); \\)Tj
+T*
+(    MODE=v; TYPE=scalar; PRESENT=yes; UPPER=999999; RESPONSE=_seed])Tj
+T*
+(  print _seed)Tj
+T*
+("generate turnout according to the model")Tj
+T*
+(  calc turnout=45+ned\(urand\(_seed; 20\)\)*sqrt\(10\))Tj
+T*
+(  print turnout,expend)Tj
+T*
+(  describe [selection=nobs,mean,sd,var,min,max] turnout)Tj
+T*
+("analyze generated data")Tj
+T*
+(  model turnout)Tj
+T*
+(  terms expend)Tj
+T*
+(  fit [fprob=y] expend)Tj
+T*
+(  rkeep deviance=res_ss; df=res_df)Tj
+T*
+(  calc f=\(variance\(turnout\)*19-res_ss\)/\(res_ss/res_df\))Tj
+ET
+endstream
+endobj
+7 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F1 8 0 R
+/F2 9 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+>>
+/ExtGState <<
+/GS1 13 0 R
+>>
+>>
+endobj
+16 0 obj
+<<
+/Length 2872
+>>
+stream
+BT
+/F1 1 Tf
+12 0 0 12 492.33 795.27 Tm
+0 g
+/GS1 gs
+0.004 Tc
+[(App-)7(2)]TJ
+/F5 1 Tf
+9.96 0 0 9.96 99.33 763.11 Tm
+0.002 Tc
+0 Tw
+(  &    p=1-fratio\(f; 1; 18\))Tj
+0 -1.0602 TD
+("check calculations")Tj
+T*
+(  print res_ss,res_df,f,p)Tj
+/F1 1 Tf
+12 0 2.551 12 71.01 714.27 Tm
+-0.001 Tw
+[(The output pr)6(oduced by these com)16(m)16(ands i)5(s)3( as fol)5(l)5(o)-1(ws:)]TJ
+/F5 1 Tf
+9 0 0 9 99.33 690.63 Tm
+0 Tc
+0 Tw
+(Genstat 5  Release 4.1  \(PC/Windows NT\)               19 March 2000 14:54:42)Tj
+0 -1.0667 TD
+(Copyright 1998, Lawes Agricultural Trust \(Rothamsted Experimental Station\))Tj
+0 -2.1333 TD
+(                 ______________________________________________)Tj
+T*
+(                 Genstat 5 Fourth Edition - \(for Windows\))Tj
+0 -1.0667 TD
+(                 Genstat 5 Procedure Library Release PL11)Tj
+T*
+(                 ______________________________________________)Tj
+0 -2.1333 TD
+(   3  "Data taken from File: D:/ANALYSES/LM/VOTER.XLS")Tj
+0 -1.0667 TD
+(   4  DELETE [redefine=yes] turnout,expend)Tj
+T*
+(   5  VARIATE [nvalues=20] turnout)Tj
+T*
+(   6  READ turnout)Tj
+0 -2.1333 TD
+(    Identifier   Minimum      Mean   Maximum    Values   Missing)Tj
+0 -1.0667 TD
+(       turnout     24.60     45.71     64.80        20         0)Tj
+0 -2.1333 TD
+(   9  VARIATE [nvalues=20] expend)Tj
+0 -1.0667 TD
+(  10  READ expend)Tj
+0 -2.1333 TD
+(    Identifier   Minimum      Mean   Maximum    Values   Missing)Tj
+0 -1.0667 TD
+(        expend     23.00     36.99     50.10        20         0)Tj
+0 -2.1333 TD
+(  13)Tj
+0 -1.0667 TD
+(  14  "load voter.xls from g:\\disciplina\\genstat so expend available")Tj
+T*
+(  15    question {PREAMBLE=!T\('What 6-digit number do you wish to use to \\)Tj
+T*
+( -16  seed the random number generator?'\); \\)Tj
+T*
+(  17      MODE=v; TYPE=scalar; PRESENT=yes; UPPER=999999; RESPONSE=_seed])Tj
+T*
+(  18    print _seed)Tj
+0 -3.2 TD
+(      123456)Tj
+0 -2.1333 TD
+(  19  "generate turnout according to the model")Tj
+0 -1.0667 TD
+(  20    calc turnout=45+ned\(urand\(_seed; 20\)\)*sqrt\(10\))Tj
+T*
+(  21    print turnout,expend)Tj
+0 -2.1333 TD
+(     turnout      expend)Tj
+0 -1.0667 TD
+(       44.39       28.50)Tj
+T*
+(       45.19       48.30)Tj
+T*
+(       46.30       40.20)Tj
+T*
+(       50.81       34.80)Tj
+T*
+(       46.07       50.10)Tj
+T*
+(       45.44       44.00)Tj
+T*
+(       42.24       27.20)Tj
+T*
+(       45.72       37.80)Tj
+T*
+(       51.21       27.20)Tj
+T*
+(       47.11       46.10)Tj
+T*
+(       43.70       31.30)Tj
+T*
+(       44.12       50.10)Tj
+T*
+(       40.44       31.30)Tj
+T*
+(       46.93       24.80)Tj
+T*
+(       44.91       42.20)Tj
+T*
+(       43.56       23.00)Tj
+T*
+(       49.73       30.10)Tj
+T*
+(       41.75       36.50)Tj
+T*
+(       47.35       40.20)Tj
+T*
+(       46.23       46.10)Tj
+ET
+endstream
+endobj
+17 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F1 8 0 R
+/F5 12 0 R
+>>
+/ExtGState <<
+/GS1 13 0 R
+>>
+>>
+endobj
+19 0 obj
+<<
+/Length 3452
+>>
+stream
+BT
+/F1 1 Tf
+12 0 0 12 492.33 795.27 Tm
+0 g
+/GS1 gs
+0.004 Tc
+[(App-)7(3)]TJ
+/F5 1 Tf
+9 0 0 9 99.33 763.83 Tm
+0 Tc
+0 Tw
+(  22    describe [selection=nobs,mean,sd,var,min,max] turnout)Tj
+0 -2.1333 TD
+( Summary statistics for turnout)Tj
+T*
+(      Number of observations = 20)Tj
+0 -1.0667 TD
+(                        Mean = 45.660)Tj
+T*
+(                     Minimum = 40.440)Tj
+T*
+(                     Maximum = 51.213)Tj
+T*
+(                    Variance = 7.831)Tj
+T*
+(          Standard deviation = 2.798)Tj
+T*
+(  23  "analyze generated data")Tj
+T*
+(  24    model turnout)Tj
+T*
+(  25    terms expend)Tj
+T*
+(  26    fit [fprob=y] expend)Tj
+0 -3.2 TD
+(26....................................................................)Tj
+T*
+(***** Regression Analysis *****)Tj
+0 -2.1333 TD
+( Response variate: turnout)Tj
+0 -1.0667 TD
+(     Fitted terms: Constant, expend)Tj
+0 -3.2 TD
+(*** Summary of analysis ***)Tj
+0 -2.1333 TD
+(              d.f.         s.s.         m.s.      v.r.  F pr.)Tj
+0 -1.0667 TD
+(Regression       1          0.0        0.039      0.00  0.946)Tj
+T*
+(Residual        18        148.7        8.264)Tj
+T*
+(Total           19        148.8        7.831)Tj
+0 -2.1333 TD
+(Residual variance exceeds variance of response variate)Tj
+0 -1.0667 TD
+(Standard error of observations is estimated to be 2.87)Tj
+T*
+(* MESSAGE: The following units have large standardized residuals:)Tj
+T*
+(         Unit     Response    Residual)Tj
+T*
+(            9        51.21        2.07)Tj
+0 -3.2 TD
+(*** Estimates of parameters ***)Tj
+0 -2.1333 TD
+(                  estimate         s.e.     t\(18\))Tj
+0 -1.0667 TD
+(Constant             45.47         2.86     15.92)Tj
+T*
+(expend              0.0051       0.0752      0.07)Tj
+0 -2.1333 TD
+(  27    rkeep deviance=res_ss; df=res_df)Tj
+0 -1.0667 TD
+(  28    calc f=\(variance\(turnout\)*19-res_ss\)/\(res_ss/res_df\))Tj
+T*
+(  29    &    p=1-fratio\(f; 1; 18\))Tj
+T*
+(  30  "check calculations")Tj
+T*
+(  31    print res_ss,res_df,f,p)Tj
+0 -2.1333 TD
+(      res_ss      res_df           f           p)Tj
+0 -1.0667 TD
+(       148.7       18.00    0.004663      0.9463)Tj
+/F1 1 Tf
+12 0 2.551 12 92.25 237.15 Tm
+0.003 Tc
+-0.001 Tw
+[(The p val)5(ue contai)5(n i)5(n)-1( p i)5(s)3( the sam)16(e)-1( as i)5(n)-1( the col)5(u)-1(m)16(n)-1( F pr)6(. i)5(n)-1( the AN)5(OVA tabl)5(e.)]TJ
+12 0 0 12 92.25 209.43 Tm
+0.119 Tw
+[(If)-9( )10(y)13(ou )10(w)15(e)-1(r)6(e)-1( )10(to take a l)5(a)-1(r)6(g)9(e number)6( of)-9( sampl)5(e)-1(s of)-9( thi)5(s)3( ki)5(nd and compute the F)]TJ
+0 -1.15 TD
+0.009 Tw
+[(stati)5(s)3(ti)5(c and p v)13(a)-1(l)5(ue f)-9(o)-1(r)6( each one, w)15(hat di)5(str)6(i)5(buti)5(on w)15(oul)5(d ex)13(pect to obtai)5(n f)-9(o)-1(r)6( the)]TJ
+T*
+0.019 Tw
+[(F )10(stati)5(s)3(ti)5(c? )10( )10(W)-43(hat pr)6(opor)6(ti)5(on of)-9( F stati)5(s)3(ti)5(cs w)15(oul)5(d y)13(ou ex)13(pect to hav)13(e a p v)13(a)-1(l)5(ue of)]TJ
+T*
+-0.001 Tw
+[(0.05 or)6( l)5(e)-1(ss?)]TJ
+12 0 2.551 12 92.25 140.43 Tm
+[(One woul)5(d expect an F di)5(str)6(i)5(buti)5(on wi)5(th one and 18 degr)6(ees of fr)6(eedom)16(.)]TJ
+0.4931 -2.32 TD
+0.069 Tw
+[(I )10(woul)5(d )10(expect )10(0.05 )10(or)6( )10(5% )10(of )10(F )10(stati)5(s)3(ti)5(cs to have a p val)5(ue of 0.05 or)6( l)5(e)-1(ss si)5(nce)]TJ
+0.2466 -1.16 TD
+0.08 Tw
+[(the )10(p value is the probability of an F statistic equal to or larger than the one for)]TJ
+ET
+endstream
+endobj
+20 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F1 8 0 R
+/F5 12 0 R
+>>
+/ExtGState <<
+/GS1 13 0 R
+>>
+>>
+endobj
+21 0 obj
+<<
+/Length 4045
+>>
+stream
+BT
+/F1 1 Tf
+12 0 0 12 492.33 795.27 Tm
+0 g
+/GS1 gs
+0.004 Tc
+[(App-)7(4)]TJ
+12 0 2.551 12 92.25 759.75 Tm
+0.003 Tc
+0.139 Tw
+[(whi)5(c)3(h )10(the )10(p )10(val)5(ue )10(i)5(s)3( )10(cal)5(c)3(ul)5(ated. )10( By defi)5(n)-1(i)5(t)1(i)5(on, onl)5(y 5% can have a p val)5(ue of)]TJ
+0.2466 -1.16 TD
+-0.001 Tw
+[(0.05 or)6( sm)16(al)5(l)5(e)-1(r)6(.)]TJ
+/F2 1 Tf
+15 0 0 15 71.01 708.87 Tm
+[(6.)-1999(G)5(e)-1(n)6(e)-1(ratin)6(g)6( 250 V)6(o)6(t)0(er samp)6(l)1(es)]TJ
+/F1 1 Tf
+12 0 0 12 92.25 680.55 Tm
+0.149 Tw
+[(U)5(s)3(e Genstat to g)9(ener)6(ate 250 sampl)5(e)-1(s of)-9( the ki)5(nd g)9(ener)6(ated i)5(n)-1( ex)13(er)6(ci)5(se )150(5. )-10( )-10(A)]TJ
+0 -1.15 TD
+0.004 Tc
+0.058 Tw
+[(pr)7(og)10(r)7(a)0(m f)-8(o)0(r)7( doi)6(ng)10( thi)6(s)4( i)6(s)4( l)6(i)6(s)4(ted bel)6(ow)16( and i)6(s)4( av)14(ai)6(l)6(abl)6(e i)6(n)0( the f)-8(i)6(l)6(e)0( v)14(o)0(teg)10(en1.g)10(en )-10(i)6(n)]TJ
+T*
+0.003 Tc
+-0.001 Tw
+[(the di)5(r)6(e)-1(ctor)6(y)13( g)9(:\\di)5(scpl)5(i)5(na\\g)9(enstat.)]TJ
+0 -2.3 TD
+[(Open the f)-9(i)5(l)5(e)-1( i)5(n)-1( Genstat and r)6(un i)5(t.  Gi)5(v)13(e)-1( )-10(i)5(t)1( )-10(a )-10(si)5(x)13(-)6(di)5(g)9(i)5(t )-10(number)6( )-10(f)-9(o)-1(r)6( )-10(the )-10(seed )-10(w)15(hen )-10(i)5(t)]TJ
+0 -1.15 TD
+0.17 Tw
+[(asks )10(f)-10(o)-2(r )10(one. )10( Does the distribution look rig)8(h)-2(t?  W)-44(hat about the number of)-10( F)]TJ
+T*
+0.039 Tw
+[(stati)5(s)3(ti)5(cs )10(w)15(i)5(th a p bel)5(ow)15( 0.05?  W)-43(hat do y)13(ou concl)5(ude about the v)13(a)-1(l)5(ue of)-9( 182.26)]TJ
+T*
+-0.001 Tw
+[(f)-9(o)-1(r)6( F f)-9(o)-1(r)6( thi)5(s)3( data set w)15(h)-1(i)5(c)3(h w)15(a)-1(s g)9(i)5(v)13(en i)5(n)-1( the l)5(e)-1(ctur)6(e?)]TJ
+/F5 1 Tf
+9 0 0 9 99.33 560.43 Tm
+0 Tc
+0 Tw
+("load voter.xls from g:\\disciplina\\genstat so expend available")Tj
+0 -1.0667 TD
+(  question {PREAMBLE=!T\('What 6-digit number do you wish to use to \\)Tj
+T*
+(seed the random number generator?'\); \\)Tj
+T*
+(    MODE=v; TYPE=scalar; PRESENT=yes; UPPER=999999; RESPONSE=_seed])Tj
+T*
+(  print _seed)Tj
+T*
+(  calc turnout=urand\(_seed; 20\))Tj
+T*
+("generate turnout according to the model for 250 samples")Tj
+T*
+(  vari [250] f)Tj
+T*
+(  for i=1...250)Tj
+T*
+(    calc turnout=45+ned\(urand\(0; 20\)\)*sqrt\(10\))Tj
+T*
+(    model turnout)Tj
+T*
+(    terms expend)Tj
+T*
+(    fit [print=*] expend)Tj
+T*
+(    rkeep deviance=res_ss; df=res_df)Tj
+T*
+(    calc f$[i]=\(variance\(turnout\)*19-res_ss\)/\(res_ss/res_df\))Tj
+T*
+(  endfor)Tj
+T*
+("examine computed Fs")Tj
+T*
+(  describe [selection=nobs,min,q1,q3,max] f)Tj
+T*
+(  histogram f)Tj
+T*
+(  calc p=1-fratio\(f; 1; 18\))Tj
+T*
+(  & signif=sum\(p <= 0.05\))Tj
+T*
+(  print signif)Tj
+/F1 1 Tf
+12 0 2.551 12 71.01 331.35 Tm
+0.003 Tc
+-0.001 Tw
+[(The output pr)6(oduced by these com)16(m)16(ands i)5(s)3( as fol)5(l)5(o)-1(ws:)]TJ
+/F5 1 Tf
+9 0 0 9 99.33 307.71 Tm
+0 Tc
+0 Tw
+(Genstat 5  Release 4.1  \(PC/Windows NT\)               19 March 2000 15:04:40)Tj
+T*
+(Copyright 1998, Lawes Agricultural Trust \(Rothamsted Experimental Station\))Tj
+0 -2.1333 TD
+(                 ______________________________________________)Tj
+T*
+(                 Genstat 5 Fourth Edition - \(for Windows\))Tj
+0 -1.0667 TD
+(                 Genstat 5 Procedure Library Release PL11)Tj
+T*
+(                 ______________________________________________)Tj
+0 -2.1333 TD
+(   3  "Data taken from File: D:/ANALYSES/LM/VOTER.XLS")Tj
+0 -1.0667 TD
+(   4  DELETE [redefine=yes] turnout,expend)Tj
+T*
+(   5  VARIATE [nvalues=20] turnout)Tj
+T*
+(   6  READ turnout)Tj
+0 -2.1333 TD
+(    Identifier   Minimum      Mean   Maximum    Values   Missing)Tj
+0 -1.0667 TD
+(       turnout     24.60     45.71     64.80        20         0)Tj
+0 -2.1333 TD
+(   9  VARIATE [nvalues=20] expend)Tj
+0 -1.0667 TD
+(  10  READ expend)Tj
+0 -2.1333 TD
+(    Identifier   Minimum      Mean   Maximum    Values   Missing)Tj
+0 -1.0667 TD
+(        expend     23.00     36.99     50.10        20         0)Tj
+0 -2.1333 TD
+(  13)Tj
+ET
+endstream
+endobj
+22 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F1 8 0 R
+/F2 9 0 R
+/F5 12 0 R
+>>
+/ExtGState <<
+/GS1 13 0 R
+>>
+>>
+endobj
+24 0 obj
+<<
+/Length 3163
+>>
+stream
+BT
+/F1 1 Tf
+12 0 0 12 492.33 795.27 Tm
+0 g
+/GS1 gs
+0.004 Tc
+[(App-)7(5)]TJ
+/F5 1 Tf
+9 0 0 9 99.33 763.83 Tm
+0 Tc
+0 Tw
+(  14  "load voter.xls from g:\\disciplina\\genstat so expend available")Tj
+0 -1.0667 TD
+(  15    question {PREAMBLE=!T\('What 6-digit number do you wish to use to \\)Tj
+T*
+( -16  seed the random number generator?'\); \\)Tj
+T*
+(  17      MODE=v; TYPE=scalar; PRESENT=yes; UPPER=999999; RESPONSE=_seed])Tj
+T*
+(  18    print _seed)Tj
+0 -3.2 TD
+(      123456)Tj
+0 -2.1333 TD
+(  19    calc turnout=urand\(_seed; 20\))Tj
+0 -1.0667 TD
+(  20  "generate turnout according to the model for 250 samples")Tj
+T*
+(  21    vari [250] f)Tj
+T*
+(  22    for i=1...250)Tj
+T*
+(  23      calc turnout=45+ned\(urand\(0; 20\)\)*sqrt\(10\))Tj
+T*
+(  24      model turnout)Tj
+T*
+(  25      terms expend)Tj
+T*
+(  26      fit [print=*] expend)Tj
+T*
+(  27      rkeep deviance=res_ss; df=res_df)Tj
+T*
+(  28      calc f$[i]=\(variance\(turnout\)*19-res_ss\)/\(res_ss/res_df\))Tj
+T*
+(  29    endfor)Tj
+T*
+(  30  "examine computed Fs")Tj
+T*
+(  31    describe [selection=nobs,min,q1,q3,max] f)Tj
+0 -2.1333 TD
+( Summary statistics for f)Tj
+T*
+(      Number of observations = 250)Tj
+0 -1.0667 TD
+(                     Minimum = 0.000)Tj
+T*
+(                     Maximum = 13.963)Tj
+T*
+(              Lower quartile = 0.067)Tj
+T*
+(              Upper quartile = 1.331)Tj
+T*
+(  32    histogram f)Tj
+0 -2.1333 TD
+(Histogram of f)Tj
+0 -3.2 TD
+(              -  1.5  194 *************************************************)Tj
+0 -1.0667 TD
+(          1.5 -  3.0   33 ********)Tj
+T*
+(          3.0 -  4.5    9 **)Tj
+T*
+(          4.5 -  6.0    7 **)Tj
+T*
+(          6.0 -  7.5    2 *)Tj
+T*
+(          7.5 -  9.0    2 *)Tj
+T*
+(          9.0 - 10.5    2 *)Tj
+T*
+(         10.5 - 12.0    0)Tj
+T*
+(         12.0 - 13.5    0)Tj
+T*
+(         13.5 -         1)Tj
+0 -2.1333 TD
+(Scale:  1 asterisk represents 4 units.)Tj
+T*
+(  33    calc p=1-fratio\(f; 1; 18\))Tj
+0 -1.0667 TD
+(  34    & signif=sum\(p <= 0.05\))Tj
+T*
+(  35    print signif)Tj
+0 -2.1333 TD
+(      signif)Tj
+0 -1.0667 TD
+(       14.00)Tj
+/F1 1 Tf
+12 0 2.551 12 92.25 227.55 Tm
+0.003 Tc
+0.229 Tw
+[(The )10(di)5(str)6(i)5(buti)5(on )10(does l)5(ook l)5(i)5(k)3(e an F di)5(str)6(i)5(buti)5(on wi)5(th one and 18 degr)6(ees of)]TJ
+0.2466 -1.16 TD
+0.149 Tw
+[(fr)6(eedom)16(. )10( )10(For)6( these num)16(ber)6(s of degr)6(ees of fr)6(eedom)16(, the di)5(str)6(i)5(buti)5(on does not)]TJ
+0.2466 -1.16 TD
+-0.001 Tw
+[(for)6(m)16( a peak but asym)16(ptotes wi)5(th the ver)6(t)1(i)5(c)3(al)5( axi)5(s)3(.)]TJ
+0.4931 -2.32 TD
+0.049 Tw
+[(Ther)6(e )10(wer)6(e)-1( 14 out of 250 F stati)5(s)3(ti)5(cs wi)5(th a p val)5(ue l)5(e)-1(ss than 0.05.  Thi)5(s)3( equal)5(s)]TJ
+0.2466 -1.16 TD
+-0.001 Tw
+[(5.6% whi)5(c)3(h i)5(s)3( qui)5(te cl)5(ose to the 5% expected.)]TJ
+0.4931 -2.32 TD
+0.059 Tw
+[(The val)5(ue of 182.26 gi)5(ven i)5(n)-1( the l)5(e)-1(ctur)6(e notes i)5(s)3( cl)5(ear)6(l)5(y)3( a ver)6(y)3( unusual)5( val)5(ue )-10(to)]TJ
+0.2466 -1.16 TD
+-0.001 Tw
+[(get when the sl)5(ope i)5(s)3( z)33(e)-1(r)6(o)-1(.)]TJ
+ET
+endstream
+endobj
+25 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/F1 8 0 R
+/F5 12 0 R
+>>
+/ExtGState <<
+/GS1 13 0 R
+>>
+>>
+endobj
+26 0 obj
+<<
+/Type /Halftone
+/HalftoneType 1
+/HalftoneName (Default)
+/Frequency 60
+/Angle 45
+/SpotFunction /Round
+>>
+endobj
+13 0 obj
+<<
+/Type /ExtGState
+/SA false
+/OP false
+/HT /Default
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Helvetica
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Helvetica-Bold
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F3
+/Encoding 27 0 R
+/BaseFont /Helvetica
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F4
+/BaseFont /Symbol
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F5
+/BaseFont /Courier
+>>
+endobj
+27 0 obj
+<<
+/Type /Encoding
+/Differences [ 0/grave/acute/circumflex/tilde/macron/breve/dotaccent/dieresis
+/ring/cedilla/hungarumlaut/ogonek/caron/dotlessi/fi/fl
+/Lslash/lslash/Zcaron/zcaron/minus 39/quotesingle 96/grave 130/quotesinglbase
+/florin/quotedblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron
+/guilsinglleft/OE 145/quoteleft/quoteright/quotedblleft/quotedblright/bullet/endash
+/emdash/tilde/trademark/scaron/guilsinglright/oe 159/Ydieresis 164/currency
+ 166/brokenbar 168/dieresis/copyright/ordfeminine 172/logicalnot/hyphen/registered/macron
+/degree/plusminus/twosuperior/threesuperior/acute/mu 183/periodcentered/cedilla
+/onesuperior/ordmasculine 188/onequarter/onehalf/threequarters 192/Agrave/Aacute/Acircumflex
+/Atilde/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex
+/Edieresis/Igrave/Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve
+/Oacute/Ocircumflex/Otilde/Odieresis/multiply/Oslash/Ugrave/Uacute
+/Ucircumflex/Udieresis/Yacute/Thorn/germandbls/agrave/aacute/acircumflex
+/atilde/adieresis/aring/ae/ccedilla/egrave/eacute/ecircumflex
+/edieresis/igrave/iacute/icircumflex/idieresis/eth/ntilde/ograve
+/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrave/uacute
+/ucircumflex/udieresis/yacute/thorn/ydieresis
+]
+>>
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 14 0 R
+/Resources 7 0 R
+/Contents 6 0 R
+>>
+endobj
+15 0 obj
+<<
+/Type /Page
+/Parent 14 0 R
+/Resources 17 0 R
+/Contents 16 0 R
+>>
+endobj
+18 0 obj
+<<
+/Type /Page
+/Parent 14 0 R
+/Resources 20 0 R
+/Contents 19 0 R
+>>
+endobj
+3 0 obj
+<<
+/Type /Page
+/Parent 14 0 R
+/Resources 22 0 R
+/Contents 21 0 R
+>>
+endobj
+23 0 obj
+<<
+/Type /Page
+/Parent 14 0 R
+/Resources 25 0 R
+/Contents 24 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 15 0 R 18 0 R 3 0 R 23 0 R]
+/Count 5
+/MediaBox [0 0 595 842]
+>>
+endobj
+28 0 obj
+<<
+/Count 2
+/First 2 0 R
+/Last 4 0 R
+>>
+endobj
+2 0 obj
+<<
+/Title (5.\011Generating a Voter sample)
+/Dest [1 0 R /FitH 580]
+/Parent 28 0 R
+/Next 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Title (6.\011Generating 250 Voter samples)
+/Dest [3 0 R /FitH 721]
+/Parent 28 0 R
+/Prev 2 0 R
+>>
+endobj
+29 0 obj
+<<
+/Type /Catalog
+/Pages 14 0 R
+/Outlines 28 0 R
+/OpenAction [1 0 R /XYZ null null null]
+/PageMode /UseOutlines
+>>
+endobj
+xref
+0 30
+0000000000 65535 f
+0000022771 00000 n
+0000023407 00000 n
+0000023044 00000 n
+0000023528 00000 n
+0000000017 00000 n
+0000000394 00000 n
+0000006410 00000 n
+0000021031 00000 n
+0000021119 00000 n
+0000021212 00000 n
+0000021319 00000 n
+0000021405 00000 n
+0000020951 00000 n
+0000023227 00000 n
+0000022860 00000 n
+0000006563 00000 n
+0000009494 00000 n
+0000022952 00000 n
+0000009613 00000 n
+0000013124 00000 n
+0000013243 00000 n
+0000017347 00000 n
+0000023135 00000 n
+0000017477 00000 n
+0000020699 00000 n
+0000020818 00000 n
+0000021492 00000 n
+0000023344 00000 n
+0000023652 00000 n
+trailer
+<<
+/Size 30
+/Root 29 0 R
+/Info 5 0 R
+/ID [<ffaa5b55da4c4ebffbdc2c8ca0afada1><ffaa5b55da4c4ebffbdc2c8ca0afada1>]
+>>
+startxref
+23792
+%%EOF

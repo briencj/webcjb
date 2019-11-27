@@ -1,0 +1,26 @@
+attach(RCBDHard.dat)
+RCBDHard.aov <- aov(Hardness ~ Coupon + TipType, RCBDHard.dat)
+summary(RCBDHard.aov)
+#
+# Use mean operator procedure
+#
+# compute Test deviations from Grand mean (e.G)"
+e.G <- Hardness-mean(Hardness)
+# compute Coupon.Tests deviations (e.B) from Test deviations (e.G)"
+Coupon.sequence <- mean.op(input = e.G, factors = Coupon, data = RCBDHard.dat)
+b.e <- Coupon.sequence$effects
+e.B <- Coupon.sequence$deviations
+# compute Treatment effects (t.e) from Tests deviations (e.G)"
+t.e.G <- mean.op(input = e.G, factors = TipType, data = RCBDHard.dat)$effects
+# compute Treatment effects (t.e) from Coupon.Tests deviations (e.B)"
+TipType.sequence <- mean.op(input = e.B, factors = TipType, data = RCBDHard.dat)
+t.e.B <- TipType.sequence$effects
+e.BT <- TipType.sequence$deviations
+# compute and print SSqs
+Coupon.ssq <- sum(b.e * b.e)
+TipType.ssq <- sum(t.e.B * t.e.B)
+Residual.ssq <- sum(e.BT * e.BT)
+data.frame(Coupon.ssq,TipType.ssq,Residual.ssq)
+# compare what has been produced"
+data.frame(Coupon,TipType,e.G,b.e,t.e.G,e.B,t.e.B,e.BT)
+

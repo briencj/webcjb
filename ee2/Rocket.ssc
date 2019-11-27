@@ -1,0 +1,5 @@
+attach(Rocket.dat)
+plot(Thrust, Temp)
+MnThrust <- mean(Thrust)
+MnThrust
+

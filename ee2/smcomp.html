@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="AUTHOR" content="Chris Brien">
+<meta name="DESCRIPTION" content="Design and randomization-based analysis of experiments in R - Computing notes &amp; files">
+<title>Design and randomization-based analysis of experiments in R - Computing notes &amp; files</title>
+<script>
+<!--//JavaScript Copyright Ben Ruciak (ruciak@adelaide.on.net)
+
+// Web site production by The Liquid Paradigm Factory (georgeous@senet.com.au) 
+
+// Project Management and template customisation by Margaret Lavelle, University of South Australia
+
+// Further customization by Chris Brien, University of South Australia
+
+// browser test:
+
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+
+if ((browserName == "Netscape" && browserVer >= 3) || 
+    (browserName == "Microsoft Internet Explorer" && browserVer >= 4)) version = "n3";
+else version = "n2";
+
+if (version == "n3"){
+        hout1_1 = new Image();
+        hout1_1.src = "images/Notesoln1.gif";
+        hout1_2 = new Image();
+        hout1_2.src = "images/Notesoln2.gif"; 
+
+        computing1_1 = new Image();
+        computing1_1.src = "images/Computing1.gif";
+        computing1_2 = new Image();
+        computing1_2.src = "images/Computing2.gif"; 
+}
+
+//-->
+<!--
+
+ function ImgFunc(imgDocID,imgObjName) {
+
+if (version == "n3")
+	document.images[imgDocID].src = eval(imgObjName + ".src")
+;
+}
+
+//-->
+</script>
+</head>
+
+<BODY TEXT="#000080" LINK="#0000ff" VLINK="#800080" BGCOLOR="#ffffff">
+
+<p><a NAME="top"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#010F87">
+    <tr>
+        <td  border="0" width="660" height="39">
+             <a href="http://www.unisa.edu.au/">
+             <img alt="University of South Australia" src="images/unisa.gif" height="68" width="54" border="0"></a></td>
+    </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td valign="top" width="90" bgcolor="#010F87"><p align="center"><br>
+
+        <a href="smhoutsoln.html"
+           OnMouseOver="ImgFunc('hout1_1','hout1_2');return true"
+           OnMouseOut="ImgFunc('hout1_1','hout1_1');">
+           <img IMG NAME="hout1_1" SRC="images/Notesoln1.gif"
+                BORDER="0" ALT="Notes and solutions" WIDTH="90" HEIGHT="40">
+        </a>
+        <a href="smcomp.html"
+           OnMouseOver="ImgFunc('computing1_1','computing1_2');return true"
+           OnMouseOut="ImgFunc('computing1_1','computing1_1');">
+           <img IMG NAME="computing1_1" SRC="images/Computing1.gif"
+                BORDER="0" ALT="Computing notes and files" 
+                WIDTH="90" HEIGHT="40">
+        </a>
+        </td>
+        <td width=560 valign="top">
+            <p>&nbsp;</p><blockquote>
+<!--Start page content-->
+<H1>Computing notes and files</H1>
+
+<P>R is the primary package that will be used to carry out the statistical procedures in this course.  R is a free statiatical software package. Assistance with installing it is available at <a href="http://chris.brien.name/rpackages/">http://chris.brien.name/rpackages/</a>. Also available there are some notes on using R and the dae package, that has a number of functions that are useful in the Design and ANOVA of experiments.</p>
+
+<p>The following following R data files and scripts are available from this page:</P>
+
+<UL>
+<li><a href="CRDConcr.dat.rda">CRDConcr.dat.rda</a></li>
+<li><a href="CRDDrug.dat.rda">CRDDrug.dat.rda</a></li>
+<li><a href="CRDForm.dat.rda">CRDForm.dat.rda</a></li>
+<li><a href="Fac2ByPr.dat.rda">Fac2ByPr.dat.rda</a></li>
+<li><a href="Fac2Prod.dat.rda">Fac2Prod.dat.rda</a></li>
+<li><a href="Frf5Fuel.dat.rda">Frf5Fuel.dat.rda</a></li>
+<li><a href="Frf8Heli.2003.dat.rda">Frf8Heli.2003.dat.rda</a></li>
+<li><a href="Frf8Heli.lay.rda">Frf8Heli.lay.rda</a></li>
+<li><a href="House.Prices.dat.rda">House.Prices.dat.rda</a></li>
+<li><a href="LSTurn.dat.rda">LSTurn.dat.rda</a></li>
+<li><a href="RCBDInse.dat.rda">RCBDInse.dat.rda</a></li>
+<li><a href="Possum.dat.rda">Possum.dat.rda</a> (from DAAG package)</li>
+<li><a href="Primates.dat.rda">Primates.dat.rda</a></li>
+<li><a href="Rocket.dat.rda">Rocket.dat.rda</a></li>
+<li><a href="Rocket.r">Rocket.r</a></li>
+</UL>
+
+
+
+<!--End page content-->
+        <p>&nbsp;</p>
+        </blockquote>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" bgcolor="#010F87">
+        <p align="center"><br>
+          <!--a href="http://www.unisa.edu.au"
+             OnMouseOver="ImgFunc('uni1_1','uni1_2');return true"
+             OnMouseOut="ImgFunc('uni1_1','uni1_1');">
+             <img IMG NAME="uni1_1" SRC="images/Unipage1.gif"
+                  BORDER="0" ALT="University page" WIDTH="90" HEIGHT="40">
+        </a--></p>
+        </td>
+        <td align="center" width=560 valign="bottom" bgcolor="#BEFBBB">
+            <a href="index.html"><font size="2">Home page</font></a>
+            <font size="2">| </font>
+            <A HREF="smcomp.html">
+                         <font size="2">Computing notes &amp; files</font></a>
+            <font size="2">| </font>
+            <A HREF="smhoutsoln.html">
+                                 <font size="2">Notes &amp; Solutions</font></a>
+          <br>
+            <a href="http://www.unisa.edu.au/ ">
+               <font size="2">University of SA</font></a>
+               <font size="2"> | </font>
+            <a href="http://www.unisa.edu.au/maths/">
+               <font size="2">School of Mathematics and Statistics</font></a>
+               <font size="2">| </font>
+            <a href="http://chris.brien.name">
+               <font size="2">Chris Brien's home page</font></a>
+               <font size="2"> | </font>
+            <a href="#top"><font size="2">Top of Page</font></a>
+          <HR>
+            <font size="2">For queries relating to this site contact: </font>
+              <a href="mailto:chris.brien@unisa.edu.au">
+              <font size="2">chris.brien@unisa.edu.au</font></a>
+              <font size="2"><br></font>
+            <a href="http://www.unisa.edu.au/footer/disclaimer/">
+            <font size="2">Liability</font></a><font size="2"> | </font>
+            <a href="http://www.unisa.edu.au/footer/copyright/">
+            <font size="2">Copyright</font></a><font size="2"> (c) 2011 |
+            Last revised:  8th February, 2011</font>
+        </td>
+    </tr>
+</table>
+
+<p>&nbsp;</p>
+</body>
+</html>
