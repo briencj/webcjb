@@ -1,0 +1,285 @@
+\begin{flushleft}\Large\bf Duplicated wheat measurements
+\end{flushleft}
+
+\label{eg:Wheat2} Example~9 of \cite{BrBa:mult} is an experiment that
+consists of a field phase and a laboratory phase. In the field phase 49
+lines of wheat are investigated using a randomized complete-block
+design with four blocks. Here the laboratory phase is modified by
+supposing that the procedure described by \cite{BrBa:mult} is repeated
+on a second occasion. That is, two samples will be obtained from each
+plot and one of them processed on the first occasion and the other on
+the second occasion. Figure~\ref{fig:wheat2} gives the randomization
+diagram for the modified experiment. Recall that a $7 \times 7$
+balanced lattice square design with four replicates is used to assign
+the blocks, plots and lines to four intervals in each occasion. In each
+interval on one occasion there are seven runs at which samples are
+processed at seven consecutive times. Pseudofactors are introduced for
+lines and plots in order to define the design of the second phase. The
+sets of objects for this experiment are analyses, samples and lines.
+
+\begin{figure}[htbp]
+\setlength{\unitlength}{1cm} \centering \small
+\begin{picture}(12.7,3.5)(0,0)
+\curvedashes[4pt]{0,1,1} \closecurve(0.1,2.0, 0.2,1.3, 7.5,1.2, 7.6,2.0
+,7.5,2.8, 0.2,2.7)
+\put(0.1,1.9){\begin{tierbox}49 & Lines\hspace{250pt}\end{tierbox}} \put(2.65,2.0){\vector(1,0){1.2}}
+\put(2,2.0){\line(1,0){0.5}}
+\put(2.4,2.0){\blob}
+\put(2.4,2.0){\line(2,3){0.8}}
+\put(2.4,2.0){\line(2,-3){0.8}}
+\put(3.4,3.2){\makebox(1,0)[l]{$7 \hspace{\nlevnamesep}
+                                {\rm L}_1,{\rm L}_3,{\rm L}_5,{\rm L}_7$}}
+\put(3.4,0.8){\makebox(1,0)[l]{$7 \hspace{\nlevnamesep}
+                                {\rm L}_2,{\rm L}_4,{\rm L}_6,{\rm L}_8$}}
+\put(3.5,1.9){\begin{tierbox}4 & Blocks\\49 & Plots in B\\
+                             2 & Samples in B, P\end{tierbox}}
+\put(5.7,2.375){\vector(1,0){4.1}}
+\put(7.0,2.0){\line(-1,0){1.0}}
+\put(7.0,2.0){\blob}
+\put(7.0,2.0){\line(2,3){0.805}}
+\put(7.0,2.0){\line(2,-3){0.85}}
+\put(8.0,3.15){\makebox(1,0)[l]{$7\hspace{\nlevnamesep} {\rm P}_1$}}
+\put(8.0,0.75){\makebox(1,0)[l]{$7\hspace{\nlevnamesep} {\rm P}_2$}}
+\put(6.7,3.10){\makepseudo}
+\put(6.7,0.65){\makepseudo}
+\put(7.81,3.2){\line(-1,0){2.2}}
+\put(7.84,0.75){\line(-1,0){2.2}}
+\put(8.8,3.2){\vector(1,0){1.05}}
+\put(8.8,0.75){\vector(1,0){1.05}}
+\put(8.0,1.6){\makebox(1,0)[l]{$2\hspace{\nlevnamesep} {\rm S}_1$}}
+\put(7.81,1.6){\line(-1,0){1.0}}
+\put(8.8,1.6){\vector(1,0){1.05}}
+\put(9.25,1.875){\begin{tierbox}\quad 7 & Runs in O, I\\&\\
+                                 4 & Intervals in O\\&\\
+                                 2 & Occasions\\&\\ 7 & Times in O, I\end{tierbox}}
+\put(1.1,0.1){\makebox(0,0){49 lines}}
+\put(5.4,0.1){\makebox(0,0){392 samples}}
+\put(11.1,0.1){\makebox(0,0){392 analyses}}
+\end{picture}
+\caption{Randomized-inclusive randomizations in the wheat experiment} \label{fig:wheat2}
+\end{figure}
+
+The covariance matrix under the randomizations is
+\begin{eqnarray}
+\mathbf{C} & = & \xi_0 \mathbf{P}_0 + \xi_\mtxt{O}
+\mathbf{P}_\mtxt{O} + \xi_\mtxt{OI} \mathbf{P}_\mtxt{OI} +
+\xi_\mtxt{OIR} \mathbf{P}_\mtxt{OIR} + \xi_\mtxt{OIT}
+\mathbf{P}_\mtxt{OIT} +
+\xi_\mtxt{OITR} \mathbf{P}_\mtxt{OITR} \nonumber\\
+& & \qquad + 2\eta_0 \mathbf{Q}_0 + 2\eta_\mtxt{B}
+\mathbf{Q}_\mtxt{B} + 2\eta_\mtxt{BP} \mathbf{Q}_\mtxt{BP} +
+2\eta_\mtxt{BPS} \mathbf{Q}_\mtxt{BPS}. \nonumber
+\end{eqnarray}
+Randomized-inclusive randomizations were used in this experiment, as
+the outcome of the randomization of lines to samples had to be known
+before the samples could be randomized to analyses.
+The plots pseudofactors~$\mtxt{P}_1$ and~$\mtxt{P}_2$ were
+used to ensure appropriate partial confounding of sources from the
+treatments tier with sources in the analyses tier. As in
+Example~\ref{eg:cotton}, there are no idempotents for the Plot
+pseudofactors in $\mathbf{C}$ because the pseudo\-factors are irrelevant
+to the first randomization, that of treatments to samples, and are not
+one of the unrandomized factors, that gives rise to covariance, in the
+other randomization. However, as in Example~\ref{eg:cotton},
+$\mathbf{Q}_\mtxt{BP}$ can be rewritten as the sum of three
+$\mathbf{Q}^*$-matrices each with coefficient $\eta_{\mtxt{BP}}$.
+This results in the coefficient $\eta_{\mtxt{BP}}$ occuring with
+three different $\xi$-coefficients in the skeleton analysis of variance
+in Table~\ref{tab:ANOVAWheat2}, which is an extended version of the
+decomposition table given by \cite{BrBa:decomp} in their Example 4.
+To obtain structure balance, the projection space of the idempotent $\mathbf{Q}_\mtxt{BPS}$ is decomposed as the sum of
+five subspaces involving the pseudofactor $\mtxt{S}_1$ so that
+$\mathbf{Q}_\mtxt{BPS}$ can be rewritten as the sum of five
+$\mathbf{Q}^*$-matrices each with coefficient $\eta_{\mtxt{BPS}}$. As
+a consequence, the coefficient $\eta_{\mtxt{BPS}}$ occurs with five
+different $\xi$-coefficients in Table~\ref{tab:ANOVAWheat2}.
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\multicolumn{2}{c}{analyses tier} \\
+\midrule
+Source & df    \\
+\midrule
+Mean & 1    \\
+    Occasions & 1    \\
+    $\mtxt{Intervals}\nesting{\mtxt{O}}$ & 6   \\
+$\mtxt{Runs} \nesting{\mtxt{O}\wedge\mtxt{I}}$ & 48  \\
+$\mtxt{Times}\nesting{\mtxt{O}\wedge\mtxt{I}}$ & 48  \\
+$\mtxt{R}\inter\mtxt{T}\nesting{\mtxt{O}\wedge\mtxt{I}}$ & 288  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{lrclr}
+\toprule
+\multicolumn{2}{c}{analyses tier} & & \multicolumn{2}{c}{plots tier} \\
+\cmidrule{1-2} \cmidrule{4-5}
+Source & df & & Source & df   \\
+\midrule
+Mean & 1 & & Mean & 1   \\
+\midrule
+    Occasions & 1 & & $\mtxt{S}_1$ & 1   \\
+\midrule
+    $\mtxt{Intervals}\nesting{\mtxt{O}}$ & 6 & & Blocks & 3  \\
+ & & &  $\mtxt{S}_1\inter\mtxt{B}$ & 3   \\
+\midrule
+ $\mtxt{Runs} \nesting{\mtxt{O}\wedge\mtxt{I}}$ & 48 & &
+       $\mtxt{P}_1 \nesting{\mtxt{B}}$ &  24  \\
+ & & &  $\mtxt{S}_1\inter\mtxt{P}_1\nesting{\mtxt{B}}$ & 24   \\
+\midrule
+$\mtxt{Times}\nesting{\mtxt{O}\wedge\mtxt{I}}$ & 48 & &
+       $\mtxt{P}_2 \nesting{\mtxt{B}}$ &  24 \\
+ & & &  $\mtxt{S}_1\inter\mtxt{P}_2\nesting{\mtxt{B}}$ & 24  \\
+\midrule
+$\mtxt{R}\inter\mtxt{T}\nesting{\mtxt{O}\wedge\mtxt{I}}$ & 288 & &
+       $\mtxt{Plots}\nesting{\mtxt{B}}_{\sresid}$ &  144 \\
+
+& & &
+$\mtxt{Samples}\nesting{\mtxt{B}\wedge\mtxt{P}}_{\sresid}$
+              & 144  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{lrclrcclr}
+\toprule
+\multicolumn{2}{c}{analyses tier} & & \multicolumn{2}{c}{plots tier} & &
+\multicolumn{3}{c}{lines tier}  \\
+\cmidrule{1-2} \cmidrule{4-5} \cmidrule{7-9}
+Source & df & & Source & df & & eff & Source & df  \\
+\midrule
+Mean & 1 & & Mean & 1 & & & Mean & 1  \\
+\midrule
+    Occasions & 1 & & $\mtxt{S}_1$ & 1 & & & &  \\
+\midrule
+    $\mtxt{Intervals}\nesting{\mtxt{O}}$ & 6 & & Blocks & 3 & & & &  \\
+ & & &  $\mtxt{S}_1\inter\mtxt{B}$ & 3 & & &  \\
+\midrule 
+$\mtxt{Runs} \nesting{\mtxt{O}\wedge\mtxt{I}}$ & 48 & &
+       $\mtxt{P}_1 \nesting{\mtxt{B}}$ &  24 &
+        &\raisebox{8.5pt}[9pt][5pt]{}$\frac{1}{4}$ & $\mtxt{Lines}_{\mtxt{R}}$  & 24 \\
+& & &  $\mtxt{S}_1\inter\mtxt{P}_1\nesting{\mtxt{B}}$ & 24 & & &  \\
+\midrule
+$\mtxt{Times}\nesting{\mtxt{O}\wedge\mtxt{I}}$ & 48 & &
+       $\mtxt{P}_2 \nesting{\mtxt{B}}$ &  24 &
+        &\raisebox{8.5pt}[9pt][5pt]{}$\frac{1}{4}$ & $\mtxt{Lines}_{\mtxt{T}}$ & 24 \\
+ & & &  $\mtxt{S}_1\inter\mtxt{P}_2\nesting{\mtxt{B}}$ & 24 & & &  \\
+\midrule
+$\mtxt{R}\inter\mtxt{T}\nesting{\mtxt{O}\wedge\mtxt{I}}$ & 288 & &
+       $\mtxt{Plots}\nesting{\mtxt{B}}_{\sresid}$ &  144 &
+        &\raisebox{8.5pt}[9pt][5pt]{}$\frac{3}{4}$ & $\mtxt{Lines}_{\mtxt{R}}$ & 24 \\
+& & & & & &\raisebox{8.5pt}[9pt][5pt]{}$\frac{3}{4}$ &
+        $\mtxt{Lines}_{\mtxt{T}}$ & 24 \\
+& & & & & & & Residual  & 96   \\
+\cmidrule{4-9}
+& & &
+$\mtxt{Samples}\nesting{\mtxt{B}\wedge\mtxt{P}}_{\sresid}$
+              & 144 & & & &  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{*{2}{lr@{\hspace{0.5em}}c@{\hspace{0.5em}}}c@{\hspace{0.5em}}lr@{\hspace{0.5em}}c@{\hspace{0.5em}}%
+*{7}{@{}c@{}}c@{}c}
+\toprule
+\multicolumn{2}{c}{analyses tier} & & \multicolumn{2}{c}{plots tier} & &
+\multicolumn{3}{c}{lines tier} & & \multicolumn{9}{c}{EMS} \\
+\cmidrule{1-2} \cmidrule{4-5} \cmidrule{7-9} \cmidrule{11-19}
+Source & df & & Source & df & & eff &Source & df & & $\phi_{\mtxt{OIRT}}$ & $\phi_{\mtxt{OIT}}$ & $\phi_{\mtxt{OIR}}$ & $\phi_{\mtxt{OI}}$ & $\phi_{\mtxt{O}}$ & $\phi_{\mtxt{BPS}}$ & $\phi_{\mtxt{BP}}$ & $\phi_{\mtxt{B}}$ & $q(.)$ \\
+\midrule
+Mean & 1 & & Mean & 1 & & & Mean & 1 & & 1 & 7 & 7 & 49 & 96 & 1 & 2 & 98 & $\phi_\mtxt{a} + \phi_\mtxt{p} + q(\mu)$ \\
+\midrule
+    Occasions & 1 & & $\mtxt{S}_1$ & 1 &  & & & & &  1 & 7 & 7 & 49 & 96 & 1 &  &  &  \\
+\midrule
+    $\mtxt{Intervals}\nesting{\mtxt{O}}$ & 6 & & Blocks & 3 & & & & & &
+                                                   1 & 7 & 7 & 49 &  & 1 & 2 & 98 & \\
+   & & &  $\mtxt{S}_1\inter\mtxt{B}$ & 3 & & & & & &
+                                                   1 & 7 & 7 & 49 &  & 1 &  &  &  \\
+\midrule
+$\mtxt{Runs} \nesting{\mtxt{O}\wedge\mtxt{I}}$ & 48 & &
+       $\mtxt{P}_1 \nesting{\mtxt{B}}$ &  24 &
+        &\raisebox{8.5pt}[9pt][5pt]{}$\frac{1}{4}$ & $\mtxt{Lines}_{\mtxt{R}}$  & 24 &
+        & 1 &  & 7 &  &  & 1 & 2 &  & \raisebox{8.5pt}[9pt][5pt]{}$\frac{1}{4}q(L_R)$ \\
+& & &  $\mtxt{S}_1\inter\mtxt{P}_1\nesting{\mtxt{B}}$ & 24 & & & & & &
+                                                   1 &  & 7 &  &  & 1 &  &  &  \\
+\midrule
+$\mtxt{Times}\nesting{\mtxt{O}\wedge\mtxt{I}}$ & 48 & &
+       $\mtxt{P}_2 \nesting{\mtxt{B}}$ &  24 &
+        &\raisebox{8.5pt}[9pt][5pt]{}$\frac{1}{4}$ & $\mtxt{Lines}_{\mtxt{T}}$ & 24 &
+        &  1 & 7 &  &  &  & 1 & 2 &  & \raisebox{8.5pt}[9pt][5pt]{}$ \frac{1}{4}q(L_T)$\\
+& & &  $\mtxt{S}_1\inter\mtxt{P}_2\nesting{\mtxt{B}}$ & 24 & & & & & &
+                                                   1 & 7 &  &  & & 1 &  &  & \\
+\midrule
+$\mtxt{R}\inter\mtxt{T}\nesting{\mtxt{O}\wedge\mtxt{I}}$ & 288 & &
+       $\mtxt{Plots}\nesting{\mtxt{B}}_{\sresid}$ &  144 &
+        &\raisebox{8.5pt}[9pt][5pt]{}$\frac{3}{4}$ & $\mtxt{Lines}_{\mtxt{R}}$ & 24 &
+        &  1 &  &  &  &  & 1 & 2 &  & \raisebox{8.5pt}[9pt][5pt]{}$\frac{3}{4}q(L_R)$ \\
+& & & & & &\raisebox{8.5pt}[9pt][5pt]{}$\frac{3}{4}$ &
+        $\mtxt{Lines}_{\mtxt{T}}$ & 24 & &
+          1 &  &  &  &  & 1 & 2 &  & \raisebox{8.5pt}[9pt][5pt]{}$\frac{3}{4} q(L_T)$\\
+& & & & & & & Residual  & 96 & & 1 &  &  &  &  & 1 & 2 &  &   \\
+\cmidrule{4-19}
+& & &
+$\mtxt{Samples}\nesting{\mtxt{B}\wedge\mtxt{P}}_{\sresid}$
+              & 144 & & & & & & 1 &  &  &  &  & 1 & \ &  &  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+
+\begin{table}
+\caption{\label{tab:ANOVAWheat2}Skeleton analysis of variance for
+Example~\ref{eg:Wheat2}}
+\begin{center}
+\begin{tabular}{lr|lr|clr|l}
+\multicolumn{2}{c|}{analyses tier} & \multicolumn{2}{c|}{plots tier} &
+\multicolumn{3}{c|}{lines tier} & \\
+Source & df & Source & df & eff &Source & df & \multicolumn{1}{c}{EMS} \\
+\hline
+Mean & 1 & Mean & 1 & & Mean & 1 & $\xi_0 + \eta_0$ \\
+\hline
+    Occasions & 1 & $\mtxt{S}_1$ & 1 &  & & & $\xi_\mtxt{O} + \eta_\mtxt{BPS}$ \\
+\hline
+    $\mtxt{Intervals}\nesting{\mtxt{O}}$ & 6 & Blocks & 3 &  & & &
+                                                  $\xi_\mtxt{OI} + \eta_\mtxt{B}$ \\
+\cline{3-8} & &  $\mtxt{S}_1\inter\mtxt{B}$ & 3 & & & &
+                                                  $\xi_\mtxt{OI} + \eta_\mtxt{BPS}$ \\
+\hline $\mtxt{Runs} \nesting{\mtxt{O}\wedge\mtxt{I}}$ & 48 &
+       $\mtxt{P}_1 \nesting{\mtxt{B}}$ &  24
+        &\raisebox{8.5pt}[9pt][5pt]{}$\frac{1}{4}$ & $\mtxt{Lines}_{\mtxt{R}}$  & 24
+        &\raisebox{8.5pt}[9pt][5pt]{}$\xi_\mtxt{OIR} + \eta_\mtxt{BP} + \frac{1}{4}q(L_R)$ \\
+\cline{3-8}
+& &  $\mtxt{S}_1\inter\mtxt{P}_1\nesting{\mtxt{B}}$ & 24 & & & &
+                                                  $\xi_\mtxt{OIR} + \eta_\mtxt{BPS}$ \\
+\hline
+$\mtxt{Times}\nesting{\mtxt{O}\wedge\mtxt{I}}$ & 48 &
+       $\mtxt{P}_2 \nesting{\mtxt{B}}$ &  24
+        &\raisebox{8.5pt}[9pt][5pt]{}$\frac{1}{4}$ & $\mtxt{Lines}_{\mtxt{T}}$ & 24
+        &\raisebox{8.5pt}[9pt][5pt]{}$\xi_\mtxt{OIT} + \eta_\mtxt{BP} + \frac{1}{4}q(L_T)$\\
+\cline{3-8}
+ & &  $\mtxt{S}_1\inter\mtxt{P}_2\nesting{\mtxt{B}}$ & 24 & & & &
+                                                  $\xi_\mtxt{OIT} + \eta_\mtxt{BPS}$ \\
+\hline
+$\mtxt{R}\inter\mtxt{T}\nesting{\mtxt{O}\wedge\mtxt{I}}$ & 288 &
+       $\mtxt{Plots}\nesting{\mtxt{B}}_{\sresid}$ &  144
+        &\raisebox{8.5pt}[9pt][5pt]{}$\frac{3}{4}$ & $\mtxt{Lines}_{\mtxt{R}}$ & 24
+        &\raisebox{8.5pt}[9pt][5pt]{}$\xi_\mtxt{OIRT} + \eta_\mtxt{BP} + \frac{3}{4}q(L_R)$ \\
+\cline{5-8}
+& & & &\raisebox{8.5pt}[9pt][5pt]{}$\frac{3}{4}$ &
+        $\mtxt{Lines}_{\mtxt{T}}$ & 24 &
+         \raisebox{8.5pt}[9pt][5pt]{}$\xi_\mtxt{OIRT} + \eta_\mtxt{BP} + \frac{3}{4} q(L_T)$\\
+\cline{5-8}
+& & & & & Residual  & 96 & $\xi_\mtxt{OIRT} + \eta_\mtxt{BP}$  \\
+\cline{3-8} & &
+$\mtxt{Samples}\nesting{\mtxt{B}\wedge\mtxt{P}}_{\sresid}$
+              & 144 & & & & $\xi_\mtxt{OIRT} + \eta_\mtxt{BPS}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}

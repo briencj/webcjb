@@ -1,0 +1,66 @@
+Firstly switch IE into quirks mode by starting the html with:
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+CSS - the html tag:
+
+html {
+	height:100%; /* fix height to 100% for IE */
+	max-height:100%; /* fix height for other browsers */
+	padding:0; /*remove padding */
+	margin:0; /* remove margins */
+	border:0; /* remove borders */
+	background:#fff; /*color background - only works in IE */
+	font-size:76%; /*set default font size */
+	font-family:georgia, "palatino linotype", "times new roman", serif; /* set default font */
+	/* hide overflow:hidden from IE5/Mac */ 
+	/* \*/ 
+	overflow:hidden; /*get rid of scroll bars in IE */
+	/* */ 
+	}
+
+CSS - the body tag:
+
+body {
+	height:100%; /* fix height to 100% for IE */
+	max-height:100%; /* fix height for other browsers */
+	overflow:hidden; /*get rid of scroll bars in IE */
+	padding:0; /*remove padding */
+	margin:0; /* remove margins */
+	border:0; /* remove borders */
+	}
+
+This now gives a html / body size of 100% x 100% with no scroll bars on which we can place a header and footer using position absolute in the normal way. The header and footer will stay fixed because the body cannot scroll.
+
+OK. now to tackle the content which must be fixed below the header, above the footer and scroll on overflow. IE has a totally different way of doing this to all other browsers!.
+
+Firstly 'other browsers'
+
+#content {
+	overflow:auto; /* add scroll bars as necessary */
+	position:absolute; /* position absolutely */
+	z-index:3; /* If required to cover any other divs */
+	top:100px; /* a value to miss the header */
+	bottom:50px; /* a value to miss the footer */
+	left:200px; /* a value to miss any navigation div */
+	right:0; /* this will put the scroll bar at the right of the page */
+	background:#eee; /* set the background color */
+	}
+
+and lastly the set up for IE which does not understand the above #content
+
+This takes the overflow:auto; position:absolute; and z-index:3; from the #content above and using the hack * html #content (to target IE only) changing the #content to give a div 100% x 100% and using border values to avoid the header and footer. The z-index values of the header and footer should be bigger than the #content value so that they will sit on top of the #content borders.
+
+* html #content {
+	height:100%; /* full screen height */
+	width:100%; /* full screen width 8/
+	top:0; /* place the content at the top */
+	left:0; /* and left of the body */
+	border-top:100px solid #fff; /*add a top border to miss the header 
+				(this is SUBTRACTED from the 100% height on quirks mode) */
+	border-bottom:50px solid #fff; /*add a bottom border to miss the footer 
+				(this is SUBTRACTED from the 100% height on quirks mode) */
+	border-left:200px solid #fff; /*add a left border to miss any navigation div 
+				(this is SUBTRACTED from the 100% width on quirks mode) */
+	}
+

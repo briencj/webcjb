@@ -1,0 +1,21 @@
+<map name="DecompositionTableDerivation">
+<!--Picture D:\Internet\MyWebPages\multitier new\DecompMethod.gif-->
+<!--Comment objects and observational unit-->
+<area shape="rect" coords="16,14,244,57" href="#obsunit">
+<!--comment tiers-->
+<area shape="rect" coords="15,85,245,130" href="#tiers">
+<!--comment intratier formulae-->
+<area shape="rect" coords="19,155,240,199" href="#intraformulae">
+<!--comment analysis formulae-->
+<area shape="rect" coords="15,224,245,271" href="#formulae">
+<!--comment form table-->
+<area shape="rect" coords="15,296,244,342" href="#table">
+<!--comment expand formulae-->
+<area shape="rect" coords="14,449,244,498" href="#expand">
+<!--comment incorporate sources-->
+<area shape="rect" coords="15,366,244,425" href="#incorporate">
+<!--comment fixed or random-->
+<area shape="rect" coords="443,371,646,419" href="#fixedrandom">
+<!--comment e[msq]-->
+<area shape="rect" coords="444,443,645,490" href="#emsq">
+</map>

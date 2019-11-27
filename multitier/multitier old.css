@@ -1,0 +1,136 @@
+.pagetitle {font-size: 1.25em; background:#CCDD00; }
+.footer {font-size: 75%}
+.displaymath {text-align: center}
+/* the code below is to split the page into a head that remains fixed and 
+   content that scrolls */
+html {
+	height:100%; 
+	max-height:100%; 
+	padding:0; 
+	margin:0; 
+	border:0; 
+	/* hide overflow:hidden from IE5/Mac */ 
+	/* \*/ 
+	overflow: hidden; 
+	/* */ 
+	}
+
+body {
+	height:100%; 
+	max-height:100%; 
+	overflow:hidden; 
+	padding:0; 
+	margin:0; 
+	border:0;
+	}
+
+#content {
+	display:block; 
+	overflow:auto; 
+	position:absolute; 
+	z-index:3; 
+	border:0; 
+	top:135px; 
+	bottom:0;
+	width:100%; 
+	}
+
+* html #content {
+	top:0; 
+	bottom:0; 
+	height:100%;
+	width:100%;
+	border:0; 
+	}
+
+#head {
+	position:absolute; 
+	top:0; 
+	border:0; 
+	width:100%; 
+	min-width:100%; 
+	height:110px; 
+	font-size:1em; 
+	z-index:5; 
+	}
+
+* html #head {
+	top:2px; width:100%; height:98px;
+	border:0; 
+	}
+
+#content p {
+        text-align:justify; 
+        padding-left:15px; 
+        padding-right:10px; 
+        border:0; 
+        }
+
+#content .comptext {font-family: courier}
+
+#content .displaymath {text-align: center}
+
+#content p.center {
+             text-align: center}
+
+#content table.displaymath {
+             border:0;
+             width:60%}
+
+#content td.left {
+             text-align:right;
+             width:20%}
+
+#content td.equal {
+             text-align:center;
+             width:5%}
+
+#content td.right {
+             text-align:left;
+             width:75%}
+
+#content table {
+             border:0;
+             padding-left:15px; 
+             padding-right:10px; 
+             width:99%}
+
+#content td.center {
+             padding-left:15px; 
+             padding-right:10px; 
+             text-align:center}
+
+#content UL.flush {
+             margin-left: 1em;
+             padding-left: 15px;
+             padding-right:10px} 
+
+#content h1 {
+             padding-left:15px; 
+             padding-right:10px; 
+            }
+
+#content h2 {
+             padding-left:15px; 
+             padding-right:10px; 
+            }
+
+#content h3 {
+             padding-left:15px; 
+             padding-right:10px; 
+            }
+
+#content h4 {
+             padding-left:15px; 
+             padding-right:10px; 
+            }
+
+#content ol {
+             padding-left:15px; 
+             padding-right:10px; 
+            }
+
+#content DT {
+             padding-left:15px; 
+             padding-right:10px; 
+            }

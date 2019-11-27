@@ -1,0 +1,171 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass{statsoc}
+\usepackage{amsmath}
+\usepackage{fancybox}
+\usepackage{multibox}
+\usepackage{theorem}
+%\usepackage{fancyhdr}
+\usepackage{curves}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{natbib}
+
+
+%commands to define new mathematical operators, relations, binary operators,
+%etc.
+\newcommand{\newmathop}[2]{\def#1{\mathop{#2}\nolimits}}
+\newcommand{\newmathopwithlimits}[2]{\def#1{\mathop{#2}}}
+\newcommand{\newmathbin}[2]{\def#1{\mathbin{#2}}}
+\newcommand{\newmathrel}[2]{\def#1{\mathrel{#2}}}
+
+
+%%%%  macros for notation
+% for the usual treatment set
+\newcommand{\curlyt}{\Upsilon}
+% for a second treatment set
+\newcommand{\curlys}{\Gamma}
+% for nesting and crossing operators
+\newmathbin{\nest}{/}
+\newmathbin{\pseudo}{//}
+\newmathbin{\cross}{*}
+\newmathbin{\inter}{\#}
+% for nesting factors
+\newcommand{\nesting}[1]{\left[#1\right]}
+%   to make combined and residual subspaces
+\newmathbin{\resid}{\ominus}
+\newmathbin{\combine}{\mbox{\rule{0.04em}{0.6em}%
+                   \rule{0.6em}{0.04em}%
+                   \rule{0.04em}{0.6em}\hspace{-0.6em}\hspace{-0.08em}%
+                   \rule[0.6em]{0.6em}{0.04em}%
+                   \rule[0.6em]{0.08em}{0.04em}}}
+\newmathbin{\scombine}{\mbox{\scriptsize\rule{0.04em}{0.6em}%
+                   \rule{0.6em}{0.04em}%
+                   \rule{0.04em}{0.6em}\hspace{-0.6em}\hspace{-0.08em}%
+                   \rule[0.6em]{0.6em}{0.04em}%
+                   \rule[0.6em]{0.08em}{0.04em}}}
+\newmathbin{\resid}{\mbox{\rule{0.04em}{0.6em}%
+                    \rule{0.6em}{0.04em}%
+                    \rule{0.04em}{0.6em}\hspace{-0.6em}%
+                    \hspace{-0.04em}\rule[0.3em]{0.6em}{0.04em}%
+                    \hspace{-0.6em}\hspace{-0.04em}%
+                    \rule[0.6em]{0.68em}{0.04em}}}
+\newmathbin{\sresid}{\mbox{\scriptsize\rule{0.04em}{0.6em}%
+                    \rule{0.6em}{0.04em}%
+                    \rule{0.04em}{0.6em}\hspace{-0.6em}%
+                    \hspace{-0.04em}\rule[0.3em]{0.6em}{0.04em}%
+                    \hspace{-0.6em}\hspace{-0.04em}%
+                    \rule[0.6em]{0.68em}{0.04em}}}
+\newmathbin{\combine}{\square}
+\newmathbin{\scombine}{\square}
+\newmathbin{\resid}{\boxminus}
+\newmathbin{\sresid}{\boxminus}
+\newmathbin{\combine}{\vartriangleright}
+\newmathbin{\scombine}{\vartriangleright}
+\newmathbin{\resid}{\vdash}
+\newmathbin{\sresid}{\ntriangleright}
+\newmathbin{\sresid}{\vdash}
+\newmathbin{\joint}{\boxdot}%\circ}
+
+
+%and some maths macros
+\newmathop{\image}{{\rm Im}}
+\newcommand{\setof}[1]{\left\{#1\right\}}
+\newcommand{\setofall}[2]{\setof{#1:#2}}
+\newcommand{\card}[1]{\left|#1\right|}
+\newcommand{\summ}{\mathop{\sum\nolimits'}}
+\newcommand{\sumo}{\mathop{\sum\nolimits^{*}}}
+\newcommand{\prodd}{\mathop{\prod\nolimits'}}
+\newcommand{\normof}[1]{\left\Vert #1 \right\Vert^2}
+\newmathop{\rank}{{\rm rank}}
+\newmathop{\trace}{{\rm trace}}
+\newcommand{\strutt}{\vphantom{$\Big($}}
+\newcommand{\smallstrut}{\vphantom{\big(}}
+\newcommand{\E}[1]{{\rm E}\kern-1pt\left[\smallstrut\kern1pt#1\kern1pt\right]}
+\newcommand{\Var}[1]{{\rm Var}\kern-1pt\left[\smallstrut\kern1pt#1\kern1pt\right]}
+\newcommand{\Cov}[1]{{\rm Cov}\kern-1pt\left[\smallstrut\kern1pt#1\kern1pt\right]}
+
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{thm}[theorem]{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{rules}{Rule}
+
+%\plaintheorems
+\theoremstyle{plain} \theorembodyfont{\rmfamily}
+\newtheorem{definition}{Definition}
+\newtheorem{defn}[definition]{Definition}
+\newtheorem{egg}{Example}
+\newenvironment{cont}[1]{\begin{trivlist}
+\item \textbf{Example \ref{#1} (continued)}}{\end{trivlist}}
+
+% enumerate-type environment with lower-case roman numerals
+\newenvironment{enumeroman}{\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}\begin{enumerate}}
+{\end{enumerate}}
+
+%\newenvironment{proof}{\trivlist
+%%
+%% Define proof environment so that proofs just go between
+%% \begin{proof} and \end{proof}.
+%% The proof environment puts a box at the end of a proof
+%%
+%\item[\hskip \labelsep {\sc Proof:}\enskip]}%
+%{\unskip\nobreak\hskip 2em plus 1fil\nobreak%
+%\fbox{\rule{0ex}{1ex}\hspace{1ex}\rule{0ex}{1ex}}%
+%\parfillskip=0pt \endtrivlist}
+%
+% TABULARRELATE & INVISTABULARRELATE
+% - environments for producing a tabular and invisible tabular containing factor
+%   relationship formulae
+%
+\newenvironment{tabularrelate}{\begin{tabular}{@{\protect\strutt}|c|l|} \hline
+       Formula &  \multicolumn{1}{c|}{Formula} \\  \hline}%
+{\hline\end{tabular}}
+\newenvironment{invistabularexpstr}{\begin{tabular}{@{\protect\strutt}cl}
+       Formula &  \multicolumn{1}{c}{Formula} \\}%
+{\end{tabular}}
+%
+% DISPLAYRELATE & INVISDISAPLAYRELATE
+% - environments for displaying and invisible displaying of factor relationship formulae
+%
+\newenvironment{displayrelate}{\begin{center}\begin{tabularrelate}}%
+{\end{tabularrelate}\end{center}}
+\newenvironment{invisdisplayrelate}{\begin{center}\begin{invistabularrelate}}%
+{\end{invistabularrelate}\end{center}}
+
+%commands for pictures
+\setlength{\unitlength}{1cm}
+\newcommand{\blob}{\circle*{0.2}}
+\newcommand{\nonorthbox}{\put(0,0){$\Box$}}
+\newcommand{\nonorthcircle}{\put(0,0){\circle{0.2}}}
+\newcommand{\orthcircle}{\put(0,0){\circle{0.2}}\put(-0.09,-0.05){{\tiny$\bot$}}}
+\newcommand{\restrict}{\put(0,0){\circle{0.2}}\put(0,0){\circle*{0.075}}}
+\newcommand{\dottydiamond}{\put(0,0){$\lozenge$}\put(0.035,0.055){{\tiny$\blacklozenge$}}}
+\newcommand{\makepseudo}{\put(0,0){$\blacklozenge$}}
+\newcommand{\llhook}[2]{\put(#1){\makebox(0,0)[r]{#2}}}
+\newcommand{\rrhook}[2]{\put(#1){\makebox(0,0)[l]{#2}}}
+\newcommand{\thook}[2]{\put(#1){\makebox(0,0)[b]{#2}}}
+\newcommand{\bhook}[2]{\put(#1){\makebox(0,0)[t]{#2}}}
+
+%for pictures of tiers
+\newlength{\nlevnamesep}
+\setlength{\nlevnamesep}{0.4em}
+\newsavebox{\savetier}
+\newenvironment{tierbox}{\begin{lrbox}{\savetier}
+\begin{tabular}{r@{\hspace{\nlevnamesep}}l}}{\end{tabular}\end{lrbox}
+\ovalbox{\usebox{\savetier}}}
+
+%for efficiency matrices
+\newlength{\perch}
+\newcommand{\fish}[2]{\settowidth{\perch}{\mbox{#1}}\makebox[\perch]{$#2$}}
+
+\hyphenation{inter-tier pseudo-factor pseudo-factors pseudo-term pseudo-terms
+             super-impose super-imposed multi-tiered Nel-der
+ pseudo-source pseudo-sources inter-action inter-actions half-plot half-plots}
+
+\begin{document}
+
+\input{splitcompose.tex}
+
+\end{document}

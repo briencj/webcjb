@@ -1,0 +1,90 @@
+\begin{flushleft}\Large\bf A Two-Phase Corn Seed Germination Experiment
+\end{flushleft}
+
+(Prof.~T.B.~Bailey~Jr., Iowa State University, kindly provided 
+a more complicated version of this experiment.)
+A study to investigate corn seed germination involved a field and a
+laboratory phase.  In the field phase, an experiment to produce corn seed
+was conducted at three sites; at each site a randomized complete block
+design of two blocks was run to investigate the differences between three
+mechanical harvesters.  Four samples of seed were harvested from each plot,
+%and these 
+combined %.  The seed from each of the 18 plots was 
+and then divided into 36 lots.  In the laboratory phase of the 
+experiment, there were nine
+containers each with four plates that were to be used for germinating seed
+in each of 18 intervals.  In each of these intervals, the 36 lots of the
+seed from a plot were placed on the four plates in the nine
+containers, the interval in which the seed from a plot was germinated
+being assigned at random.  In
+each interval, nine temperature-moisture conditions, referred to as nine
+treatments, were randomly assigned to the nine containers.  
+Thus the inherent crossing of containers with intervals was ignored.
+The percentage germination of the seeds was recorded for each
+plate.
+
+This two-phase experiment differs from others in
+that treatments are introduced in both the first and second phases.  The
+sets for this experiment are plates, lots, harvesters and treatments and
+the tiers are 
+${\cal F}_{\rm plates} = \setof{\mbox{Intervals}, 
+\mbox{Containers}, \mbox{Plates}}$, ${\cal F}_{\rm lots} = 
+\setof{\mbox{Sites}, \mbox{Plots}, \mbox{Blocks}, \mbox{Lots}}$, 
+${\cal F}_{\rm harvesters} = \setof{\mbox{Harvesters}}$ and 
+${\cal F}_{\rm treatments} = \setof{\mbox{Temperatures},
+\mbox{Moistures}}$.  There are three randomizations: harvesters to plots, 
+lots to plates and treatments to plates.  The first two randomizations are 
+composed and the third is partly coincident with and partly independent of 
+the second. Figure~\ref{fig:corn} gives the randomization diagram. New in this 
+diagram is the black circle preceded by an arrow and with lines leading from 
+it to both Containers and Plates --- it indicates that Lots are randomized to 
+$\mbox{Containers}\wedge\mbox{Plates}$. This randomization and that of 
+$\mbox{Plots}\wedge\mbox{Sites}\wedge\mbox{Blocks}$ are independent, 
+but can be reduced to single randomization. The randomization of Lots 
+is coincident with that of treatments. On the other hand the randomization of 
+$\mbox{Plots}\wedge\mbox{Sites}\wedge\mbox{Blocks}$ and treatments are 
+independent, but cannot be reduced to a single randomization.
+
+\begin{figure}[htbp]
+\centering
+\begin{picture}(12,6)
+\put(-1,4.05){\begin{tierbox}3 & Harvesters\end{tierbox}}
+\put(1.85,4.15){\vector(1,0){1.6}}
+\put(3,4){\begin{tierbox}3 & Sites\\2 & Blocks in S\\
+3 & Plots in S$\wedge$B\\& \\36 & Lots in S$\wedge$B$\wedge$P\end{tierbox}}
+%combinations on left
+\put(7.8,4.6){\blob}
+\put(7.8,4.6){\line(-2,1){1.2}}
+\put(7.8,4.6){\line(-1,0){1.2}}
+\put(7.8,4.6){\line(-3,-1){1.2}}
+\put(7.8,4.6){\vector(2,-1){1.35}}
+%combinations on right
+\put(6.9,3.1){\vector(1,0){0.9}}
+\put(7.9,3.1){\blob}
+\put(7.9,3.1){\line(4,1){1.25}}
+\put(7.9,3.1){\line(4,-1){1.25}}
+%\put(8.1,3.6){\makebox(1,0)[l]{$4$ \nlevnamesep $L_1$}}
+%\put(8.1,3){\makebox(1,0)[l]{$9$ \nlevnamesep $L_2$}}}
+%\put(9.3,3.6){\vector(1,0){0.8}}
+%\put(9.3,3){\vector(1,0){0.8}}
+\put(8.7,3.2){\begin{tierbox}18 & Intervals\\
+4 & Plates in I$\wedge$C\\9 & Containers in I\end{tierbox}}
+\put(3.4,1.05){\begin{tierbox}3 & Temperatures\\3 & Moistures\end{tierbox}}
+%\put(8,1){$\biggr\rbrace$}
+%combinations on left
+\put(7.8,1.15){\blob}
+\put(7.8,1.15){\line(-4,1){1}}
+\put(7.8,1.15){\line(-4,-1){1}}
+\put(7.8,1.15){\vector(1,1){1.45}}
+\end{picture}
+\caption{Composed and coincident randomizations in the two-phase corn experiment}
+\label{fig:corn}
+\end{figure}
+
+The permutation group used for the first randomization is $S_3\wr S_2
+\wr S_3$ (since Lots are only implicit at this stage) while that for
+the coincident second and third randomizations is $S_4 \wr S_9\wr S_{18}$.
+
+The factor Lots could be omitted from the above description, but it is
+included to emphasize that the $36$~lots from a given plot must not be
+allocated systematically to the $36$~plates. 

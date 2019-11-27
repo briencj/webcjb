@@ -1,0 +1,46 @@
+\begin{flushleft}\Large\bf Superimposed Experiment using Split Plots
+\end{flushleft}
+
+Suppose a randomized complete block experiment with $b$ blocks is set up to
+investigate the yield differences between $r$ rootstocks for orange trees
+and that each plot in a block consists of $t$ trees.  After several a years
+of running this initial experiment, it is decided to incorporate $t$
+fertilizer treatments into the experiment by randomizing the $t$ treatments
+to the $t$ trees in a plot.
+
+The sets for this experiment are trees, rootstocks and fertilizers and the
+tiers are ${\cal F}_{\rm trees} = \setof{\mbox{Blocks}, \mbox{Plots},
+\mbox{Trees}}$, ${\cal F}_{\rm rootstocks} = \setof{\mbox{Rootstocks}}$
+and ${\cal F}_{\rm fertilizers} = \setof{\mbox{Fertilizers}}$.  There
+are two randomizations: rootstocks to plots in the initial experiment and
+fertilizers to trees  in the revised
+experiment.  The performance of these randomizations being separated in
+time, they cannot be achieved in a single randomization.  However, the two
+randomizations are independent --- they involve two distinct
+ subsets of ${\cal F}_{\rm trees}$: see Figure~\ref{fig:indep}.  
+Therefore none of the factors in ${\cal F}_{\rm rootstocks}$ and 
+${\cal F}_{\rm fertilizers}$ are associated
+by randomization.  
+However, these two tiers are not combined because, as a 
+result of their separate randomizations, the factors in one tier have
+a different status in the randomization to those in the second tier.
+%Consequently, we can combine these two tiers into the
+%single set ${\cal F}_{\rm treatments} = \setof{\mbox{Rootstocks},
+%\mbox{Fertilizers}}$ which we will refer to as and the experiment is 
+%essentially two-tiered, in spite of necessarily involving 
+%two separate randomizations.
+
+\begin{figure}[htbp]
+\centering
+\begin{picture}(8,3)
+\put(0,0.75){\begin{tierbox}$t$ & Fertilizers\end{tierbox}}
+\put(0,1.7){\begin{tierbox}$r$ & Rootstocks\end{tierbox}}
+\put(4.5,1.5){\begin{tierbox}$b$ & Blocks\\
+$r$ & Plots in B\\ \\$t$ & Trees in P$\wedge$B\end{tierbox}}
+\put(3,1.8){\vector(1,0){1.9}}
+\put(2.75,0.85){\vector(1,0){2.15}}
+\end{picture}
+\caption{Independent randomizations in superimposed experiment 
+using split plots}
+\label{fig:indep}
+\end{figure}

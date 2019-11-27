@@ -1,0 +1,47 @@
+%use this as input to a suitable tt.tex
+%it produces the randomization diagrams for a split-plot and a composed randomization
+%so that they can be compared and contrasted
+
+\setcounter{figure}{3}
+\begin{figure}[htbp]
+\small
+\centering
+\begin{picture}(13.8,1.8)(-2,0)
+\put(0,0.6){\begin{tierbox}2 & Air temperatures\\
+                         \\2 & Soil temperatures\end{tierbox}}
+\put(4.5,0.8){\begin{tierbox}4 & Blocks\\2 & Compartments in B\\
+                              2 & Troughs in B, C\\
+                              2 & Halves in B, C, T
+\end{tierbox}}
+\put(3.3,1.1){\vector(1,0){1.6}}
+\put(3.3,0.325){\vector(1,0){1.6}}
+\put(-1,0.7){\makebox(0,0){4 treatments}}
+\put(10.2,0.8){\makebox(0,0){32 experimental units}}
+\end{picture}
+\caption{Randomization diagram for a split-split plot design with two
+treatment factors}
+\label{fig:split}
+\end{figure}
+
+\setcounter{figure}{5}
+\begin{figure}[htbp]
+\small
+\centering
+\begin{picture}(10.7,1.5)(0.1,-0.2)
+\put(0,0.55){\begin{tierbox}$t$ & Treatments\end{tierbox}}
+\put(4.1,0.75){\begin{tierbox}$b$ & Blocks\\$t$ & Plots in
+B\end{tierbox}}
+\put(7.9,0.75){\begin{tierbox}$j$&Judges\\$bt$&Sittings in
+J\end{tierbox}}
+\put(2.4,0.65){\vector(1,0){2.0}}
+\put(6.3,0.65){\vector(1,0){1.95}}
+\put(7.3,0.65){\blob}
+\put(7.3,0.65){\line(-3,1){1}}
+\put(1.4,0){\makebox(0,0){$t$ treatments}}
+\put(5.5,0){\makebox(0,0){$bt$ plots}}
+\put(9.5,0){\makebox(0,0){$jbt$ evaluations}}
+\end{picture}
+\caption{Randomization diagram for example~1}
+\label{fig:wine}
+\end{figure}
+

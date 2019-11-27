@@ -1,0 +1,13 @@
+<MAP NAME="MixeModelMethod">
+<!--Picture D:\Internet\MyWebPages\multitier\MixModelMethod.gif-->
+<!--Comment objects and observational unit-->
+<AREA SHAPE="RECT" COORDS="8,16,349,78" HREF="#obsunit">
+<!--Comment tiers-->
+<AREA SHAPE="RECT" COORDS="10,124,349,187" HREF="#tiers">
+<!--Comment initial model-->
+<AREA SHAPE="RECT" COORDS="16,226,343,294" HREF="#initmodel">
+<!--Comment homogeneous model-->
+<AREA SHAPE="RECT" COORDS="9,334,349,396" HREF="#homgmodel">
+<!--Comment prior model-->
+<AREA SHAPE="RECT" COORDS="9,441,350,508" HREF="#priormodel">
+</MAP>

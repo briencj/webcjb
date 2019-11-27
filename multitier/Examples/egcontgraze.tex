@@ -1,0 +1,32 @@
+\begin{flushleft}\Large\bf A Continuous Grazing Experiment
+\end{flushleft}
+
+\nocite{Brien99}Brien and Dem\'{e}trio (1999) discuss the analysis of 
+continuous grazing trials based on a randomized complete block design.
+The sets for such experiments, when an animal variable is to be analysed, 
+are animal, plots and treatments and the tiers
+are ${\cal F}_{\rm animals} = \setof{\mbox{Classes}, \mbox{Animals}}$, 
+${\cal F}_{\rm plots} = \setof{\mbox{Blocks}, \mbox{Plots}}$ and 
+${\cal F}_{\rm treatments} = \setof{\mbox{Treatments}}$.
+These experiments involves two randomizations --- treatments to plots and
+plots to animals --- and they are composed, as shown in the randomization
+diagram in Figure~\ref{fig:sheep}. In spite of this, they are not two-phase 
+experiments --- they are single stage. 
+
+\begin{figure}[htbp]
+\centering
+\begin{picture}(12,2)
+\put(0,0.5){\begin{tierbox}$t$ & Treatments\end{tierbox}}
+\put(3,0.6){\vector(1,0){1.4}}
+\put(4,0.75){\begin{tierbox}$b$ &Blocks\\$t$ &Plots in B\end{tierbox}}
+%combination on left
+\put(7.7,0.8){\blob}
+\put(7.7,0.8){\line(-4,1){0.95}}
+\put(7.7,0.8){\line(-4,-1){0.95}}
+\put(7.7,0.8){\vector(4,-1){1.2}}
+%\put(7,1.1){\vector(1,0){1.9}}
+\put(8.5,0.6){\begin{tierbox}$a$ & Classes\\$bt$ & Animals in C\end{tierbox}}
+\end{picture}
+\caption{Composed randomizations in a continuous grazing experiment} 
+\label{fig:sheep}
+\end{figure}

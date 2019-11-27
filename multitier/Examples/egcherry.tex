@@ -1,0 +1,210 @@
+\begin{flushleft}\Large\bf Superimposed Experiment using a Row-and-Column Design
+\end{flushleft}
+
+\nocite{Freeman59}Free\-man (1959) describes a cherry experiment in which a
+large number of rootstocks had been tested using a randomized complete
+block design for 20 years.  The trees from 10 rootstocks in three blocks
+were than to be used for investigating five virus treatments.  The five
+virus treatments were assigned using the extended Youden square 
+shown in table~\ref{t:SuperBIBD},  the rootstocks corresponding to the
+columns and the blocks to the rows.
+
+\begin{table}[htbp]
+\begin{center}\begin{tabular}{lr|*{10}{c}}
+ &  & \multicolumn{10}{c}{Rootstocks} \\
+%\hline \\
+       &     & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+       &   I & A & B & A & C & D & C & B & E & E & D  \\
+Blocks &  II & D & E & B & D & E & A & C & C & A & B  \\
+       & III & E & A & C & E & B & D & D & B & C & A  \\
+%\hline \\
+\end{tabular}\end{center}
+\caption{\label{t:SuperBIBD}Virus Treatment for each Block-Rootstock 
+combination}
+\end{table}
+
+The sets for this experiment are trees, rootstocks and treatments and the
+tiers are ${\cal F}_{\rm trees} = \setof{\mbox{Blocks}, \mbox{Trees}}$,
+${\cal F}_{\rm rootstocks} = \setof{\mbox{Rootstocks}}$ and ${\cal
+F}_{\rm treatments} = \setof{\mbox{Viruses}}$.  There are two
+randomizations: rootstocks to trees in the initial experiment and virus
+treatments to trees, taking into account the rootstocks, in the revised
+experiment.  In this experiment, the two randomizations are u-inclusive in
+that the unrandomized factors for the second randomization include factors 
+from both tiers, ${\cal F}_{\rm trees}$ and ${\cal F}_{\rm rootstocks}$, of 
+the first randomization.
+
+In Figure~\ref{fig:cherry} the dashed oval once again shows the new
+pseudotier created by the first randomization.
+\begin{figure}[htbp]
+\centering
+\begin{picture}(12,4)
+\put(0,2.5){\begin{tierbox}5 & Viruses\end{tierbox}}
+\put(2.25,2.57){\vector(4,-1){0.665}}
+\put(2.9,2.26){$\Diamond$}
+\put(3.2,2.4){\line(1,0){5.25}}
+\put(3.2,2.4){\line(2,-3){1.15}}
+\put(4,0.5){\begin{tierbox}10 & Rootstocks\end{tierbox}}
+\put(7.15,0.65){\vector(1,1){1.25}}
+\put(8,2){\begin{tierbox}3 & Blocks\\10 & Trees in B\end{tierbox}}
+\curvedashes[4pt]{0,1,1}
+\closecurve(4.5,0,11,0,12,1,12,2,11,3,4.5,3,3.5,2,3.5,1)
+\end{picture}
+\caption{Unrandomized-inclusive randomizations in the 
+superimposed experiment using a row-and-column design}
+\label{fig:cherry}
+\end{figure}
+
+Now the diamond after the arrow indicates that viruses are randomized
+to those combinations of Block and Rootstock that occur as a result of
+the first randomization. The group for the first randomization is
+$S_{10}\wr S_3$, while that for the second is $S_{10} \times S_3$,
+which is a subgroup of the former. In contrast to
+wheat variety experiment, both the group and the systematic plan for the
+second randomization are constrained by the result of the first. This
+double constraint is reflected in the number of plans which the
+designer must write out. If the result of the first randomization is
+ shown in Table~\ref{t:roots} and the constrained systematic plan
+in Table~\ref{t:SuperBIBD} is randomized by $S_{10} \times S_3$ to the
+plan in Table~\ref{t:virus} then the designer will also have to write
+out Table~\ref{t:orchard} for the orchard worker to follow.
+
+\begin{table}[htbp]
+\begin{center}\begin{tabular}{lr|*{10}r}
+ &  & \multicolumn{10}{c}{Trees} \\
+%\hline \\
+       &     & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+       &   I & 7 & 2 & 1 & 10 & 6 & 3 & 5 & 9 & 4 & 8\\
+Blocks &  II & 5 & 6 & 3 & 4 & 9 & 1 & 8 & 7 & 2 & 10\\
+       & III & 8 & 6 & 3 & 9 & 7 & 4 & 2 & 10 & 1 & 5
+%\hline \\
+\end{tabular}\end{center}
+\caption{Allocation of rootstocks after the first randomization}
+\label{t:roots}
+\end{table}
+
+\begin{table}[htbp]
+\begin{center}\begin{tabular}{lr|*{10}{c}}
+ &  & \multicolumn{10}{c}{Rootstocks} \\
+%\hline \\
+       &     & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+       &   I & C & D & B & E & A & D & B & E & A & C\\
+Blocks &  II & D & B & A & B & E & A & D & C & C & E\\
+       & III & A & E & E & C & D & B & C & A & B & D
+%\hline \\
+\end{tabular}\end{center}
+\caption{Allocation of viruses after the second randomization}
+\label{t:virus}
+\end{table}
+
+\begin{table}[htbp]
+\begin{center}\begin{tabular}{lr|*{10}r}
+ &  & \multicolumn{10}{c}{Trees} \\
+%\hline \\
+       &     & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+       &   I & 7B & 2D & 1C & 10C & 6D & 3B & 5A & 9A & 4E & 8E\\
+Blocks &  II & 5E & 6A & 3A & 4B & 9C & 1D & 8C & 7D & 2B & 10E\\
+       & III & 8A & 6B & 3E & 9B & 7C & 4C & 2E & 10D & 1A & 5D
+%\hline \\
+\end{tabular}\end{center}
+\caption{Plan for the orchard worker}
+\label{t:orchard}
+\end{table}
+
+The structure formulae for the superimposed experiment are 
+\[\begin{array}{c}
+  \mbox{3 Blocks} \nest \mbox{10 Trees} \\
+  \mbox{10 Rootstocks}  \\
+  \mbox{5 Viruses}.
+\end{array}\]
+
+The Hasse diagrams for this experiment are trivial as is the matrix of 
+efficiencies for the structure on rootstocks in relation to that on trees. 
+The matrix of efficiencies for the structure on treatments in relation to 
+the joint decomposition of trees and rootstocks is given in 
+Table~\ref{tab:DecompSuper}. Note that for this example, we have that 
+Viruses is orthogonal with respect to the 
+structure on trees since
+\begin{equation*}\begin{split}
+\lambda_{\mbox{Plots} \nesting{\mbox{Blocks}},\:\mbox{Viruses}} 
+  &= \lambda_{\mbox{Plots} \nesting{\mbox{Blocks}}
+                            \sresid\mbox{Rootstocks},\:\mbox{Viruses}} \\
+  & \qquad+ \lambda_{\mbox{Plots} \nesting{\mbox{Blocks}}
+                           \scombine\mbox{Rootstocks},\:\mbox{Viruses}} \\
+  & = \dfrac{1}{6} + \dfrac{5}{6} \\
+  & = 1.
+\end{split}\end{equation*}
+
+\begin{table}[htbp]
+\renewcommand{\arraystretch}{1.9}
+\[
+\begin{array}{cc}
+&
+\begin{array}{cc} 
+\mbox{Mean} & \mbox{Viruses}
+\end{array}
+\\
+\begin{array}{l}
+\mbox{Mean}\\
+\mbox{Blocks}\\
+\mbox{Plots} \nesting{\mbox{Blocks}}\\
+\quad\combine\:\mbox{Rootstocks} \vphantom{\dfrac{1}{6}}\\
+\quad\resid\:\mbox{Rootstocks} \vphantom{\dfrac{5}{6}}\\
+\end{array}
+&
+\left[
+\begin{array}{cc}
+ \fish{Mean}{1} & \fish{Viruses}{0} \\
+ 0 & 0\\
+ \\
+ 0 & \dfrac{1}{6}\\
+ 0 & \dfrac{5}{6}\\
+\end{array}
+\right]
+\end{array}
+\]
+\caption{Matrix of efficiency factors 
+   $\Lambda_{{\cal P} \protect\scombine {\cal Q}, {\cal R}}$ 
+   for the superimposed experiment}
+\label{tab:DecompSuper}
+\end{table}
+
+The analysis of variance table derived from this structure is given in 
+Table~\ref{tab:ANOVASuper}. It shows that Viruses is confounded with 
+both Rootstocks and that part of  $\mbox{Plots} \nesting{\mbox{Blocks}}$ 
+that is orthogonal to Rootstocks. A consequence of this is that 
+four Rootstocks degrees of freedom are not able to be separated from 
+Virus differences. However, there is five Rootstocks degrees of freedom 
+that are free of Virus differences and this analysis provides the 
+corresponding sums of squares.  Further, we note that while Viruses 
+is balanced with respect to Rootstocks, the reverse is not true. 
+The aspect of this experiment that the analysis elucidates is that, 
+in the second randomization, Rootstocks has acted as a `block' factor 
+in that it has been involved in restrictions that were placed on this 
+randomization.
+
+\begin{table}[htbp]
+%\renewcommand{\arraystretch}{1.9}
+\begin{center}
+\begin{tabular}{lrrrc}
+Source & \multicolumn {3}{c}{DF} & Efficiency factor \\
+\hline
+Blocks & 2 \\
+$\mbox{Plots} \nesting{\mbox{Blocks}}$ & 27\\
+\quad Rootstocks & & 9          \\
+\qquad Viruses   & & & 4 & 1/6  \\
+\qquad Residual  & & & 5        \\
+\quad Residual   & & 18         \\
+\qquad Viruses   & & & 4 & 5/6  \\
+\qquad Residual  & & & 14       \\
+\hline
+Total            & 29
+\end{tabular}
+\end{center}
+\caption{Analysis variance table for the superimposed experiment}
+\label{tab:ANOVASuper}
+\end{table}

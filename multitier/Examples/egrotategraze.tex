@@ -1,0 +1,135 @@
+\begin{flushleft}\Large\bf An Improperly Replicated Rotational Grazing Experiment
+\end{flushleft}
+
+One way to reduce herd size in grazing trials is to use a single
+herd to graze the replicates of each treatment in turn.
+For example, suppose an experiment is to be conducted to investigate the
+effects of three levels of pasture availability on the weight gain of cattle.
+Further, the 12 combinations of three levels of availability
+and four rotations are
+applied completely at random to 12 paddocks so that each treatment
+combination occurs on one paddock.  Also, the three 
+levels of availability are assigned
+completely at random to 15 animals so that each %treatment
+level of availability is assigned to
+five animals. The five animals are then grazed together
+in sequence on the four paddocks assigned to that
+level of availability; the sequence of 4 paddocks is determined by
+the order in which the rotations were assigned to them.
+
+The sets for this experiment are paddocks, cattle and treatments %-rotations
+and the tiers are ${\cal F}_{\rm paddocks} = \setof{\mbox{Paddocks}}$,
+${\cal F}_{\rm cattle\ over\ time} =
+                   \setof{\mbox{Animals}, \mbox{Rotations}}$,
+and ${\cal F}_{\rm treatments} =
+                   \setof{\mbox{Availability}, \mbox{Rotations}}$.
+Note that Rotations occurs in the two tiers
+${\cal F}_{\rm cattle\ over\ time}$ and ${\cal F}_{\rm treatments}$.
+It must be included in the first so that the set of factors in this tier
+uniquely indexes the observational units. It occurs in the other tier because
+$\mbox{Availability}\wedge\mbox{Rotations}$ is randomized to Paddocks.
+Further, it is not possible to have the Rotations in the
+Cattle-over-time tier randomized to Paddocks there is no viable unrandomized
+design.
+There are two randomizations that have to be taken into account in deriving
+the analysis:  the randomization of levels of availability
+to animals and that of treatments to the paddocks. Note that treatments are
+randomized in both randomizations and so this experiment involves double
+multiple randomizations: see the randomization diagram in
+Figure~\ref{fig:improper}, where the
+double randomizations are shown by two arrows which start from the same factor
+but go to different tiers. There is no arrow between the two Rotations
+in the different tiers because they are the same Rotations.
+
+\begin{figure}[htbp]
+\centering
+\begin{picture}(7,3)
+\put(-1,0.9){\begin{tierbox}3 & Availability\\4 &
+Rotations\end{tierbox}}
+\put(4.5,0.4){\begin{tierbox}12 & Paddocks\end{tierbox}}
+\put(4.5,1.9){\begin{tierbox}15 & Animals\\4 & Rotations\end{tierbox}}
+\put(3,0.95){\blob}
+\put(3,0.95){\line(-4,-1){0.95}}
+\put(2.05,1.3){\vector(3,1){2.85}}
+\put(2.05,1.2){\vector(4,-1){2.85}}
+\end{picture}
+\caption{Double randomizations in the rotational grazing experiment}
+\label{fig:improper}
+\end{figure}
+
+The structure formulae for the rotational grazing experiment are
+\[\begin{array}{c}
+  \mbox{15 Animals} \cross \mbox{4 Rotations} \\
+  \mbox{12 Paddocks} \pseudo (\mbox{3 Herds} + \mbox{4 Rotations})  \\
+  \mbox{3 Availability} \cross \mbox{4 Rotations}.
+\end{array}\]
+It is necessary to introduce two pseudofactors into the second formula to
+account for the association between cattle-over-time entities and paddocks
+that arises from the randomization. The first of these recognizes that
+certain groups of animals, or herds, were associated with particular
+paddocks in the randomization of Availablilty to both Animals and Paddocks.
+The second, Rotations, recognizes that different Rotations were associated
+with different paddocks when treatments were randomized to paddocks.
+
+The Hasse diagrams corresponding to the first and third formulae are just
+standard ones for two crossed factors. That for the second formula
+is given Figure~\ref{f:HasseRotate}. The matrices of efficiences are
+straightforward with elements that are either 0 or 1.
+The analysis of variance that summarizes the relationships between
+the elements of the different structures is given in
+Table~\ref{tab:ANOVARotateGraze}. It shows how the 11 degrees of freedom
+is split between the three terms and that there is no Residual degrees of
+freedom for testing Availability differenes and interactions --- hence its
+being dubbed improperly replicated.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{minipage}{\columnwidth}
+\centering
+\begin{picture}(4,4)(-2,-1)
+\put(0,2){\blob}
+\thook{0,2.3}{Universe $1$, $1$}
+\put(-1,1){\blob}
+\llhook{-1.3,1.25}{\begin{tabular}{@{}c@{}}
+     Herds\\3, 2 \end{tabular}}
+\put(1,1){\blob}
+\rrhook{1.3,1.25}{\begin{tabular}{@{}c@{}}
+     Rotations \\4, 3 \end{tabular}}
+\put(0,0){\blob}
+\bhook{0,-0.3}{\begin{tabular}{@{}c@{}}
+     Paddocks \\12, 6 \end{tabular}}
+\multiput(0,0)(-1,1){2}{\line(1,1){1}}
+\multiput(0,0)(1,1){2}{\line(-1,1){1}}
+\end{picture}
+\end{minipage}
+\end{center}
+%\vspace{\baselineskip}
+\caption{Hasse diagram for paddocks formula
+from the rotational grazing experiment}
+%Example~\ref{eg:RotateGraze}}
+\label{f:HasseRotate}
+\end{figure}
+
+\begin{table}[htbp]
+%\renewcommand{\arraystretch}{1.9}
+\begin{center}
+\begin{tabular}{lrrr}
+Source & \multicolumn {3}{c}{DF} \\
+\hline
+Animals & 14 \\
+\quad Paddocks & & 2          \\
+\qquad Availability  & & & 2  \\
+\quad Residual  & & 12        \\
+Rotations & 3 \\
+\quad Paddocks & & 3          \\
+$\mbox{Animals}\inter \mbox{Rotations}$ & 42 \\
+\quad Paddocks & & 6          \\
+\qquad $\mbox{Availability} \inter \mbox{Rotations}$  & & & 6  \\
+\quad Residual  & & 36       \\
+\hline
+Total            & 59
+\end{tabular}
+\end{center}
+\caption{Analysis variance table for the rotational grazing experiment}
+\label{tab:ANOVARotateGraze}
+\end{table}

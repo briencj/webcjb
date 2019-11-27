@@ -1,0 +1,203 @@
+\begin{flushleft}\Large\bf A meat loaf tasting experiment
+\end{flushleft}
+
+\nocite{BrBa:mult}Brien and Bailey (2006, Section~4.1) give the
+two-phase sensory experiment in Figure~\ref{fig:tbb}: the design in the
+second phase consists of a pair of $6\times 6$ Latin squares in each
+session.
+
+\begin{figure}[htbp]
+\setlength{\unitlength}{1cm}
+\small
+\centering
+\begin{picture}(12.8,1.9)(0,-0.6)
+\put(0.2,0.5){\begin{tierbox}2&Rosemary\\3&Irradiation\end{tierbox}}
+\put(4,0.5){\begin{tierbox}3&Blocks\\6&Meatloaves in B\end{tierbox}}
+\put(8.7,0.5){\begin{tierbox}3&Sessions\\12&Panellists in S\\
+6&Time-orders in S\end{tierbox}}
+\put(3.2,0.4){\blob}
+\put(3.2,0.4){\vector(1,0){1.1}}
+\put(3.2,0.4){\line(-1,0){0.7}}
+\put(3.2,0.4){\line(-2,1){0.7}}
+\put(7.1,0.4){\vector(1,0){1}}
+\put(8.2,0.4){\orthcircle}
+\put(8.3,0.43){\line(5,1){0.8}}
+\put(8.3,0.37){\line(5,-1){0.8}}
+\put(7.1,0.95){\vector(1,0){2}}
+\put(1.5,-0.5){\makebox(0,0){6 treatments}}
+\put(5.7,-0.5){\makebox(0,0){18 meatloaves}}
+\put(10.7,-0.5){\makebox(0,0){216 tastings}}
+\end{picture}
+\caption{Composed randomizations in a two-phase experiment}
+\label{fig:tbb}
+\end{figure}
+
+The Hasse diagrams for the treatments and meatloaves tiers are like
+those those given in \cite{BrBa:decomp} for two crossed and two nested
+factors, respectively. Figure~\ref{fig:taste} gives the Hasse diagram for the tastings tier.
+Table~\ref{tab:tbb} gives the skeleton analysis of variance, that
+includes the expected mean squares under randomization; there is no
+need to show efficiency factors because both designs are orthogonal. One consequence of this simple orthogonality is that each
+$\eta$-coefficient appears in the final column in conjunction with
+exactly one $\xi$-coefficient.
+The appropriate `Residual' for each of
+the three treatments
+sources is the one
+with $10$~degrees of freedom, which is $ \left(
+(\mtxt{P}\inter\mtxt{T}\nesting{\mtxt{S}}) \combine
+(\mtxt{Meatloaves}\nesting{\mtxt{B}}) \right) \resid \mathcal{R} $,
+where $\mathcal{R}$ is the structure on the treatments tier.
+
+\begin{figure}[htbp]
+\setlength{\unitlength}{1cm}
+\centering
+\small
+\begin{picture}(8,4.9)(-4,-1.2)
+\put(0,3){\blob}
+\thook{0,3.3}{Universe $1$, $1$}
+\put(0,2){\blob}
+\rrhook{0.3,1.75}{\begin{tabular}{@{}c@{}}
+     Sessions\\3, 2 \end{tabular}}
+\put(-1,1){\blob}
+\llhook{-1.3,0.75}{\begin{tabular}{@{}c@{}}
+     $\mtxt{S}\wedge\mtxt{Panellists}$\\36, 33 \end{tabular}}
+\put(1,1){\blob}
+\rrhook{1.3,0.75}{\begin{tabular}{@{}c@{}}
+     $\mtxt{S}\wedge\mtxt{Time\mbox{-}orders}$\\18, 15 \end{tabular}}
+\put(0,0){\blob}
+\bhook{0,-0.3}{\begin{tabular}{@{}c@{}}
+     $\mtxt{S}\wedge\mtxt{P}\wedge\mtxt{T}$\\216, 165 \end{tabular}}
+\multiput(0,0)(-1,1){2}{\line(1,1){1}}
+\multiput(0,0)(1,1){2}{\line(-1,1){1}}
+\put(0,2){\line(0,1){1}}
+\end{picture}
+\caption{Hasse diagram for the tastings tier in Example~\ref{eg:tbb}}
+\label{fig:taste}
+\end{figure}
+
+\begin{table}
+\caption{\label{tab:tbb}Skeleton analysis of variance for
+Example~\ref{eg:tbb}}
+\begin{center}
+\begin{tabular}{lr|lr|lr|l}
+\multicolumn{2}{c|}{tastings tier} & \multicolumn{2}{c|}{meatloaves tier} &
+\multicolumn{2}{c|}{treatments tier} & \\
+Source & df & Source & df & Source & df & \multicolumn{1}{c}{EMS} \\
+\hline
+Mean & 1 & Mean & 1 & Mean & 1 &  $\xi_0 + 12\eta_0$\\
+    \hline
+    Sessions & 2 & Blocks & 2   & & & $\xi_\mtxt{S} + 12\eta_\mtxt{B}$ \\
+\hline
+     $\mtxt{Panellists}\nesting{\mtxt{S}}$ &33 & & &  & & $\xi_\mtxt{SP}$ \\
+  \hline
+     $\mtxt{Time\mbox{-}orders}\nesting{\mtxt{S}}$ &15 & &  & & & $\xi_\mtxt{ST}$ \\
+\hline
+     $\mtxt{P}\inter\mtxt{T}\nesting{\mtxt{S}}$ &165 &
+$\mtxt{Meatloaves}\nesting{\mtxt{B}}$& 15 & Rosemary & 1 &
+$\xi_\mtxt{STP} + 12\eta_\mtxt{BM} + q(\mtxt{R})$ \\
+\cline{5-7}
+ & & & & Irradiation & 2 & $\xi_\mtxt{STP} + 12\eta_\mtxt{BM} +
+q(\mtxt{I})$\\
+\cline{5-7}
+& & & & $\mtxt{R} \inter \mtxt{I}$ & 2 & $\xi_\mtxt{STP} +
+12\eta_\mtxt{BM} + q(\mtxt{RI})$ \\
+\cline{5-7}
+       & & & & Residual & 10 & $\xi_\mtxt{STP} + 12\eta_\mtxt{BM}$ \\
+\cline{3-7}
+& & Residual & 150 & & & $\xi_\mtxt{STP}$ \\
+\hline
+\end{tabular}\end{center}
+\end{table}
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\multicolumn{2}{c}{tastings tier}  \\
+\midrule
+Source & df  \\
+\midrule
+Mean & 1  \\
+    Sessions & 2   \\
+     $\mtxt{Panellists}\nesting{\mtxt{S}}$ & 33   \\
+     $\mtxt{Time\mbox{-}orders}\nesting{\mtxt{S}}$ &15   \\
+     $\mtxt{P}\inter\mtxt{T}\nesting{\mtxt{S}}$ &165   \\
+\bottomrule
+\end{tabular}\end{center}
+
+
+\begin{center}
+\begin{tabular}{lrclr}
+\toprule
+\multicolumn{2}{c}{tastings tier} & & \multicolumn{2}{c}{meatloaves tier}  \\
+\cmidrule{1-2} \cmidrule{4-5}
+Source & df & & Source & df  \\
+\midrule
+Mean & 1 & & Mean & 1 \\
+\midrule
+    Sessions & 2 & & Blocks & 2   \\
+\midrule
+     $\mtxt{Panellists}\nesting{\mtxt{S}}$ &33 & & &  \\
+\midrule
+     $\mtxt{Time\mbox{-}orders}\nesting{\mtxt{S}}$ &15 & & &   \\
+\midrule
+     $\mtxt{P}\inter\mtxt{T}\nesting{\mtxt{S}}$ &165 & &
+$\mtxt{Meatloaves}\nesting{\mtxt{B}}$& 15  \\
+& & & Residual & 150  \\
+\bottomrule
+\end{tabular}\end{center}
+
+\begin{center}
+\begin{tabular}{lrclrclr}
+\toprule
+\multicolumn{2}{c}{tastings tier} & & \multicolumn{2}{c}{meatloaves tier} & &
+\multicolumn{2}{c}{treatments tier}  \\
+\cmidrule{1-2} \cmidrule{4-5} \cmidrule{7-8}
+Source & df & & Source & df & & Source & df  \\
+\midrule
+Mean & 1 & & Mean & 1 & & Mean & 1 \\
+\midrule
+     Sessions & 2 & & Blocks & 2 &  & &  \\
+\midrule
+     $\mtxt{Panellists}\nesting{\mtxt{S}}$ &33 & & & & &  &  \\
+\midrule
+     $\mtxt{Time\mbox{-}orders}\nesting{\mtxt{S}}$ &15 & & & & & &  \\
+\midrule
+     $\mtxt{P}\inter\mtxt{T}\nesting{\mtxt{S}}$ &165 & &
+$\mtxt{Meatloaves}\nesting{\mtxt{B}}$& 15 & & Rosemary & 1 \\
+ & & & & & & Irradiation & 2 \\
+& & & & & & $\mtxt{R} \inter \mtxt{I}$ & 2  \\
+       & & & & & & Residual & 10  \\
+\cmidrule{4-8}
+& & & Residual & 150 & & &  \\
+\hline
+\end{tabular}\end{center}
+
+
+%\begin{table}
+\begin{center}
+\begin{tabular}{*{3}{lr@{\hspace{0.5em}}c@{\hspace{0.5em}}}*{5}{@{}c@{}}c@{}c}
+\toprule
+\multicolumn{2}{c}{tastings tier} & & \multicolumn{2}{c}{meatloaves tier} & &
+\multicolumn{2}{c}{treatments tier} & & \multicolumn{7}{c}{EMS} \\
+\cmidrule{1-2} \cmidrule{4-5} \cmidrule{7-8} \cmidrule{10-16}
+Source & df & & Source & df & & Source & df & & $\phi_{\mtxt{SPT}}$ & $\phi_{\mtxt{ST}}$ & $\phi_{\mtxt{SP}}$ & $\phi_{\mtxt{S}}$ & $\phi_{\mtxt{BM}}$ & $\phi_{\mtxt{B}}$ & $q(.)$ \\
+\midrule
+Mean & 1 & & Mean & 1 & & Mean & 1 & & 1 & 6 & 12 & 72 & 12 & 72 & $\phi_\mtxt{t} + \phi_\mtxt{m} + q(\mu)$ \\
+\midrule
+    Sessions & 2 & & Blocks & 2  & & & & & 1 & 6 & 12 & 72 & 12 & 72 &  \\
+\midrule
+     $\mtxt{Panellists}\nesting{\mtxt{S}}$ &33 & & & & & & & & 1 &  & 12 & &  &  &  \\
+\midrule
+     $\mtxt{Time\mbox{-}orders}\nesting{\mtxt{S}}$ &15 & & & & & & & & 1 & 6 &  &  &  &  & \\
+\midrule
+     $\mtxt{P}\inter\mtxt{T}\nesting{\mtxt{S}}$ &165 & &
+$\mtxt{Meatloaves}\nesting{\mtxt{B}}$& 15 & & Rosemary & 1 & & 1 &  & &  & 12 &  &
+$q(\mtxt{R})$ \\
+ & &  & & & & Irradiation & 2 & & 1 &  & &  & 12 &  & $q(\mtxt{I})$\\
+& & & & & & $\mtxt{R} \inter \mtxt{I}$ & 2 & & 1 &  & &  & 12 &  & $q(\mtxt{RI})$ \\
+     & & & & & & Residual & 10 & & 1 &  & &  & 12 &  &  \\
+\cmidrule{4-16}
+& & & Residual & 150 & & & & & 1 &  & &  &  &  & \\
+\bottomrule
+\end{tabular}\end{center}
+%\end{table}

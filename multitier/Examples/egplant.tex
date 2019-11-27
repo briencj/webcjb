@@ -1,0 +1,195 @@
+\begin{flushleft}\Large\bf A Plant Experiment
+\end{flushleft}
+
+A plant experiment is to be conducted to investigate five varieties and two
+spray regimes.  Twelve pots containing a single seedling of each variety
+will be used and these are to be randomly assigned to six benches on each
+of which there are 10 positions so that there are two seedlings of each
+variety on each bench.  The two spray regimes are to be randomly assigned
+to the benches so that each is applied to the pots on three benches.  The
+height gain after six months is measured for each seedling in a pot.
+
+The sets for this experiment are positions, seedlings and regimes and the
+tiers are 
+${\cal F}_{\rm positions} = \setof{\mbox{Benches}, \mbox{Positions}}$,
+${\cal F}_{\rm seedlings} = \setof{\mbox{Varieties}, \mbox{Seedlings}}$ 
+and ${\cal F}_{\rm regimes} = \setof{\mbox{Regimes}}$.  
+This single-stage experiment involves two randomizations: the randomization
+of seedlings to positions and the randomization of regimes to positions.
+The randomizations are coincident as the different seedlings and the
+different spray regimes are both randomized to the benches.
+
+\begin{figure}[htbp]
+\centering
+\begin{picture}(10,5)
+\put(-1.3,2.9){\begin{tierbox}5 & Varieties\\&\\12 & Seedlings
+in V\end{tierbox}}
+\put(2.4,3.65){\line(5,-1){4.2}}
+\put(2.5,2.5){\line(1,0){0.8}}
+\put(3.4,2.5){\line(3,1){1}}
+\put(3.4,2.5){\line(3,-1){1}}
+\put(3.4,2.5){\blob}
+\put(4.6,2.8){\makebox(1,0)[l]{$2 \hspace{\nlevnamesep} S_2$}}
+\put(4.6,2.2){\makebox(1,0)[l]{$6 \hspace{\nlevnamesep} S_1$}}
+\put(6.5,2.8){\blob}
+\put(5.5,2.8){\vector(1,0){1.85}}
+\put(7,2.1){\begin{tierbox}10 & Positions in B\\&\\6& Benches\end{tierbox}}
+\put(5.5,2.2){\vector(4,-1){2}}
+\put(2.5,0.6){\begin{tierbox}2 & Regimes\end{tierbox}}
+\put(4.9,0.7){\vector(3,1){2.65}}
+\end{picture}
+\caption{Coincident randomizations in for the plant experiment}
+\label{fig:plant}
+\end{figure}
+
+This randomization is summarized in Figure~\ref{fig:plant}, which 
+introduces three new features.  The first is that we have a factor from one 
+tier, Seedlings (in Varieties), randomized two factors from the second tier, 
+Benches and Positions (in Benches). 
+To achieve this the seedlings within a variety are split into 6 sets of
+two and the sets are randomized to benches while the seedlings within a set 
+(within a variety) are randomized to positions within benches.
+It is convenient to represent the formation of sets of seedlings by using
+pseudofactors (\nocite{Monod92}Monod and Bailey, 1992) $S_1$ and $S_2$ 
+for Seedlings, with $6$ and $2$ levels
+respectively, so that $\mbox{Seedlings} = S_1\wedge S_2$. We use the
+convention that pseudofactors have the same letter as the (real)
+factor and are distinguished by subscripts. The lines and black circle between 
+Seedlings and the pseudofactors in the diagram portray this splitting of 
+Seedlings into the two pseudofactors. 
+Now $\mbox{Varieties}
+\wedge S_2$ is randomized to Positions in Benches while $S_1$~is
+randomized to Benches. Note that the twelve levels of Seedlings, 
+and therefore the levels of
+both $S_1$ and~$S_2$, must be randomly allocated within each level of
+Varieties. If, for example, the levels of~$S_1$ correspond to
+different heights of seedling then $S_1$~is crossed with Varieties
+rather than nested in Varieties.
+
+Another way of viewing the randomization of Seedlings (in Varieties) 
+is that all $60$~levels of the generalized factor 
+$\mbox{Varieties} \wedge \mbox{Seedlings}$ is randomized to 
+the generalized factor $\mbox{Benches}\wedge \mbox{Positions}$ subject 
+to the constraint that Varieties are randomized to Positions within Benches. 
+
+The second new feature is that there are two arrows coming from the 
+seedlings tier to the positions tier. All arrows from one tier to
+another represent a single randomization.
+
+Finally, coincident randomizations are indicated by two arrowheads at the
+same factor. Not every combination of Seedlings and Regimes can occur:
+the confounding between Regimes and part of~$S_1$ is indicated by the
+fact that both are randomized to Benches.
+
+The structure formulae for this experiment are
+\[\begin{array}{c}
+  \mbox{6 Benches} \nest \mbox{10 Positions} \\
+  (\mbox{5 Varieties} \nest \mbox{12 Seedlings})//(\mbox{6 S}_1)  \\
+  \mbox{2 Regimes} \cross \mbox{Varieties}.
+\end{array}\]
+In this case Varieties has been included in both the second and third 
+structure formulae. 
+It is inlcuded in the second because Varieties and 
+Seedlings form a tier as they were randomized together. 
+It is included in the third because the experimenter 
+would be interested in the interaction of Regimes with Varieties.
+
+The Hasse diagrams displaying the structures for this experiment are given 
+in Figure~\ref{f:HassePlant}. As far as the conditions required for coincident 
+randomizations are concerned, this experiment clearly meets the first condition, after the addition of a pseudofactor for Seedlings. Indeed, 
+all terms in the structures corresponding to both seedlings and regimes 
+are orthogonal to those for positions and the elements of the corresponding 
+matrices of efficiencies are either zero or one. 
+The second condition is also met with the subspaces corresponding to 
+Regimes, Varieties and $\mbox{Regimes} \inter \mbox{Varieties}$ each being 
+a subspace of one of those correspnding to Varieties, $\mbox{S}_1$ and 
+$\mbox{Seedlings} \nesting{\mbox{Varieties}}$.
+The analysis of variance table, that summarizes the relationships 
+between subspaces for terms from different structure formulae, 
+is given in Table~\ref{tab:ANOVAPlant}.
+
+\begin{figure}[htbp]
+\begin{minipage}{0.45\columnwidth}
+\centering
+\begin{picture}(2,4)(-1,-1)
+\put(0,2){\blob}
+\llhook{-0.3,2.25}{Universe}
+\rrhook{0.3,2.25}{$1$, $1$}
+\put(0,1){\blob}
+\llhook{-0.3,1.2}{Benches}
+\rrhook{0.3,1.2}{6, 5}
+\put(0,0){\blob}
+\llhook{-0.3,0.2}{$\mbox{Positions}\nesting{\mbox{B}}$}
+\rrhook{0.3,0.25}{60, 54}
+\put(0,0){\line(0,1){2}}
+\end{picture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\columnwidth}
+\centering
+\begin{picture}(4,4)(-2,-1)
+\put(0,2){\blob}
+\thook{0,2.3}{Universe $1$, $1$}
+\put(-1,1){\blob}
+\llhook{-1.3,1.25}{\begin{tabular}{@{}c@{}}
+     Varieties\\5, 4 \end{tabular}}
+\put(1,1){\blob}
+\rrhook{1.3,1.25}{\begin{tabular}{@{}c@{}}
+     $\mbox{S}_1$\\6, 5 \end{tabular}}
+\put(0,0){\blob}
+\bhook{0,-0.3}{\begin{tabular}{@{}c@{}}
+     $\mbox{Seedlings} \nesting{\mbox{V}}$\\
+     60, 50 \end{tabular}}
+\multiput(0,0)(-1,1){2}{\line(1,1){1}}
+\multiput(0,0)(1,1){2}{\line(-1,1){1}}
+\end{picture}
+\end{minipage}
+
+\begin{center}
+\begin{minipage}{\columnwidth}
+\centering
+\begin{picture}(4,4)(-2,-1)
+\put(0,2){\blob}
+\thook{0,2.3}{Universe $1$, $1$}
+\put(-1,1){\blob}
+\llhook{-1.3,1.25}{\begin{tabular}{@{}c@{}}
+     Regimes\\2, 1 \end{tabular}}
+\put(1,1){\blob}
+\rrhook{1.3,1.25}{\begin{tabular}{@{}c@{}}
+     Varieties\\5, 4 \end{tabular}}
+\put(0,0){\blob}
+\bhook{0,-0.3}{\begin{tabular}{@{}c@{}}
+     $\mbox{R} \inter \mbox{V}$\\
+     10, 4 \end{tabular}}
+\multiput(0,0)(-1,1){2}{\line(1,1){1}}
+\multiput(0,0)(1,1){2}{\line(-1,1){1}}
+\end{picture}
+\end{minipage}
+\end{center}
+%\vspace{\baselineskip}
+\caption{Hasse diagrams for the plant experiment}
+\label{f:HassePlant}
+\end{figure}
+
+\begin{table}[htbp]
+%\renewcommand{\arraystretch}{1.9}
+\begin{center}
+\begin{tabular}{lrrr}
+Source & \multicolumn {3}{c}{DF} \\
+\hline
+Benches & 5 \\
+\quad $\mbox{Seedlings} \nesting{\mbox{Varieties}}$ & & 5          \\
+\qquad Regimes   & & & 1  \\
+\qquad Residual  & & & 4        \\
+$\mbox{Positions}\nesting{\mbox{Benches}}$ & 54\\
+\quad Varieties  & & 4  \\
+\quad $\mbox{Seedlings} \nesting{\mbox{Varieties}}$ & & 50          \\
+\qquad $\mbox{Regimes} \inter \mbox{Varieties}$   & & & 4  \\
+\qquad Residual  & & & 46       \\
+\hline
+Total            & 59
+\end{tabular}
+\end{center}
+\caption{Analysis variance table for the plant experiment}
+\label{tab:ANOVAPlant}
+\end{table}

@@ -1,0 +1,57 @@
+\begin{flushleft}\Large\bf A Two-Phase Sensory Experiment
+\end{flushleft}
+
+\nocite{Brien83}Brien (1983) describes a simple, sensory experiment to 
+evaluate a set of wines made from the produce of a field trial in order to 
+test the effects of several viticultural treatments.  
+In the field trial, the treatments are assigned to plots 
+according to a randomized complete block design. Then the produce from each 
+plot is separately made into wine which is evaluated 
+at a tasting inwhich several judges are given the wines over a number of 
+sittings.  One wine is presented for scoring to each judge at a sitting and 
+each wine is presented only once to a judge.  The order of presentation of 
+the wines is randomized for each judge.  This experiment is then a two-phase 
+experiment \nocite{McIntyre55}(McIntyre, 1955).  In the first, or field, phase 
+the field trial is conducted, and in the second, or evaluation, phase the wine 
+made from the produce of each plot in the field trial is evaluated by several 
+judges.
+
+The sets for this experiment are evaluations, wines and treatments,
+ and the
+tiers are 
+${\cal F}_{\rm evaluations} = \setof{\mbox{Judges}, \mbox{Sittings}}$, 
+${\cal F}_{\rm wines} = \setof{\mbox{Blocks}, \mbox{Plots}}$ and 
+${\cal F}_{\rm treatments} = \setof{\mbox{Treatments}}$.  There are two
+randomizations --- treatments to wines and wines to evaluations --- and
+they are composed.  The crucial aspect of these two randomizations is that 
+no account is taken of the randomized factors from the first phase, 
+${\cal F}_{\rm treatments}$, when doing the randomization of the second 
+phase; the only factors explicitly included in the second randomization are 
+those from ${\cal F}_{\rm wines}$ and ${\cal F}_{\rm evaluations}$. 
+However, the two randomizations taken together have the effect of 
+randomizing treatments onto evaluations.
+ 
+The randomization diagram in Figure~\ref{fig:wine} summarizes 
+the randomization. 
+Although Judges and Sittings are inherently crossed
+on the set of evaluations, the experimenter chose to ignore this
+inherent structure and randomize according to the group $S_{bt} \wr
+S_j$.
+
+\begin{figure}[htbp]
+\centering
+\begin{picture}(12,2)(0.5,0)
+\put(0,0.5){\begin{tierbox}$t$ & Treatments\end{tierbox}}
+\put(4.5,0.75){\begin{tierbox}$b$ & Blocks\\$t$ & Plots in B\end{tierbox}}
+\put(8.7,0.75){\begin{tierbox}$j$&Judges\\$bt$&Sittings in J\end{tierbox}}
+\put(3,0.6){\vector(1,0){1.9}}
+\put(7.25,0.6){\vector(1,0){1.85}}
+\put(8,0.6){\blob}
+\put(8,0.6){\line(-3,2){0.75}}
+\end{picture}
+\caption{Composed randomizations in the two-phase sensory experiemnt}
+\label{fig:wine}
+\end{figure}
+
+A more complicated two-phase sensory experiment is described by 
+\nocite{Brien99}Brien and Payne (1999).

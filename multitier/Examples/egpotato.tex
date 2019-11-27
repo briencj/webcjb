@@ -1,0 +1,121 @@
+\begin{flushleft}\Large\bf A Two-Phase Potato Storage Experiment
+\end{flushleft}
+
+(Prof. Roger Payne, IACR-Rothamsted, kindly provided this experiment.)
+This two-phase experiment consists of field and storage phases. In the
+field phase four cultivars of potatoes and three fungicides are
+investigated using a randomized complete block design with three blocks
+each with 12 plots. At the storage phase, the produce from each of the
+36 plots is divided into four samples for storage on four pallets and
+the produce on a pallet is to be stored for one of four different
+lengths of time.  Altogether, there are  12 pallets on each of 12 benches.
+The task is to randomize the 144 samples so that the three blocks by four
+cultivars are randomized to the 12 benches and the three fungicides with
+their four samples for that bench are randomized to the 12 pallets within
+each bench.
+Finally the four times of storage are randomized to the pallets within
+each bench-fungicide combination.
+Formally, we identify sets of plots within each block that have the same
+cultivar and set up a pseudofactor that indexes these sets.
+Similarly we create a pseudofactor that indexes the sets of plots in each
+block that received the different fungicides. It turns out that the two
+pseudofactors have the same levels for each analysis as Cultivars and
+Fungicides, respectively. However, most importantly, the pseudofactors
+differ from the factors in being nested within Blocks. The pseudofactors
+are used in achieving the desired randomization of the 144 samples to the
+144 benches as descried below.
+
+Like the two-phase experiment wheat variery trial, this experiment
+involves r-inclusive randomizations. In this case, r-inclusive
+randomizations need to be employed because plots within blocks:
+(i) had treatments randomized to it in the first randomization; and,
+(ii) is to be randomized to benches and to positions within benches
+in the second randomization. This experiment also has in common with
+the two-phase corn gernination experiment that treatments are
+introduced in both the first and second phases.  The sets for this experiment
+are pallets, samples, treatments and times and the tiers are
+${\cal F}_{\rm pallets} = \setof{\mbox{Benches}, \mbox{Pallets}}$,
+${\cal F}_{\rm samples} = \setof{\mbox{Blocks}, \mbox{Plots},
+\mbox{Samples}}$,
+${\cal F}_{\rm treatments} = \setof{\mbox{Cultivars}, \mbox{Fungicides}}$
+and ${\cal F}_{\rm times} = \setof{\mbox{Times}}$.
+There are three randomizations: treatments to samples, samples to
+pallets and times to pallets. They are illustrated in the randomization
+diagram for this experiment given in Figure~\ref{fig:storage}.
+The first and second randomizations are r-inclusive and
+the second and third are u-inclusive. The randomization of samples
+to pallets involves both treatments and samples factors and so the randomized
+factors for the second randomization involve both tiers from the first
+randomization. The randomization of the times is to the
+pallets within each bench-fungicide combination, so the unrandomized
+factors for the third randomization come from ${\cal F}_{\rm
+treatments}$ and ${\cal F}_{\rm pallets}$.
+
+Note the two pseudofactors, $P_C$ and $P_F$, in Figure~\ref{fig:storage}.
+They are nested within Blocks and index the partitions of the Plots with
+Blocks that correspond to Cultivars and Fungicides, respectively.
+In randomizing the samples to pallets, the levels of Benches and Pallets
+are listed in standard order and the levels of the rest of the factors
+in the experiment are listed in standard order
+according to the levels of Blocks, Samples and the pseudofactors.
+
+\begin{figure}[htbp]
+\centering
+\begin{picture}(14,6)
+\curvedashes[4pt]{0,1,1}
+%inner
+\closecurve(1,1.3, 8.75,1.3, 9.75,2.3, 9.75,4, 8.75,5, 1,5, 0,4, 0,2.3)
+%outer
+\closecurve(1,1, 12.8,1, 13.8,2, 13.8,4, 12.8,5.25, 1,5.25, 0,4, 0,2)
+\put(0.1,3){\begin{tierbox}4 & Cultivars \\ \\ \\ \\ \\
+                           3 & Fungicides\end{tierbox}}
+\put(3.55,3.1){\blob}
+\put(3.5,3.1){\line(-1,2){0.6}}
+\put(3.5,3.1){\line(-1,-2){0.6}}
+\put(3.55,3.1){\vector(1,0){0.65}}
+%top lines
+\put(9.7,4.4){\line(-1,0){6.85}}
+\put(9.675,4.25){$\Diamond$}
+\put(9.975,4.4){\vector(1,0){0.5}}
+\put(9.7,4.4){\line(-2,-5){0.2}}
+\put(9.535,4.025){\blob}
+\put(9.535,4.025){\line(-4,-1){1.7}}
+\put(9.535,4.025){\line(-1,-4){0.1}}
+%bottom lines
+\put(9.7,1.85){\line(-1,0){6.8}}
+\put(9.675,1.7){$\Diamond$}
+\put(9.975,1.85){\vector(1,0){0.5}}
+\put(9.7,1.85){\line(-2,5){0.2}}
+\put(9.535,2.22){\blob}
+\put(9.535,2.22){\line(-4,1){1.7}}
+\put(9.535,2.22){\line(-1,4){0.1}}
+%Block-Plots randomization
+\put(3.75,3){\begin{tierbox}3 & Blocks\\12 & Plots in B\\
+4 & Samples in B$\wedge$P\end{tierbox}}
+\put(8.3,3.1){\line(3,2){0.4}}
+\put(8.3,3.1){\line(3,-2){0.4}}
+\put(8.3,3.1){\blob}
+\put(7.8,3.1){\line(1,0){0.5}}
+\put(8.8,3.35){\makebox(1,0)[l]{$4 \hspace{\nlevnamesep} P_C$}}
+\put(8.8,2.85){\makebox(1,0)[l]{$3 \hspace{\nlevnamesep} P_F$}}
+\put(10,3){\begin{tierbox}12 & Benches\\ \\ \\ \\ \\ 12 & Pallets in B
+\end{tierbox}}
+%Times randomization
+\put(3.7,0.245){\vector(1,0){0.82}}
+\put(4.5,0.1){$\Diamond$}
+\put(4.8,0.245){\line(1,2){1.05}}
+\put(4.8,0.245){\line(4,1){5.75}}
+\put(1.6,0.1){\begin{tierbox}4 & Times\end{tierbox}}
+\end{picture}
+\caption{Unrandomized- and randomized-inclusive randomizations 
+in the potato storage experiment}
+\label{fig:storage}
+\end{figure}
+
+
+
+
+
+
+
+

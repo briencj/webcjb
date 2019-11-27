@@ -1,0 +1,31 @@
+"Script for the nonorthogonal, multiphase athlete training experiment from Brien (2017)"
+UNITS       [36]
+
+"Generate a layout for the first phase"
+FACTOR      [LEVELS=4] Months
+&           [LEVELS=3] Athletes,Tests,Intensities,Surfaces
+&           [LEVELS=9] Conditions; !(1...9, 1,4,7,2,5,8,3,6,9, \
+                                     1,5,9,7,2,6,4,8,3, 1,8,6,4,2,9,7,5,3)
+GENERATE    Months,Athletes,Tests
+FACDIVIDE   [OLDFACTOR = Conditions] NEWFACTOR = Intensities,Surfaces; LEVELS=3,3
+RANDOMIZE   [BLOCKSTRUCTURE=Months/Athletes/Tests; SEED=2598] Intensities,Surfaces
+PDESIGN     [BLOCKSTRUCTURE=Months/Athletes/Tests; \
+             TREATMENTSTRUCTURE=Intensities,Surfaces]
+
+"Get anatomy to check properties of the design"
+ACANONICAL  [CRITERIA=aefficiency, order] !p(!f(Months/Athletes/Tests), !f(Intensities*Surfaces))
+
+"Second phase design"
+FACTOR      [LEVELS=4] Batches
+&           [LEVELS=9] Locations
+GENERATE    Batches,Locations
+RANDOMIZE   [BLOCKSTRUCTURE=Batches/Locations; EXCLUDE=Batches; SEED=71230] \
+                                               Athletes,Tests,Intensities,Surfaces
+PDESIGN     [BLOCKSTRUCTURE=Batches/Locations; \
+             TREATMENTSTRUCTURE=Months,Athletes,Tests,Intensities,Surfaces]
+
+"Get anatomy to check properties of the design"
+ACANONICAL  [CRITERIA=aefficiency, order] !p(!f(Batches/Locations),     \
+                                             !f(Months/Athletes/Tests), \
+                                             !f(Intensities*Surfaces))
+

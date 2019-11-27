@@ -1,0 +1,303 @@
+\begin{flushleft}\Large\bf A Two-Phase Wheat Variety Trial
+\end{flushleft}
+
+(This example is based on a problem described to us by
+Kathy Haskard, BiometricsSA.)
+In the field phase of this experiment 49 lines of wheat are investigated 
+using a randomized complete block design with four blocks. 
+The produce of each plot is to be analysed using a gas chromatograph 
+in which just seven samples can be processed in a single run.  
+A $7 \times 7$ balanced lattice square design 
+with four replicates is used to assign the blocks, plots and lines to 
+four intervals in each of which there are seven runs at which samples are 
+processed at seven consecutive times. 
+
+The sets for this experiment are analyses, plots and lines and the tiers are 
+${\cal F}_{\rm analyses} = \setof{\mbox{Intervals}, \mbox{Runs}, 
+                                  \mbox{Times}}$, 
+${\cal F}_{\rm plots} = \setof{\mbox{Blocks}, \mbox{Plots}}$, 
+and ${\cal F}_{\rm lines} = \setof{\mbox{Lines}}$.  
+There are two randomizations: lines to plots and plots to analyses. 
+
+There are two aspects of this experiment that prevent the use of 
+two randomizations that are composed:  (i) lines are randomized to plots 
+within blocks in the first randomization;  (ii) plots within blocks 
+are to be randomized in the second randomization 
+to the levels of, not a single analyses factor,
+but two different analyses factors, and their combinations.
+%to the levels combinations of, not a single set of analyses factors,
+%but three sets of analyses factors.
+%not so that they are confounded with a single analyses term, 
+%but so that they are confounded with three of these terms; and, 
+These obstacles could be overcome, and composed randomizations employed, 
+by assigning the 49 plots within a block completely at random to the 
+49 run-time combinations within an interval. However, when it comes to 
+the analysis of variance, it would not be feasible to isolate 
+Runs within Intervals and Times within Intervals effects, 
+Lines being hopelessly confounded with these terms. So we need to 
+choose different partitions of Plots within Blocks to randomize to 
+different sets of analyses factors. A partition into 7 parts of 
+Plots within Blocks will be randomized to Runs within Intervals and 
+another partition into 7 parts to Times within Intervals 
+so that all 49 Plots within a block are randomized 
+to the 49 Runs by Times combinations within an interval. A pseudofactor with
+7 levels and nested within blocks, say $P_1$, is set up; it indexes which 
+plots are randomized to which runs. Similary, a second pseudofactor, 
+say $P_2$, is set up for plots randomized to times. 
+%Indeed, $P_R$ and $P_T$ are the same factors as Runs and Times, respectively, 
+%except that they are nested within Blocks.
+%and the remainder with the Runs by Times combinations within Intervals. 
+The selection of partitions of Plots within Blocks needs to be 
+done so that, in the analysis of variance, Lines are balanced with the 
+three terms involving Runs and Times. Clearly, to choose these 
+partitions it is necessary to know which Lines are associated with 
+which Plots within Blocks --- that is, to know the outcome of the 
+first randomization. In this example, a balanced lattice square design to 
+specify that the plots with certain lines should be processed at the 
+same run in a particular interval and at the same time in a particular 
+interval. This divison of the lines into groups for randomizing in a 
+particular interval, simultaneously results in a division into groups of 
+the plots in the block assigned to that interval. Again a pair of 
+Lines pseudofactors for each interval can be set up, one to indicate those 
+lines that occur in the same run in that interval and the other to 
+indicate those that occur at the same time in that interval. Suppose the pairs
+are labelled: $(L_1,L_2)$, $(L_3,L_4)$, $(L_5,L_6)$ and $(L_7,L_8)$. 
+
+The randomization diagram for this experiment is given
+in Figure~\ref{fig:wheat}. It has two new features. 
+The dashed oval shows the pseudotier created by the first randomization. 
+One diamond, with lines going towards it, indicates that four of the \cb[24]
+Lines pseudofactors and the 
+correspondng Plots pseudofactor are taken in combination, but
+that not all combinations of the Lines pseudofactors with the Plots 
+pseudofactor occurs: those that do are randomized to Runs or Times 
+within Intervals, as appropriate. 
+The diamond shows combinations of levels of 
+factors from different tiers, in contrast to a black circle that shows 
+combintions from the same tier.
+
+\begin{figure}[htbp]
+\centering
+\begin{picture}(13.5,4)
+\curvedashes[4pt]{0,1,1}
+\closecurve(1,0, 8.7,0, 9.7,1, 9.7,2, 8.7,3, 1,3, 0,2, 0,1)
+\put(0.1,1.5){\begin{tierbox}49 & Lines\hspace{250pt}\end{tierbox}}
+\put(2.95,1.6){\vector(1,0){1.9}}
+\put(2.2,1.6){\line(1,0){0.5}}
+\put(2.6,1.6){\blob}
+\put(2.6,1.6){\line(2,3){0.8}}
+\put(2.6,1.6){\line(2,-3){0.8}}
+\put(3.6,2.8){\makebox(1,0)[l]{$7 \hspace{\nlevnamesep} L_1,L_3,L_5,L_7$}}
+\put(3.6,0.3){\makebox(1,0)[l]{$7 \hspace{\nlevnamesep} L_2,L_4,L_6,L_8$}}
+\put(4.5,1.7){\begin{tierbox}4 & Blocks\\49 & Plots in B\end{tierbox}}
+\put(6.9,2.05){\vector(3,1){4.05}}
+\put(7.9,1.6){\line(-1,0){0.4}}
+\put(7.9,1.6){\blob}
+\put(7.9,1.6){\line(3,2){0.5}}
+\put(7.9,1.6){\line(3,-2){0.5}}
+\put(8.5,2){\makebox(1,0)[l]{$7 \hspace{\nlevnamesep} P_1$}}
+\put(8.5,1.2){\makebox(1,0)[l]{$7 \hspace{\nlevnamesep} P_2$}}
+\put(10,2.85){\line(-1,0){3.5}}
+\put(10,2.85){\line(-1,-1){0.65}}
+\put(10,0.3){\line(-1,0){3.5}}
+\put(10,0.3){\line(-1,1){0.65}}
+\put(9.975,2.7){$\Diamond$}
+\put(9.975,0.15){$\Diamond$}
+\put(10.275,2.85){\vector(1,0){0.65}}
+\put(10.275,0.3){\vector(1,0){0.65}}
+\put(10.5,1.7){\begin{tierbox}4 & Intervals\\7 & Runs in I\\&\\&\\&\\&\\%&\\
+7 & Times in I\end{tierbox}}
+\end{picture}
+\caption{Randomized-inclusive randomizations in the wheat experiment}
+\label{fig:wheat}
+\end{figure}
+
+The permutation group in the first randomization is $S_{49}\wr
+S_4$ on plots. In the second randomization it is $(S_7 \times S_7) \wr
+S_4$ on analyses. Thus the effect of the first randomization is 
+not to constrain the second randomization but to constrain the 
+choice of initial systematic plan allocating the diamond combinations
+to analyses.
+
+Note that, like the sensory and the corn-seed germination experiment, 
+this is 
+a two-phase experiment and involves different units in its field and 
+laboratory phases. However, it differs from the other examples in that 
+it involves r-inclusive, rather than composed, 
+multiple randomizations. That is, factors from both tiers of the first 
+randomization, ${\cal F}_{\rm plots}$ and ${\cal F}_{\rm lines}$, are 
+explicitly included in the randomized factors for the 
+second randomization.
+
+The sets for this experiment are analyses, plots and lines. 
+Because pseudofactors were introduced for lines and plots, the sets 
+of factors on which 
+the structure for the analysis will be based are 
+${\cal F}_{\rm analyses} 
+     = \setof{\mbox{Intervals}, \mbox{Runs}, \mbox{Times}}$, 
+${\cal F}_{\rm plots} \cup {\cal H}_{\rm plots} 
+     = \setof{\mbox{Blocks}, \mbox{Plots}, \mbox{P}_1, \mbox{P}_2}$, 
+and ${\cal F}_{\rm lines} \cup {\cal H}_{\rm lines}
+     = \setof{\mbox{Lines}, \mbox{L}_1, \mbox{L}_2, \mbox{L}_3, \mbox{L}_4, 
+                            \mbox{L}_5, \mbox{L}_6, \mbox{L}_7, \mbox{L}_8}$.  
+The structure formulae derived from these sets are 
+\[\begin{array}{c}
+  \mbox{4 Intervals} \nest (\mbox{7 Runs} \cross \mbox{7 Times}) \\
+  \mbox{4 Blocks} \nest (\mbox{49 Plots} \pseudo (\mbox{7 P}_1 + \mbox{7 P}_2))  \\
+  \mbox{49 Lines} \pseudo (\mbox{7 L}_1 + \mbox{7 L}_2 + \mbox{7 L}_3 
+      + \mbox{7 L}_4 + \mbox{7 L}_5 + \mbox{7 L}_6 + \mbox{7 L}_7 + \mbox{7 L}_8).
+\end{array}\]
+and the Hasse diagrams for the structures derived from them are given in 
+Figure~\ref{f:HasseWheat}. It is with respect to the structures summarized 
+in these figures that the design is structurally balanced. 
+The non-zero efficiency factors are
+%\[\begin{array}{rll}
+%   \lambda_{\mbox{Intervals},\:\mbox{Blocks}} &= 1                   \\
+%   \lambda_{\mbox{Runs} \nesting{\mbox{I}},\:\mbox{P}_1 \nesting{\mbox{B}}} &=
+%   \lambda_{\mbox{Times} \nesting{\mbox{I}},\:\mbox{P}_2 \nesting{\mbox{B}}}= 1\\
+%   \lambda_{\mbox{P}_1 \nesting{\mbox{B}},\:\mbox{L}_i} &=
+%   \lambda_{\mbox{P}_2 \nesting{\mbox{B}},\:\mbox{L}_j} = 0.25 
+%                                  & i=1,3,5,7; j=2,4,6,8             \\
+%   \lambda_{\mbox{Plots} \nesting{\mbox{B}},\:\mbox{L}_k} &= 0.75 
+%                                  & k=1\ldots 8
+%\end{array}\]
+\begin{alignat*}{5}
+   \lambda_{\mbox{Intervals},\:\mbox{Blocks}} & = 1                  \\
+   \lambda_{\mbox{Runs} \nesting{\mbox{I}},\:\mbox{P}_1 \nesting{\mbox{B}}} & =
+   \lambda_{\mbox{Times} \nesting{\mbox{I}},\:\mbox{P}_2 \nesting{\mbox{B}}} 
+                                                        = 1         \\
+   \lambda_{\mbox{P}_1 \nesting{\mbox{B}},\:\mbox{L}_i} & =
+   \lambda_{\mbox{P}_2 \nesting{\mbox{B}},\:\mbox{L}_j} = 0.25
+                                   & \quad i&=1,3,5,7; j=2,4,6,8      \\
+   \lambda_{\mbox{Plots} \nesting{\mbox{B}},\:\mbox{L}_k} &= 0.75   
+                                  & \quad k&=1\ldots 8
+\end{alignat*}
+
+The analysis of variance table for this example is given in 
+Table~\ref{tab:ANOVAWheat}.
+
+\begin{figure}[htbp]
+\begin{minipage}{0.45\columnwidth}
+\centering
+\begin{picture}(4,5.5)(-2,-1)
+\put(0,3){\blob}
+\thook{0,3.3}{Universe $1$, $1$}
+\put(0,2){\blob}
+\rrhook{0.3,2.25}{\begin{tabular}{@{}c@{}}
+     Intervals\\4, 3 \end{tabular}}
+\put(-1,1){\blob}
+\llhook{-1.3,1.25}{\begin{tabular}{@{}c@{}}
+     $\mbox{Runs} \nesting{\mbox{I}}$\\28, 24 \end{tabular}}
+\put(1,1){\blob}
+\rrhook{1.3,1.25}{\begin{tabular}{@{}c@{}}
+     $\mbox{Times} \nesting{\mbox{I}}$\\28, 24 \end{tabular}}
+\put(0,0){\blob}
+\bhook{0,-0.3}{\begin{tabular}{@{}c@{}}
+     $\mbox{R} \inter \mbox{T} \nesting{\mbox{I}}$\\196, 144 \end{tabular}}
+\multiput(0,0)(-1,1){2}{\line(1,1){1}}
+\multiput(0,0)(1,1){2}{\line(-1,1){1}}
+\put(0,2){\line(0,1){1}}
+\end{picture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\columnwidth}
+\centering
+\begin{picture}(4,5.5)(-2,-1)
+\put(0,3){\blob}
+\thook{0,3.3}{Universe $1$, $1$}
+\put(0,2){\blob}
+\rrhook{0.3,2.25}{\begin{tabular}{@{}c@{}}
+     Blocks\\4, 3 \end{tabular}}
+\put(-1,1){\blob}
+\llhook{-1.3,1.25}{\begin{tabular}{@{}c@{}}
+     $\mbox{P}_1 \nesting{\mbox{B}}$\\28, 24 \end{tabular}}
+\put(1,1){\blob}
+\rrhook{1.3,1.25}{\begin{tabular}{@{}c@{}}
+     $\mbox{P}_2 \nesting{\mbox{B}}$\\28, 24 \end{tabular}}
+\put(0,0){\blob}
+\bhook{0,-0.3}{\begin{tabular}{@{}c@{}}
+     $\mbox{Plots} \nesting{\mbox{B}}$\\196, 144 \end{tabular}}
+\multiput(0,0)(-1,1){2}{\line(1,1){1}}
+\multiput(0,0)(1,1){2}{\line(-1,1){1}}
+\put(0,2){\line(0,1){1}}
+\end{picture}
+\end{minipage}
+
+\begin{center}
+\begin{minipage}{0.75\columnwidth}
+\centering
+\begin{picture}(9,6.5)(-4.25,-1)
+\put(0,4){\blob}
+\thook{0,4.3}{Universe $1$, $1$}
+\multiput(-4,2)(1,0){4}{\blob}
+\llhook{-3.9,2.25}{\begin{tabular}{@{}l@{}}
+     $\mbox{L}_1$\\7, 6 \end{tabular}}
+\llhook{-2.9,2.25}{\begin{tabular}{@{}l@{}}
+     $\mbox{L}_3$\\7, 6 \end{tabular}}
+\llhook{-1.9,2.25}{\begin{tabular}{@{}l@{}}
+     $\mbox{L}_5$\\7, 6 \end{tabular}}
+\llhook{-0.9,2.25}{\begin{tabular}{@{}l@{}}
+     $\mbox{L}_7$\\7, 6 \end{tabular}}
+\multiput(1,2)(1,0){4}{\blob}
+\rrhook{1.25,2.25}{\begin{tabular}{@{}l@{}}
+     $\mbox{L}_2$\\7, 6 \end{tabular}}
+\rrhook{2.25,2.25}{\begin{tabular}{@{}l@{}}
+     $\mbox{L}_4$\\7, 6 \end{tabular}}
+\rrhook{3.25,2.25}{\begin{tabular}{@{}l@{}}
+     $\mbox{L}_6$\\7, 6 \end{tabular}}
+\rrhook{4.25,2.25}{\begin{tabular}{@{}l@{}}
+     $\mbox{L}_8$\\7, 6 \end{tabular}}
+\put(0,0){\blob}
+\bhook{0,-0.3}{\begin{tabular}{@{}c@{}}
+     Lines\\49, 0 \end{tabular}}
+\put(0,0){\line(-2,1){4}}
+\put(0,0){\line(-3,2){3}}
+\put(0,0){\line(-1,1){2}}
+\put(0,0){\line(-1,2){1}}
+\put(0,0){\line(2,1){4}}
+\put(0,0){\line(3,2){3}}
+\put(0,0){\line(1,1){2}}
+\put(0,0){\line(1,2){1}}
+\put(0,4){\line(-2,-1){4}}
+\put(0,4){\line(-3,-2){3}}
+\put(0,4){\line(-1,-1){2}}
+\put(0,4){\line(-1,-2){1}}
+\put(0,4){\line(2,-1){4}}
+\put(0,4){\line(3,-2){3}}
+\put(0,4){\line(1,-1){2}}
+\put(0,4){\line(1,-2){1}}
+\end{picture}
+\end{minipage}
+\vspace{\baselineskip}
+\caption{Hasse diagrams for analyses, plots and lines from 
+the two-phase wheat experiment}
+%Example~\ref{eg:WheatStruct}}
+\label{f:HasseWheat}
+\end{center}
+\end{figure}
+
+\begin{table}[htbp]
+%\renewcommand{\arraystretch}{1.9}
+\begin{center}
+\begin{tabular}{lrrrc}
+Source & \multicolumn {3}{c}{DF} & Efficiency factor \\
+\hline
+Intervals & 3 \\
+\quad Blocks & & 3          \\
+$\mbox{Runs} \nesting{\mbox{Intervals}}$ & 24\\
+\quad $\mbox{Plots} \nesting{\mbox{Blocks}}$ & & 24          \\
+\qquad Lines   & & & 24 & 1/4  \\
+$\mbox{Times} \nesting{\mbox{Intervals}}$ & 24\\
+\quad $\mbox{Plots} \nesting{\mbox{Blocks}}$ & & 24          \\
+\qquad Lines   & & & 24 & 1/4  \\
+$\mbox{Runs} \inter \mbox{Times} \nesting{\mbox{Intervals}}$ & 144 \\
+\quad $\mbox{Plots} \nesting{\mbox{Blocks}}$ & & 144          \\
+\qquad Lines   & & & 48 & 3/4  \\
+\qquad Residual  & & & 96        \\
+\hline
+Total            & 195
+\end{tabular}
+\end{center}
+\caption{Analysis variance table for the two-phase wheat experiment}
+\label{tab:ANOVAWheat}
+\end{table}
