@@ -52,6 +52,7 @@
 			</ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
 	</li>
+	<li><a href="MTDTabDescript.html#emsq" class="sub1" title="Expected mean squares">Deriving the expected mean squares</a></li>
 	<li><a href="#top" class="sub1" title="Formulating an allocation-based mixed model">Formulating an allocation-based mixed model<!--[if IE 7]><!--></a><!--<![endif]-->
 	        <!--[if lte IE 6]><table><tr><td><![endif]-->
 		<ul>
@@ -226,29 +227,40 @@ Add a <EM>major column</EM> to the <a href="MTGlossary.html#decomptable">decompo
 <br><a href="#top"><img alt="Top" src="uphand.gif" border=0></a>
 </ol>
 
-<li><a name="emsq"></a><b>Derive the expected mean squares and add to form the skeleton analysis-of-variance table</b>
-<br>The rules for deriving the expected mean squares (EMS) given here are based on results given by <a href="MTBibliog.html#Brien92">Brien (1992)</a> and <a href="MTBibliog.html#Bailey16">Bailey and Brien (2016)</a>. They apply to experiments in which all <A HREF="MTGlossary.html#phase">phases</A> are <A HREF="MTGlossary.html#sbalance">structure balanced</A> and may be able to be used when it is not. For example, it can be used when all random terms are in structure-balanced tiers and, in some cases, when they are first-order balanced.<br>
+<li><a name="emsq"></a><b>Derive the expected mean squares and add to the decomposition table to form the skeleton analysis-of-variance table</b>
+<br>The rules for deriving the expected mean squares (EMS) given here are based on results given by <a href="MTBibliog.html#Brien92">Brien (1992)</a> and <a href="MTBibliog.html#Bailey16">Bailey and Brien (2016)</a>. They apply to experiments in which all <A HREF="MTGlossary.html#phase">phases</A> are <A HREF="MTGlossary.html#sbalance">structure balanced</A> and may be able to be used when it is not. For example, it can be used when all random terms are in <A HREF="MTGlossary.html#sbalance">structure-balanced</A> tiers and, in some cases, when they are only <A HREF="MTGlossary.html#order1">first-order balanced</A>. 
+These conditions can be checked using the <CODE>designAnatomy</CODE> function in the <CODE>R</CODE> package <A HREF="https://CRAN.R-project.org/package=dae/"><CODE>dae</CODE></A>. 
+A <A HREF="MTGlossary.html#sbalance">structure-balanced</A> design will have all <A HREF="MTGlossary.html#order"><CODE>orders</CODE></A> equal to one and no partial aliasing, while an <A HREF="MTGlossary.html#orthdesign">orthogonal design</A> will have all <A HREF="MTGlossary.html#effcriteria"><CODE>aefficiency</CODE></A> and <A HREF="MTGlossary.html#order"><CODE>orders</CODE></A> values equal to one and no partial <A HREF="MTGlossary.html#aliasing">aliasing</A>. A design that is not <A HREF="MTGlossary.html#sbalance">structure balanced</A>, but is <A HREF="MTGlossary.html#order1">first-order balanced</A>, is the same as a <A HREF="MTGlossary.html#sbalance">structure-balanced</A> design, except that it involves partial <A HREF="MTGlossary.html#aliasing">aliasing</A>. These rules deal with experiments in which fixed <A HREF="MTGlossary.html#source">sources</A> are <A HREF="MTGlossary.html#confounding">confounded</A> wth other fixed <A HREF="MTGlossary.html#source">sources</A>.<br>
 
 <br>For <I>each row</I> in the <A HREF="MTGlossary.html#decomptable">decomposition table</A>, determine its expected mean square as follows:
 <DL>
   <DT><STRONG>Obtain the contribution of the <A HREF="MTGlossary.html#source">source</A> from each <A HREF="MTGlossary.html#tier">tier</A> in the row: </STRONG></DT><DD>The <A HREF="MTGlossary.html#source">sources</A> to be considered are the right-most <A HREF="MTGlossary.html#source">source</A> and those <A HREF="MTGlossary.html#source">sources</A> with which it is confounded. Beginning with the left-most column of <A HREF="MTGlossary.html#source">sources</A> and continuing across to the right-most <A HREF="MTGlossary.html#source">source</A> for that row, obtain the contribution for each <A HREF="MTGlossary.html#source">source</A> from a <A HREF="MTGlossary.html#tier">tier</A> (ignore Residual <A HREF="MTGlossary.html#source">sources</A>) as follows:
     <OL>
-      <LI>Identify the <A HREF="MTGlossary.html#genfactor">generalized factor</A> for the current <A HREF="MTGlossary.html#source">source</A>: it is comprised of all factors in the <A HREF="MTGlossary.html#source">source</A> and is referred to as the current <A HREF="MTGlossary.html#term">term</A>.</LI>
+      <LI>Identify the <A HREF="MTGlossary.html#genfactor">generalized factor</A> for the current <A HREF="MTGlossary.html#source">source</A>: it is comprised of all factors in the <A HREF="MTGlossary.html#source">source</A> and is referred to as the current <A HREF="MTGlossary.html#term">term</A>. Both are represented by abbreviated names formed from the initial capital letters of the factors that comprise them.</LI>
       <LI>Determine whether the current <a href="MTGlossary.html#term">term</a> represents a fixed or random <a href="MTGlossary.html#term">term</a>.
       <DL>
-        <DT><EM>If is it random:</EM></DT><DD>The contribution is the linear combination of the <A HREF="MTGlossary.html#cancomp">canonical components</A> for the current <a href="MTGlossary.html#term">term</a> and for all random <A HREF="MTGlossary.html#term">terms</A> that are a superset of the factors in the current <a href="MTGlossary.html#term">term</a>.</DT>
+        <DT><EM>If is it random:</EM></DT><DD>The contribution is the linear combination of the <A HREF="MTGlossary.html#cancomp">canonical components</A> for the current <a href="MTGlossary.html#term">term</a> and for all random <A HREF="MTGlossary.html#term">terms</A> that include all of the factors in the current <a href="MTGlossary.html#term">term</a>, the subscript for a component being the abbreviated name for its <a href="MTGlossary.html#term">term</a>.</DT>
 
            <DD> The coefficient of a <A HREF="MTGlossary.html#cancomp">canonical component</A> for a random <a href="MTGlossary.html#term">term</a>, in the linear combination, is the number of observations for which the <a href="MTGlossary.html#expdesign">experimental design</a> has been generated divided by the number of observed combinations of the factors in the random <a href="MTGlossary.html#term">term</a> (the replication of the observed combinations) and then multiplied by the <A HREF="MTGlossary.html#ceff">canonical efficiency factor</A> for the current <A HREF="MTGlossary.html#source">source</A> in the current row. 
 </DD>
-       <DT><EM>If it is fixed:</EM></DT><DD>The contribution is a quadratic form in the expected value for the response  plus the linear combination of the <A HREF="MTGlossary.html#cancomp">canonical components</A> for all random <a href="MTGlossary.html#term">terms</a> that are a superset of the factors in the current fixed <a href="MTGlossary.html#term">term</a>, if any.</DD>
-        <DD>The quadratic function is written as <I>q</I>(<I>G</I>) where <I>G</I> is the current <a href="MTGlossary.html#term">term</a>; the matrix of the quadratic form is the projection matrix for the current <a href="MTGlossary.html#source">source</a>. For brevity, just the first letters of <I>G</I> are given. 
-The <I>q</I>-function is premultiplied by the <A HREF="MTGlossary.html#ceff">canonical efficiency factor</A> for the current <A HREF="MTGlossary.html#source">source</A> in the current row.</DD>
-        <DD>The linear combination of the <A HREF="MTGlossary.html#cancomp">canonical components</A> is determined in the same manner as for a random <a href="MTGlossary.html#term">term</a>, except that the current <a href="MTGlossary.html#term">term</a> has no component.</DD>
+       <DT><EM>If it is fixed:</EM></DT><DD>The contribution is a quadratic form in the expected value for the response, determined in forming the expected mean square for the row (see below), plus a linear combination of <A HREF="MTGlossary.html#cancomp">canonical components</A>.  for all random <a href="MTGlossary.html#term">terms</a> that are a superset of the factors in the current fixed <a href="MTGlossary.html#term">term</a>, if any.</DD>
+        <DD>As for a random term, the linear combination of <A HREF="MTGlossary.html#cancomp">canonical components</A> involves the components of all random <a href="MTGlossary.html#term">terms</a> whose factors include all the factors in the current (fixed) <a href="MTGlossary.html#term">term</a>.  The coefficients of the  <A HREF="MTGlossary.html#cancomp">canonical components</A> are determined in the same way as described for a random <a href="MTGlossary.html#term">term</a>.</DD>
       </DL>
       </LI>
     </OL>
   <DT><STRONG>Form the expected mean square for the row:</STRONG></DT>
-  <DD>It is the sum of the contributions of its <A HREF="MTGlossary.html#source">sources</A>.</DD></DL>
+  <DD>It is the sum of the contributions of its <A HREF="MTGlossary.html#source">sources</A>, plus a quadratic form in the expectation for a response if there are any fixed <A HREF="MTGlossary.html#source">sources</A> involved in the row. The general form of a quadratic function is &lambda; <I>q</I>(&middot;, &middot;, &middot;), where (i) &lambda; is the <a href="MTGlossary.html#effcriteria"><I>A</I>-efficiency criterion</a> for an allocated <A HREF="MTGlossary.html#source">source</A> confounded with a recipient <A HREF="MTGlossary.html#source">source</A>, (ii) the first argument of <I>q</I> is the abbreviated name of the <A HREF="MTGlossary.html#source">source</A> whose projection matrix is the matrix of the quadratic form for the mean square, subscripted with the abbreviated names of the <A HREF="MTGlossary.html#source">source(s)</A> with which it is partially <A HREF="MTGlossary.html#confounding">confounded</A>, and (iii) the remaining arguments are the abbreviated names of the fixed <A HREF="MTGlossary.html#source">sources</A> involved in the row.</DD>
+  <DD>For example, suppose that there are two <A HREF="MTGlossary.html#source">sources</A> with abbreviated source names A and B involved in a row of the table, that A is partially <A HREF="MTGlossary.html#confounding">confounded</A> with B and that both are fixed <A HREF="MTGlossary.html#source">sources</A>, then the <I>q</I>-function would be &lambda;<SUB>B,A</SUB> <I>q</I>(A<SUB>B</SUB>,B, A), with A<SUB>B</SUB> signifying the projector for A when partially <A HREF="MTGlossary.html#confounding">confounded</A> with B. </DD>
+  <DD>	Two simplifications are possible: 
+	<OL>
+	  <LI>if A is only <A HREF="MTGlossary.html#confounding">confounded</A> with B (&lambda; is one), then omit the subscript from the <A HREF="MTGlossary.html#source">source</A> name and &lambda; to yield <I>q</I>(A); </LI>
+	  <LI>if the only fixed <A HREF="MTGlossary.html#source">source</A> is a recipient <A HREF="MTGlossary.html#source">source</A>, say B, and, if there is no <A HREF="MTGlossary.html#confounding">confounding</A> with B, the <I>q</I>-function is <I>q</I>(B), or, if it is a Residual <A HREF="MTGlossary.html#source">source</A>, the <I>q</I>-function is <I>q</I>(B<SUB>&vdash;</SUB>)$.</LI>
+	</OL>
+</DD>
+</DL>
+
+        <!--DD>The quadratic function is written as <I>q</I>(<I>G</I>) where <I>G</I> is the current <a href="MTGlossary.html#term">term</a>; the matrix of the quadratic form is the projection matrix for the current <a href="MTGlossary.html#source">source</a>. For brevity, just the first letters of <I>G</I> are given. 
+The <I>q</I>-function is premultiplied by the <A HREF="MTGlossary.html#ceff">canonical efficiency factor</A> for the current <A HREF="MTGlossary.html#source">source</A> in the current row.</DD-->
 
 <br>The resulting table will be a <a href="MTGlossary.html#skaovtable">skeleton analysis-of-variance table.</a>
 <br><a href="#top"><img alt="Top" src="uphand.gif" border=0></a>
@@ -261,8 +273,8 @@ The <I>q</I>-function is premultiplied by the <A HREF="MTGlossary.html#ceff">can
 This site maintained by <a href="http://chris.brien.name/">Chris Brien</a> | 
 The menus on this page are based on a style from <a href="http://www.cssplay.co.uk/menus/">CSSplay</a><br>
 <a href="http://www.unisa.edu.au/footer/disclaimer/">Disclaimer</a> | 
-<a href="http://www.unisa.edu.au/copyright/">Copyright</a> (c) 2001 - 2020 | 
-Last Revised: 23rd October, 2020</p>
+<a href="http://www.unisa.edu.au/copyright/">Copyright</a> (c) 2001 - 2021 | 
+Last Revised: 20th March, 2021</p>
 </div>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
