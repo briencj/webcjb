@@ -14,6 +14,7 @@
 \usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage{natbib}
+\usepackage{rotating}
 \title{Multitiered experiments: II. Structure and analysis}
 
 %setting for margins
@@ -57,12 +58,16 @@
 %\newcommand{\E}[1]{{\mathop{\mtxt{E}\kern-1pt}\nolimits}\left(#1\right)}
 \newcommand{\Cov}[1]{{\mathop{\mtxt{cov}\kern-1pt}\nolimits}\left(#1\right)}
 \newcommand{\Var}[1]{{\mathop{\mtxt{var}\kern-1pt}\nolimits}\left(#1\right)}
+%\newcommand{\fixcont}[1]{\ensuremath{q({#1})}}
+\newcommand{\fixcont}[1]{\ensuremath{\theta_{#1}}}
 \newcommand{\trace}{\mathop{\mtxt{trace}}}
 \newcommand{\rank}{\mathop{\mtxt{rank}}}
 \newcommand{\image}{\mathop{\mtxt{Im}}\nolimits}
 \newcommand{\setof}[1]{\ensuremath{\left\{#1\right\}}}
 \newcommand{\setofall}[2]{\setof{#1:#2}}
 \newcommand{\card}[1]{\left|#1\right|}
+\newcommand{\conf}{\mathbin{\leftarrow}}
+\newcommand{\rterm}{*}
 \newcommand{\combine}{\mathbin{\vartriangleright}}
 \newcommand{\scombine}{\mathbin{\vartriangleright}}
 \newcommand{\resid}{\mathbin{\vdash}}
@@ -168,6 +173,6 @@
 \hyphenation{inter-tier pseudo-factor pseudo-factors}
 
 \begin{document}
-\input{egmeatloafsingle.tex}
+\input{egdupwheat.tex}
 
 \end{document}

@@ -175,29 +175,28 @@ $\mtxt{Meatloaves}\nesting{\mtxt{B}}$& 15 & & Rosemary & 1 \\
 
 %\begin{table}
 \begin{center}
-\begin{tabular}{*{3}{lr@{\hspace{0.5em}}c@{\hspace{0.5em}}}*{5}{@{}c@{}}c@{}c}
+\begin{tabular}{*{3}{lr@{\hspace{0.5em}}c@{\hspace{0.5em}}}*{6}{@{}c@{}}c@{}c}
 \toprule
 \multicolumn{2}{c}{tastings tier} & & \multicolumn{2}{c}{meatloaves tier} & &
-\multicolumn{2}{c}{treatments tier} & & \multicolumn{7}{c}{EMS} \\
-\cmidrule{1-2} \cmidrule{4-5} \cmidrule{7-8} \cmidrule{10-16}
-Source & df & & Source & df & & Source & df & & $\phi_{\mtxt{SPT}}$ & $\phi_{\mtxt{ST}}$ & $\phi_{\mtxt{SP}}$ & $\phi_{\mtxt{S}}$ & $\phi_{\mtxt{BM}}$ & $\phi_{\mtxt{B}}$ & $q(.)$ \\
+\multicolumn{2}{c}{treatments tier} & & \multicolumn{8}{c}{EMS} \\
+\cmidrule{1-2} \cmidrule{4-5} \cmidrule{7-8} \cmidrule{10-17}
+Source & df & & Source & df & & Source & df & & $\phi_{\mtxt{SPT}}$ & $\phi_{\mtxt{ST}}$ & $\phi_{\mtxt{SP}}$ & $\phi_{\mtxt{S}}$ & $\phi_{\mtxt{BM}}$ & $\phi_{\mtxt{B}}$ & $\phi_\mtxt{t} + \phi_\mtxt{m}$ & $\fixcont{\cdot}$ \\
 \midrule
-Mean & 1 & & Mean & 1 & & Mean & 1 & & 1 & 6 & 12 & 72 & 12 & 72 & $\phi_\mtxt{t} + \phi_\mtxt{m} + q(\mu)$ \\
+Mean & 1 & & Mean & 1 & & Mean & 1 & & 1 & 6 & 12 & 72 & 12 & 72 & 1 & $\fixcont{\mu}$ \\
 \midrule
-    Sessions & 2 & & Blocks & 2  & & & & & 1 & 6 & 12 & 72 & 12 & 72 &  \\
+    Sessions & 2 & & Blocks & 2  & & & & & 1 & 6 & 12 & 72 & 12 & 72 & & \\
 \midrule
-     $\mtxt{Panellists}\nesting{\mtxt{S}}$ &33 & & & & & & & & 1 &  & 12 & &  &  &  \\
+     $\mtxt{Panellists}\nesting{\mtxt{S}}$ &33 & & & & & & & & 1 &  & 12 & &  &  &  &  \\
 \midrule
-     $\mtxt{Time\mbox{-}orders}\nesting{\mtxt{S}}$ &15 & & & & & & & & 1 & 6 &  &  &  &  & \\
+     $\mtxt{Time\mbox{-}orders}\nesting{\mtxt{S}}$ &15 & & & & & & & & 1 & 6 &  &  &  &  & & \\
 \midrule
      $\mtxt{P}\inter\mtxt{T}\nesting{\mtxt{S}}$ &165 & &
-$\mtxt{Meatloaves}\nesting{\mtxt{B}}$& 15 & & Rosemary & 1 & & 1 &  & &  & 12 &  &
-$q(\mtxt{R})$ \\
- & &  & & & & Irradiation & 2 & & 1 &  & &  & 12 &  & $q(\mtxt{I})$\\
-& & & & & & $\mtxt{R} \inter \mtxt{I}$ & 2 & & 1 &  & &  & 12 &  & $q(\mtxt{RI})$ \\
-     & & & & & & Residual & 10 & & 1 &  & &  & 12 &  &  \\
-\cmidrule{4-16}
-& & & Residual & 150 & & & & & 1 &  & &  &  &  & \\
+$\mtxt{Meatloaves}\nesting{\mtxt{B}}$& 15 & & Rosemary & 1 & & 1 &  & &  & 12 &  & & $\fixcont{\mtxt{R}}$ \\
+ & &  & & & & Irradiation & 2 & & 1 &  & &  & 12 &  & & $\fixcont{\mtxt{I}}$\\
+& & & & & & $\mtxt{R} \inter \mtxt{I}$ & 2 & & 1 &  & &  & 12 &  & & $\fixcont{\mtxt{RI}}$ \\
+     & & & & & & Residual & 10 & & 1 &  & &  & 12 &  &  & \\
+\cmidrule{4-17}
+& & & Residual & 150 & & & & & 1 &  & &  &  &  & & \\
 \bottomrule
 \end{tabular}\end{center}
 %\end{table}
