@@ -260,7 +260,7 @@ A <A HREF="MTGlossary.html#sbalance">structure-balanced</A> design will have all
       <LI>Determine the random contribution for the current <A HREF="MTGlossary.html#source">source</A> to the expected mean square for the row: 
            <DD>It is the linear combination of the <A HREF="MTGlossary.html#cancomp">canonical components</A> for all random <A HREF="MTGlossary.html#term">terms</A> to which the current <A HREF="MTGlossary.html#term">term</A> is marginal; i.e. the random <A HREF="MTGlossary.html#term">terms</A> will be in the same <A HREF="MTGlossary.html#tier">tier</A> as the current <A HREF="MTGlossary.html#term">term</A> and the column space for the current <A HREF="MTGlossary.html#term">term</A> will be a subspace of the column space for each of these random <A HREF="MTGlossary.html#term">terms</A>.</DD>
 			
-	   <DD>If the current <A HREF="MTGlossary.html#term">term</A> is random, also include its <A HREF="MTGlossary.html#cancomp">canonical component</A> in the linear combination. </DD>
+	   <DD>If the current <A HREF="MTGlossary.html#term">term</A> is random, also add its <A HREF="MTGlossary.html#cancomp">canonical component</A> to the linear combination. </DD>
 			
 	   <DD>The coefficient of each <A HREF="MTGlossary.html#cancomp">canonical component</A> in the linear combination is the number of observations for which the <a href="MTGlossary.html#expdesign">experimental design</a> has been generated divided by the number of observed combinations of the levels of the factors in the random <A HREF="MTGlossary.html#term">term</A> (the replication of the observed combinations). </DD>
 			
@@ -269,7 +269,7 @@ A <A HREF="MTGlossary.html#sbalance">structure-balanced</A> design will have all
     </OL>
 
   <DT><STRONG>Form the expected mean square for the row:</STRONG></DT>
-  <DD>It is the sum of the random contributions of its <A HREF="MTGlossary.html#source">sources</A>, i.e. the sum of the linear combinations, to which is added a fixed contribution, provided that there is at least one fixed <A HREF="MTGlossary.html#source">source</A> involved in the row.</DD>
+  <DD>It is the sum of the random contributions of its <A HREF="MTGlossary.html#source">sources</A>, i.e. the sum of the linear combinations, to which is added a fixed contribution, provided at least one fixed <A HREF="MTGlossary.html#source">source</A> is involved in the row.</DD>
 
   <DD>The fixed contribution for a row, &theta;, is a quadratic form in the expectation for a response, as described <A HREF="#quadforms">above</A>. Here, the &theta; for a row is specified by nominating the matrix of the quadratic form using a subscript that is a list of the abbreviated names for <A HREF="MTGlossary.html#source">sources</A> in the row, beginning with the right-most <A HREF="MTGlossary.html#source">source</A> and proceeding to the left-most <A HREF="MTGlossary.html#source">source</A> and with <A HREF="MTGlossary.html#source">sources</A> separated by left arrows (&larr;). The left arrow indicates that the <A HREF="MTGlossary.html#source">source</A> at the tail is <A HREF="MTGlossary.html#confounding">confounded</A> with the <A HREF="MTGlossary.html#source">source</A> at the head of the arrow; thus, the matrix of the quadratic form is the scaled projection matrix for the part of the <A HREF="MTGlossary.html#source">source</A> at the head that pertains to the <A HREF="MTGlossary.html#source">source</A> at the tail. All <A HREF="MTGlossary.html#source">sources</A> are fixed unless they are asterisked, in which case they are random <A HREF="MTGlossary.html#source">sources</A>; note that while the projection matrix may incorporate random <A HREF="MTGlossary.html#source">sources</A>, only fixed <A HREF="MTGlossary.html#source">sources</A> have <A HREF="MTGlossary.html#term">terms</A> that contribute to the expectation.</DD>
 	
@@ -302,7 +302,7 @@ This site maintained by <a href="http://chris.brien.name/">Chris Brien</a> |
 The menus on this page are based on a style from <a href="http://www.cssplay.co.uk/menus/">CSSplay</a><br>
 <a href="http://www.unisa.edu.au/footer/disclaimer/">Disclaimer</a> | 
 <a href="http://www.unisa.edu.au/copyright/">Copyright</a> (c) 2001 - 2021 | 
-Last Revised: 18th April, 2021</p>
+Last Revised: 6th May, 2021</p>
 </div>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
