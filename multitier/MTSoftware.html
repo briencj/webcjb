@@ -40,7 +40,7 @@
 	<!--li><a href="MTDiagram.html" title="Factor-allocation diagrams">Factor-allocation diagrams</a></li>
 	<li><a href="MTDiagram.html" title="Randomization diagrams">Randomization diagrams</a></li-->
 	<li><a href="MTMphase.html#labprinc" title="Principles and laws">Principles and laws for designing multiphase experiments</a></li>
-	<li><a href="#top" class="sub1" title="Deriving tables">Deriving decomposition/skeleton-ANOVA tables<!--[if IE 7]><!--></a><!--<![endif]-->
+	<li><a href="#top" class="sub1" title="Deriving tables">Deriving anatomy tables<!--[if IE 7]><!--></a><!--<![endif]-->
 	        <!--[if lte IE 6]><table><tr><td><![endif]-->
 		<ul>
 			<li><a href="MTDTabDescript.html" title="Description of procedure">Description of procedure</a></li>
@@ -52,7 +52,7 @@
 			</ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
 	</li>
-	<li><a href="#top" class="sub1" title="Deriving tables" title="Deriving EMS">Deriving the expected mean squares<<!--[if IE 7]><!--></a><!--<![endif]-->
+	<li><a href="#top" class="sub1" title="Deriving tables" title="Deriving EMS">Deriving the expected mean squares for an anatomy table<<!--[if IE 7]><!--></a><!--<![endif]-->
 	        <!--[if lte IE 6]><table><tr><td><![endif]-->
 		<ul>
 			<li><a href="MTDTabDescript.html#emsq" class="sub1" title="Description of procedure">Description of procedure</a></li>
@@ -133,9 +133,9 @@
 
 <p>Because multitiered experiments are often constructed using <a href="MTGlossary.html#stdesign">standard designs</a>, the tools available for obtaining <a href="MTGlossary.html#stdesign">standard designs</a> can be used. Thus, as <a href="MTBibliog.html#Brien17">Brien (2017c, Section 5.1)</a> suggests, one might (i) deploy a straightforward <a href="MTGlossary.html#stdesign">standard design</a>, like a randomized complete-block design; (ii) manually construct a design, perhaps using design keys; (iii) consult a catalogue of <a href="MTGlossary.html#stdesign">standard designs</a>; or (iv) search for a design using computer algorithms.</p>
 
-<p>Three packages for the <A HREF="MTBibliog.html#R18">R statistical computing environment</A> that can play a role in obtaining the layout for a <a href="MTGlossary.html#multitiered">multitiered experiment</a> are: <A HREF="MTBibliog.html#Brien19R"><span class="comptext">dae</span></A> and <A HREF="MTBibliog.html#Butler14"><span class="comptext">od</span></A>. </p>
+<p>Three packages for the <A HREF="MTBibliog.html#R18">R statistical computing environment</A> that can play a role in obtaining the layout for a <a href="MTGlossary.html#multitiered">multitiered experiment</a> are: <A HREF="MTBibliog.html#Brien21R"><span class="comptext">dae</span></A> and <A HREF="MTBibliog.html#Butler14"><span class="comptext">od</span></A>. </p>
 
-<p>The package <A HREF="MTBibliog.html#Brien19R"><span class="comptext">dae</span></A> has two functions that are particularly applicable: <span class="comptext">designRandomize</span>, for randomizing systematic layouts such as when straightforward <a href="MTGlossary.html#stdesign">standard designs</a> are to be employed, and <span class="comptext">designAnatomy</span>, for producing the <a href="MTGlossary.html#decomptable">decomposition table</a> that exhibits the <a href="MTGlossary.html#anatomy">anatomy</a> of the <a href="MTGlossary.html#expdesign">design</a>. For examples that use these functions see <A HREF="MTDTabMeatLoaf.html">a two-phase sensory experiment</A> and <A HREF="MTDTabDupWheat.html">a two-phase wheat experiment</A>. Scripts for other examples are available in the Supplementary materials for <a href="MTBibliog.html#Brien17">Brien (2017c)</a>.</p> 
+<p>The package <A HREF="MTBibliog.html#Brien21R"><span class="comptext">dae</span></A> has two functions that are particularly applicable: <span class="comptext">designRandomize</span>, for randomizing systematic layouts such as when straightforward <a href="MTGlossary.html#stdesign">standard designs</a> are to be employed, and <span class="comptext">designAnatomy</span>, for producing the <a href="MTGlossary.html#anattable">anatomy table</a> that exhibits the <a href="MTGlossary.html#confound">confounding</a> for the <a href="MTGlossary.html#expdesign">design</a>. For examples that use these functions see <A HREF="MTDTabMeatLoaf.html">a two-phase sensory experiment</A> and <A HREF="MTDTabDupWheat.html">a two-phase wheat experiment</A>. Scripts for other examples are available in the Supplementary materials for <a href="MTBibliog.html#Brien17">Brien (2017c)</a>.</p> 
 
 <p>On the other hand, <A HREF="MTBibliog.html#Butler14"><span class="comptext">od</span></A> can be used to obtain an optimal <a href="MTGlossary.html#multiphase">multiphase design</a>. For a two-phase design, this involves two steps. Firstly, obtain the first-phase design, using any of the methods above, including generating it with <A HREF="MTBibliog.html#Butler14"><span class="comptext">od</span></A>. Secondly, based on a <A HREF="MTGlossary.html#mixedmodel">mixed model</A> for the two-phase experiment (e.g. the <a href="MTGlossary.html#priorallocmodel">prior allocation model</a>), use <A HREF="MTBibliog.html#Butler14"><span class="comptext">od</span></A> to obtain the <a href="MTGlossary.html#facalloc">allocation</a> of the first-phase <a href="MTGlossary.html#unit">units</a> to the second-phase <a href="MTGlossary.html#unit">units</a> that are optimal for specified values of the variance parameters in the <A HREF="MTGlossary.html#mixedmodel">mixed model</A> for the experiment.</p>
 
@@ -156,7 +156,7 @@
 
 <div class="displaymath"> Rosemary + Irradiation + Rosemary^Irradiation | Blocks + Blocks^Plots + Sessions + Sessions^Panellists + Sessions^Time-orders + Sessions^Panellists^Time-orders.</div>
 
-<p>However, the <a href="MTGlossary.html#skaovtable">skeleton analysis-of-variance table</a> for <a href="MTDTabMeatLoaf.html#emsq">this example</a> shows that Blocks and Sessions are confounded so that the variance matrix for the model will be singular. To be able to fit a mode, on of Blocks and Sessions will have to be omitted.</p>
+<p>However, the <a href="MTGlossary.html#anattable">anatomy table</a> for <a href="MTDTabMeatLoaf.html#emsq">this example</a> shows that Blocks and Sessions are confounded so that the variance matrix for the model will be singular. To be able to fit a mode, on of Blocks and Sessions will have to be omitted.</p>
 
 <h3>Analysis of variance</h3>
 
@@ -164,7 +164,7 @@
 
 <p>To perform an analysis using standard analysis of variance or regression software, it will be necessary to determine the set of <a href="MTGlossary.html#source">sources</a> that will produce the  set of sums of squares that correctly partitions the total sums of squares .  That is, the derivation of the analysis of variance table will have to be done manually and the sums of squares added to it once they have been obtained using a package. In practice this is only feasible for orthogonal designs</p>
 
-<p>For example, three <A HREF="MTGlossary.html#formulae">analysis formula</A> were used in deriving the <a href="MTGlossary.html#decomptable">decomposition tables</a> for the <a href="MTDTabMeatLoaf.html">meatloaf tasting experiment</a> illustrating the <a href="MTDTabDescript.html">proposed procedure</a>. However, 
+<p>For example, three <A HREF="MTGlossary.html#formulae">analysis formula</A> were used in deriving the <a href="MTGlossary.html#anattable">anatomy tables</a> for the <a href="MTDTabMeatLoaf.html">meatloaf tasting experiment</a> illustrating the <a href="MTDTabDescript.html">proposed procedure</a>. However, 
 although there are problems as discussed below, this analysis 
 could be obtained with the following single structure formula:</p>
 
@@ -180,7 +180,7 @@ This site maintained by <a href="http://chris.brien.name/">Chris Brien</a> |
 The menus on this page are based on a style from <a href="http://www.cssplay.co.uk/menus/">CSSplay</a><br>
 <a href="http://www.unisa.edu.au/footer/disclaimer/">Disclaimer</a> | 
 <a href="http://www.unisa.edu.au/copyright/">Copyright</a> (c) 2001 - 2021 | 
-Last Revised: 9th June, 2021</p>
+Last Revised: 22nd August, 2021</p>
 </div>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

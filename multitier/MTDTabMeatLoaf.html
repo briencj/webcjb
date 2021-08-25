@@ -40,7 +40,7 @@
 	<!--li><a href="MTDiagram.html" title="Factor-allocation diagrams">Factor-allocation diagrams</a></li>
 	<li><a href="MTDiagram.html" title="Randomization diagrams">Randomization diagrams</a></li-->
 	<li><a href="MTMphase.html#labprinc" title="Principles and laws">Principles and laws for designing multiphase experiments</a></li>
-	<li><a href="#top" class="sub1" title="Deriving tables">Deriving decomposition/skeleton-ANOVA tables<!--[if IE 7]><!--></a><!--<![endif]-->
+	<li><a href="#top" class="sub1" title="Deriving tables">Deriving anatomy tables<!--[if IE 7]><!--></a><!--<![endif]-->
 	        <!--[if lte IE 6]><table><tr><td><![endif]-->
 		<ul>
 			<li><a href="MTDTabDescript.html" title="Description of procedure">Description of procedure</a></li>
@@ -52,7 +52,7 @@
 			</ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
 	</li>
-	<li><a href="#top" class="sub1" title="Deriving tables" title="Deriving EMS">Deriving the expected mean squares<<!--[if IE 7]><!--></a><!--<![endif]-->
+	<li><a href="#top" class="sub1" title="Deriving tables" title="Deriving EMS">Deriving the expected mean squares for an anatomy table<<!--[if IE 7]><!--></a><!--<![endif]-->
 	        <!--[if lte IE 6]><table><tr><td><![endif]-->
 		<ul>
 			<li><a href="MTDTabDescript.html#emsq" class="sub1" title="Description of procedure">Description of procedure</a></li>
@@ -126,23 +126,23 @@
 <div id="content">
 <p><a name="top"></a></p>
 <!--Start page content-->
-<h2><a href="MTDTabDescript.html">Deriving the decomposition table using the allocation</a> for the meatloaf tasting experiment</h2>
+<h2><a href="MTDTabDescript.html">Deriving the anatomy table using the allocation</a> for the meatloaf tasting experiment</h2>
 
-<p>The sense in which the <a href="MTGlossary.html#facalloc">allocation</a> is used is that it determines, via the <a href="MTGlossary.html#tier">tiers</a>, the <a href="MTGlossary.html#source">sources</a> that will be included in the <a href="MTGlossary.html#decomptable">decomposition table</a>.</p>
+<p>The sense in which the <a href="MTGlossary.html#facalloc">allocation</a> is used is that it determines, via the <a href="MTGlossary.html#tier">tiers</a>, the <a href="MTGlossary.html#source">sources</a> that will be included in the <a href="MTGlossary.html#anattable">anatomy table</a>.</p>
 
 <p><a href="MTBibliog.html#Brien06">Brien and Bailey (2006, Section 4.1)</a> give the two-phase sensory experiment in the following <a href="MTGlossary.html#allocdiagram">factor-allocation diagram</a> that, because all <a href="MTGlossary.html#facalloc">allocation</a> in this experiment was by <a href="MTGlossary.html#randomization">randomization</a>, is also a <a href="MTGlossary.html#randiagram">randomization diagram</a>. The first phase was a production phase and the second phase the sensory phase. The design in the
 second phase consists of a pair of 6 x 6 Latin squares in each session.</p>
 
 <center><A name="meatloaffacalloc"><img src="RandDiagMeatLoaf.gif" width="474" height="123" border="0" alt="Factor-allocation diagram for sensory experiment" /></A></center>
 
-<p>An <a href="MTGlossary.html#expdesign">experimental design</a> can be generated for this example and the <a href="MTGlossary.html#decomptable">decomposition table</a> exhibiting its <a href="MTGlossary.html#anatomy">anatomy</a> computed using the following <A HREF="MTDTabMeatLoafR.r">R script</A>; its <A HREF="MTDTabMeatLoafR.html">output is here</A>.
+<p>An <a href="MTGlossary.html#expdesign">experimental design</a> can be generated for this example and the <a href="MTGlossary.html#anattable">anatomy table</a> exhibiting the <a href="MTGlossary.html#confound">confounding</a> intrinsic to the design computed using the following <A HREF="MTDTabMeatLoafR.r">R script</A>; its <A HREF="MTDTabMeatLoafR.html">output is here</A>.
 
-<h3>Deriving the decomposition table</h3>
+<h3>Deriving the anatomy table</h3>
 
-<p><a name="description"></a>The following diagram illustrates the procedure for deriving the <a href="MTGlossary.html#decomptable">decomposition table</a>. Derivation of the table for the example follows the diagram or you can go to the derivation for a particular rectangle by clicking on it.</p>
+<p><a name="description"></a>The following diagram illustrates the procedure for deriving the <a href="MTGlossary.html#anattable">anatomy table</a>. Derivation of the table for the example follows the diagram or you can go to the derivation for a particular rectangle by clicking on it.</p>
 
-<center><map name="DecompositionTableDerivation">
-<!--Picture D:\Internet\MyWebPages\multitier new\DecompMethod.gif-->
+<center><map name="AnatomyTableDerivation">
+<!--Picture D:\Internet\MyWebPages\multitier new\AnatomyMethod.gif-->
 <!--Comment objects and observational unit-->
 <area shape="rect" coords="16,14,244,57" href="#obsunit">
 <!--comment tiers-->
@@ -162,7 +162,7 @@ second phase consists of a pair of 6 x 6 Latin squares in each session.</p>
 <!--comment e[msq]-->
 <area shape="rect" coords="444,443,645,490" href="#emsq">
 </map>
-<img src="DecompMethod.gif" alt="Decomposition table derivation" width=660 height=572 border=0 usemap="#DecompositionTableDerivation">
+<img src="AnatomyMethod.gif" alt="Anatomy table derivation" width=660 height=572 border=0 usemap="#AnatomyTableDerivation">
 </center>
 <ol compact>
 <li><a name="obsunit"><b>Sets of objects and obervational unit</b></a> The <a href="MTGlossary.html#objects">set of objects</a> for this experiment are the treatments, the meatloaves and the tastings. Of these, the <a href="MTGlossary.html#obsunit">observational units</a> are the <i>tastings</i>. It is the entity from which a single value of the response variable, a score, is obtained.</li>
@@ -195,26 +195,26 @@ second phase consists of a pair of 6 x 6 Latin squares in each session.</p>
 <br><br><a href="MTDTabDescript.html#formulae">More explanation</a></li>
 <br><a href="#top"><img alt="Top" src="uphand.gif" border=0></a>
 
-<li><a name="table"><b>Derive the decomposition table</b></a> The <a href="MTGlossary.html#decomptable">decomposition table</a> is derived by performing a circuit of the loop in the diagram as follows: 
+<li><a name="table"><b>Derive the anatomy table</b></a> The <a href="MTGlossary.html#anattable">anatomy table</a> is derived by performing a circuit of the loop in the diagram as follows: 
 <ol compact type="i">
   <li><a name="expand"><b>Derive the terms and sources from each <a href="MTGlossary.html#formulae">formula</a> in turn</b></a> <a href="MTDTabDescript.html#expand">More explanation</a></li> 
   <li><a name="incorporate"><B>Incorporate current sources</B></a> and 
-      their degrees of freedom into the <a href="MTGlossary.html#decomptable">decomposition table</a>. <a href="MTDTabDescript.html#incorporate">More explanation</a></li>
+      their degrees of freedom into the <a href="MTGlossary.html#anattable">anatomy table</a>. <a href="MTDTabDescript.html#incorporate">More explanation</a></li>
 </ol>
 
 <ol compact type="a">
 <li>Using first-letters for the factors, the first <a href="MTGlossary.html#formulae">formula</a> expands as follows.<br>
 <div class="displaymath"> S / (P * T) = S + S^P + S^T + S^P^T</div>
-The <a href="MTGlossary.html#source">sources</a> and their degrees of freedom are listed in the following first major column of the <a href="MTGlossary.html#decomptable">decomposition table</a>:
+The <a href="MTGlossary.html#source">sources</a> and their degrees of freedom are listed in the following first major column of the <a href="MTGlossary.html#anattable">anatomy table</a>:
 
-<center><img src="DTabMeatloaf1.gif" border="0" alt="First column of decomposition table"></center>
+<center><img src="DTabMeatloaf1.gif" border="0" alt="First column of anatomy table"></center>
 </li>
-<li>The second <a ref="formulae">formula</a> expands as follows: B / M = B + B^M. The <a href="MTGlossary.html#source">sources</a> and their degrees of freedom are listed in the second major column of the following <a href="MTGlossary.html#decomptable">decomposition table</a>:</br>
-<center><img src="DTabMeatloaf2.gif" border="0" alt="Second column of decomposition table"></center>
+<li>The second <a ref="formulae">formula</a> expands as follows: B / M = B + B^M. The <a href="MTGlossary.html#source">sources</a> and their degrees of freedom are listed in the second major column of the following <a href="MTGlossary.html#anattable">anatomy table</a>:</br>
+<center><img src="DTabMeatloaf2.gif" border="0" alt="Second column of anatomy table"></center>
 Note that Blocks and Sessions are aligned as these are confounded, as are Meatloaves[Blocks] and Panelists#Time-orders[Sessions]. Further, a Residual line was added for Panelists#Time-orders[Sessions].</li>
-<li>The third <a ref="formulae">formula</a> expands as follows: R * I = R + I + R^I. The <a href="MTGlossary.html#source">sources</a> and their degrees of freedom are listed in the third major column of the following <a href="MTGlossary.html#decomptable">decomposition table</a>:</br>
-<a name="decompmeatloaf"><center><img src="DTabMeatloaf3.gif" border="0" alt="Third column of decomposition table" /></center></A>
-All three <a href="MTGlossary.html#source">sources</a> from this <a href="MTGlossary.html#tier">tier</a> are <A HREF="MTGlossary.html#confound">confounded</A> with Meatloaves[Blocks]. Clearly, an advantage of the <a href="MTGlossary.html#decomptable">decomposition table</a> is that it displays the <A HREF="MTGlossary.html#confound">confounding</A> in the experiment.</li></ol>
+<li>The third <a ref="formulae">formula</a> expands as follows: R * I = R + I + R^I. The <a href="MTGlossary.html#source">sources</a> and their degrees of freedom are listed in the third major column of the following <a href="MTGlossary.html#anattable">anatomy table</a>:</br>
+<a name="decompmeatloaf"><center><img src="DTabMeatloaf3.gif" border="0" alt="Third column of anatomy table" /></center></A>
+All three <a href="MTGlossary.html#source">sources</a> from this <a href="MTGlossary.html#tier">tier</a> are <A HREF="MTGlossary.html#confound">confounded</A> with Meatloaves[Blocks]. Clearly, an advantage of the <a href="MTGlossary.html#anattable">anatomy table</a> is that it displays the <A HREF="MTGlossary.html#confound">confounding</A> in the experiment.</li></ol>
 <br><a href="#top"><img alt="Top" src="uphand.gif" border=0></a>
 </li>
 
@@ -230,9 +230,9 @@ One division of factors into fixed and random is as follows:
 <br><a href="#top"><img alt="Top" src="uphand.gif" border=0></a>
 
 <li><a name="emsq"></a><b>Derive the expected mean squares and add to form the skeleton analysis-of-variance table</b>
-Let the <A HREF="MTGlossary.html#cancomp">canonical components</A> from the first <a ref="formulae">formula</a> be &phi;<sub>S</sub>, &phi;<sub>SP</sub>, &phi;<sub>ST</sub> and &phi;<sub>SPT</sub> (with &phi;<sub>t</sub> for the Mean). Similarly those from the second <a ref="formulae">formula</a> are &phi;<sub>B</sub> and &phi;<sub>BM</sub> (with &phi;<sub>m</sub> for the Mean). Also let <i>q</i>(R), <i>q</i>(I) and <i>q</i>(RI) be the quadratic forms for the <a href="MTGlossary.html#source">sources</a> corresponding to the three fixed <a href="MTGlossary.html#term">terms</a>, respectively. Then the expected mean squares are given in the last major column of the <a href="MTGlossary.html#skaovtable">skeleton analysis-of-variance table</a>. Note the multiplier of 12 for the &phi;s from the meatloves tier, this being the replications of the meatloaves amongst the tastings.</li>
+Let the <A HREF="MTGlossary.html#cancomp">canonical components</A> from the first <a ref="formulae">formula</a> be &phi;<sub>S</sub>, &phi;<sub>SP</sub>, &phi;<sub>ST</sub> and &phi;<sub>SPT</sub> (with &phi;<sub>t</sub> for the Mean). Similarly those from the second <a ref="formulae">formula</a> are &phi;<sub>B</sub> and &phi;<sub>BM</sub> (with &phi;<sub>m</sub> for the Mean). Also let <i>q</i>(R), <i>q</i>(I) and <i>q</i>(RI) be the quadratic forms for the <a href="MTGlossary.html#source">sources</a> corresponding to the three fixed <a href="MTGlossary.html#term">terms</a>, respectively. Then the expected mean squares are given in the last major column of the <a href="MTGlossary.html#anattable">anatomy table</a>. Note the multiplier of 12 for the &phi;s from the meatloves tier, this being the number of replicates of the meatloaves amongst the tastings.</li>
 <br><a href="MTDTabDescript.html#emsq">More explanation</a><br>
-<center><img src="DTabMeatloaf4.gif" border="0" alt="E[MSq] in skeleton analysis-of-variance table"></center>
+<center><img src="DTabMeatloaf4.gif" border="0" alt="Anatomy table"></center>
 <br><a href="#top"><img alt="Top" src="uphand.gif" border=0></a></li>
 </ol>
 
@@ -244,7 +244,7 @@ This site maintained by <a href="http://chris.brien.name/">Chris Brien</a> |
 The menus on this page are based on a style from <a href="http://www.cssplay.co.uk/menus/">CSSplay</a><br>
 <a href="http://www.unisa.edu.au/footer/disclaimer/">Disclaimer</a> | 
 <a href="http://www.unisa.edu.au/copyright/">Copyright</a> (c) 2001 - 2021 | 
-Last Revised: 9th June, 2021</p>
+Last Revised: 25th August, 2021</p>
 </div>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

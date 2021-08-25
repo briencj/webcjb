@@ -40,7 +40,7 @@
 	<!--li><a href="MTDiagram.html" title="Factor-allocation diagrams">Factor-allocation diagrams</a></li>
 	<li><a href="MTDiagram.html" title="Randomization diagrams">Randomization diagrams</a></li-->
 	<li><a href="MTMphase.html#labprinc" title="Principles and laws">Principles and laws for designing multiphase experiments</a></li>
-	<li><a href="#top" class="sub1" title="Deriving tables">Deriving decomposition/skeleton-ANOVA tables<!--[if IE 7]><!--></a><!--<![endif]-->
+	<li><a href="#top" class="sub1" title="Deriving tables">Deriving anatomy tables<!--[if IE 7]><!--></a><!--<![endif]-->
 	        <!--[if lte IE 6]><table><tr><td><![endif]-->
 		<ul>
 			<li><a href="MTDTabDescript.html" title="Description of procedure">Description of procedure</a></li>
@@ -52,7 +52,7 @@
 			</ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
 		</ul><!--[if lte IE 6]></td></tr></table></a><![endif]-->
 	</li>
-	<li><a href="#top" class="sub1" title="Deriving tables" title="Deriving EMS">Deriving the expected mean squares<<!--[if IE 7]><!--></a><!--<![endif]-->
+	<li><a href="#top" class="sub1" title="Deriving tables" title="Deriving EMS">Deriving the expected mean squares for an anatomy table<<!--[if IE 7]><!--></a><!--<![endif]-->
 	        <!--[if lte IE 6]><table><tr><td><![endif]-->
 		<ul>
 			<li><a href="MTDTabDescript.html#emsq" class="sub1" title="Description of procedure">Description of procedure</a></li>
@@ -135,7 +135,7 @@ second phase consists of a pair of 6 x 6 Latin squares in each session.</p>
 
 <center><A name="meatloaffacalloc"><img src="RandDiagMeatLoaf.gif" width="474" height="123" border="0" alt="Factor-allocation diagram for sensory experiment" /></A></center>
 
-<p>An <a href="MTGlossary.html#expdesign">experimental design</a> can be generated for this example and the <a href="MTGlossary.html#decomptable">decomposition table</a> exhibiting its <a href="MTGlossary.html#anatomy">anatomy</a> computed using the following <a href="MTDTabMeatLoafR.r">R script</a>; its <a href="MTDTabMeatLoafR.html">output is here</a>.
+<p>An <a href="MTGlossary.html#expdesign">experimental design</a> can be generated for this example and the <a href="MTGlossary.html#anattable">anatomy table</a> exhibiting its <a href="MTGlossary.html#anatomy">anatomy</a> computed using the following <a href="MTDTabMeatLoafR.r">R script</a>; its <a href="MTDTabMeatLoafR.html">output is here</a>.
 
 <h3>Formulating the model</h3>
 
@@ -191,7 +191,7 @@ second phase consists of a pair of 6 x 6 Latin squares in each session.</p>
 <br><br><a href="MTMixmod.html#homogmodel">More explanation</a></li>
 <br><a href="#top"><img alt="Top" src="uphand.gif" border=0></a>
 
-<li><a name="priormodel"><b>Prior allocation model</b></a> It can be seen from the  <a href="MTDTabMeatLoaf.html#decompmeatloaf">decomposition table for this example</a> that Sessions and Blocks are confounded so that one will have to be omitted from the model for the <A HREF="MTGlossary.html#mixedmodel">mixed model</A> to fit successfully. Thus, leaving out Blocks, the <A HREF="MTGlossary.html#priorallocmodel">prior allocation model</a> is:
+<li><a name="priormodel"><b>Prior allocation model</b></a> It can be seen from the  <a href="MTDTabMeatLoaf.html#decompmeatloaf">anatomy table for this example</a> that Sessions and Blocks are confounded so that one will have to be omitted from the model for the <A HREF="MTGlossary.html#mixedmodel">mixed model</A> to fit successfully. Thus, leaving out Blocks, the <A HREF="MTGlossary.html#priorallocmodel">prior allocation model</a> is:
 
 <br><br><div class="displaymath"> S + R + I + R^I + P + R^P + I^P + R^I^P | B + B^M + S + S^P + S^T + S^P^T</div>
 
@@ -206,7 +206,7 @@ This site maintained by <a href="http://chris.brien.name/">Chris Brien</a> |
 The menus on this page are based on a style from <a href="http://www.cssplay.co.uk/menus/">CSSplay</a><br>
 <a href="http://www.unisa.edu.au/footer/disclaimer/">Disclaimer</a> | 
 <a href="http://www.unisa.edu.au/copyright/">Copyright</a> (c) 2001 - 2021 | 
-Last Revised: 9th June, 2021</p>
+Last Revised: 22nd August, 2021</p>
 </div>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
