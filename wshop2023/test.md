@@ -16,27 +16,20 @@ output:
 library(knitr)
 #knitr::spin("test.r")
 library(dae)
-```
-
-```
-## Loading required package: ggplot2
-```
-
-```r
 packageVersion("dae")
 ```
 
 ```
-## [1] '3.1.12'
+## [1] '3.2.15'
 ```
 
 ```r
-library(od)
-packageVersion("od")
+library(odw)
+packageVersion("odw")
 ```
 
 ```
-## [1] '2.0.0'
+## [1] '2.1.4'
 ```
 
 ```r
@@ -44,7 +37,7 @@ b <- 5
 t <- 5
 ```
 
-## Construct a systematic layoout and obtain the randomized layout for an RCBD
+## Construct a systematic layout and obtain the randomized layout for an RCBD
 
 
 ```r
@@ -88,24 +81,25 @@ summary(RCBD.canon)
 ##                    Residual      16
 ```
 
-## Use od to get an optimal row-column design
+## Use odw to get an optimal row-column design
 
 
 ```r
-RC.od <- od (fixed = ~ Rows + Columns,
-             residual = ~ Rows:Columns,
-             permute = ~ Lines, maxit = 500,
-             data = RCBD.lay)
+RC.odw <- odw (fixed = ~ Rows + Columns,
+               residual = ~ Rows:Columns,
+               permute = ~ Lines, maxit = 500,
+               data = RCBD.lay)
 ```
 
 ```
-## Wed Oct 23 16:55:16 2019
-## Initial A-value = 0.496091 (5 A-equations; rank C 4)
-## Final A-value after 500 iterations: 0.419048
+## Mon Mar 20 21:09:06 2023
+## Initial criterion = 0.496091 (5 A-equations; rank C 4)
+## Final criterion after 500 iterations: 0.419048
+## Cleaning up: Mon Mar 20 21:09:06 2023
 ```
 
 ```r
-RC.lay <- RC.od$design
+RC.lay <- RC.odw$design
 ```
 
 ## Plot the layout
