@@ -25,18 +25,18 @@ w\:* {behavior:url(#default#VML);}
   <o:Author>Unisanet</o:Author>
   <o:Template>Generic online 11pt.dot</o:Template>
   <o:LastAuthor>Chris Brien</o:LastAuthor>
-  <o:Revision>14</o:Revision>
-  <o:TotalTime>3013</o:TotalTime>
+  <o:Revision>15</o:Revision>
+  <o:TotalTime>3027</o:TotalTime>
   <o:LastPrinted>2003-09-29T00:44:00Z</o:LastPrinted>
   <o:Created>2023-03-20T10:44:00Z</o:Created>
-  <o:LastSaved>2024-03-26T12:07:00Z</o:LastSaved>
-  <o:Pages>4</o:Pages>
-  <o:Words>768</o:Words>
-  <o:Characters>4379</o:Characters>
+  <o:LastSaved>2024-04-09T12:30:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>778</o:Words>
+  <o:Characters>4437</o:Characters>
   <o:Company>University of South Australia</o:Company>
   <o:Lines>36</o:Lines>
   <o:Paragraphs>10</o:Paragraphs>
-  <o:CharactersWithSpaces>5137</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>5205</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
 </xml><![endif]-->
@@ -47,6 +47,7 @@ target="index_files/props007.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Print</w:View>
+  <w:SpellingState>Clean</w:SpellingState>
   <w:UpdateStylesOnOpen/>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
@@ -2438,6 +2439,9 @@ span.Heading1Char
 span.apple-style-span
 	{mso-style-name:apple-style-span;
 	mso-style-unhide:no;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -3163,16 +3167,21 @@ break-word'>
   href="ShortCourseNotesSolutions.pdf">with output and solutions</a> can be
   downloaded using the links here. You will be provided with a hardcopy of the
   notes <a href="ShortCourseNotes.pdf">without output</a>.</span></p>
-  <h1><span lang=EN-GB style='mso-fareast-font-family:"Times New Roman"'>Powerpoint
+  <h1><span class=SpellE><span lang=EN-GB style='mso-fareast-font-family:"Times New Roman";
+  display:none;mso-hide:all'>Powerpoint</span></span><span lang=EN-GB
+  style='mso-fareast-font-family:"Times New Roman";display:none;mso-hide:all'>
   slides <o:p></o:p></span></h1>
-  <p class=Text><span lang=EN-GB>The slides can be downloaded using the
-  following links:</span></p>
-  <p class=Text><span lang=EN-GB><a href="DesignShortCourseTopic1.v7.ppsx">Topic
-  I: Concepts in experimental design</a>;</span></p>
-  <p class=Text><span lang=EN-GB><a href="DesignShortCourseTopic2.v6.ppsx">Topic
-  II: Nonorthogonal experimental design</a>;</span></p>
-  <p class=Text><span lang=EN-GB><a href="DesignShortCourseTopic3.v5.ppsx">Topic
-  III: Miscellaneous topics in experimental design</a>.</span></p>
+  <p class=Text><span lang=EN-GB style='display:none;mso-hide:all'>The slides
+  can be downloaded using the following links:<o:p></o:p></span></p>
+  <p class=Text><span lang=EN-GB style='display:none;mso-hide:all'><a
+  href="DesignShortCourseTopic1.v7.ppsx">Topic I: Concepts in experimental
+  design</a>;<o:p></o:p></span></p>
+  <p class=Text><span lang=EN-GB style='display:none;mso-hide:all'><a
+  href="DesignShortCourseTopic2.v6.ppsx">Topic II: Nonorthogonal experimental
+  design</a>;<o:p></o:p></span></p>
+  <p class=Text><span lang=EN-GB style='display:none;mso-hide:all'><a
+  href="DesignShortCourseTopic3.v5.ppsx">Topic III: Miscellaneous topics in
+  experimental design</a>.<o:p></o:p></span></p>
   <h1 style='margin-top:12.0pt'><span lang=EN-GB style='mso-fareast-font-family:
   "Times New Roman"'>Software and files <o:p></o:p></span></h1>
   <p class=Text><span lang=EN-GB>Make sure that R, RStudio, the two required
@@ -3185,7 +3194,7 @@ break-word'>
   <ol start=1 type=1>
    <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
        auto;mso-list:l9 level1 lfo16;tab-stops:list 36.0pt'><span lang=EN-GB><a
-       href="https://cran.r-project.org/">R Version 4.3.2</a> - <a
+       href="https://cran.r-project.org/">R Version 4.3.2</a> or later - <a
        href="https://cran.r-project.org/">click here</a>, download the binary
        appropriate to your machine and install.</span></li>
    <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:
@@ -3199,60 +3208,69 @@ break-word'>
        direct code execution, as well as tools for plotting, history, debugging
        and workspace management. </span></li>
   </ol>
-  <h3><span lang=EN-GB>Download and install </span><span lang=EN-GB
-  style='font-family:"Courier New"'>dae</span><span lang=EN-GB> from the CRAN
-  repository</span></h3>
-  <p class=Text><span lang=EN-GB>You need the Version 3.2.24 or later of </span><span
-  lang=EN-GB style='font-family:"Courier New"'>dae</span><span lang=EN-GB>. If
-  you have installed an earlier version, it will need to be updated. The
-  installed version can be checked using </span><span lang=EN-GB
-  style='font-family:"Courier New"'>packageVersion(&quot;dae&quot;)</span><span
+  <h3><span lang=EN-GB>Download and install </span><span class=SpellE><span
+  lang=EN-GB style='font-family:"Courier New"'>dae</span></span><span
+  lang=EN-GB> from the CRAN repository</span></h3>
+  <p class=Text><span lang=EN-GB>You need </span><span class=SpellE><span
+  lang=EN-GB style='font-family:"Courier New"'>dae</span></span><span
+  lang=EN-GB> Version 3.2.25 or later. If you have installed an earlier
+  version, it will need to be updated. The installed version can be checked
+  using </span><span class=SpellE><span lang=EN-GB style='font-family:"Courier New"'>packageVersion</span></span><span
+  lang=EN-GB style='font-family:"Courier New"'>(&quot;<span class=SpellE>dae</span>&quot;)</span><span
   lang=EN-GB>.</span></p>
   <p class=Text><span lang=EN-GB>To install <a
-  href="https://cran.r-project.org/package=dae">dae Version 3.2.24 from CRAN</a>
-  in RStudio, select Tools &gt; Install Packages. Make sure that the </span><span
-  lang=EN-GB style='font-family:"Courier New"'>Install from:</span><span
-  lang=EN-GB> option is </span><span lang=EN-GB style='font-family:"Courier New"'>Repository
-  (CRAN, CRANextra)</span><span lang=EN-GB>. Enter </span><span lang=EN-GB
-  style='font-family:"Courier New"'>dae</span><span lang=EN-GB> and make sure
-  that </span><span lang=EN-GB style='font-family:"Courier New"'>Install
+  href="https://cran.r-project.org/package=dae"><span class=SpellE>dae</span>
+  Version 3.2.25 from CRAN</a> in RStudio, select Tools &gt; Install Packages.
+  Make sure that the </span><span lang=EN-GB style='font-family:"Courier New"'>Install
+  from:</span><span lang=EN-GB> option is </span><span lang=EN-GB
+  style='font-family:"Courier New"'>Repository (CRAN, <span class=SpellE>CRANextra</span>)</span><span
+  lang=EN-GB>. Enter </span><span class=SpellE><span lang=EN-GB
+  style='font-family:"Courier New"'>dae</span></span><span lang=EN-GB> and make
+  sure that </span><span lang=EN-GB style='font-family:"Courier New"'>Install
   dependencies</span><span lang=EN-GB> is checked. Click on </span><span
   lang=EN-GB style='font-family:"Courier New"'>Install</span><span lang=EN-GB>.</span></p>
-  <p class=Text><span lang=EN-GB>Generally, the most recent version of dae is
-  available for download from my <a href="http://chris.brien.name/rpackages">rpackages
+  <p class=Text><span lang=EN-GB>Generally, the most recent version of <span
+  class=SpellE>dae</span> is available for download from my <a
+  href="http://chris.brien.name/rpackages"><span class=SpellE>rpackages</span>
   repository</a>.</span></p>
-  <h3><span lang=EN-GB>Download and install </span><span lang=EN-GB
-  style='font-family:"Courier New"'>odw</span></h3>
-  <p class=Text><span lang=EN-GB>If you have not got a recent version of odw
-  installed on your machine, then you will need an install for it. Once you
-  have obtained an odw install, you can install it using RStudio by selecting
-  Tools &gt; Install Packages. Make sure that the </span><span lang=EN-GB
+  <h3><span lang=EN-GB>Download and install </span><span class=SpellE><span
+  lang=EN-GB style='font-family:"Courier New"'>odw</span></span></h3>
+  <p class=Text><span lang=EN-GB>Download the build of<span
+  style='mso-spacerun:yes'>  </span><a href="odw_2.1.4.zip">od Version 2.1.4</a>
+  for Windows or <a href="odw_2.1.2_linux-intel64.tar.gz">od Version 2.1.2</a> for
+  <span class=SpellE>linux</span> (Right click on the link and ask to </span><span
+  lang=EN-GB style='font-family:"Courier New"'>Save link as</span><span
+  lang=EN-GB>...) and install it. To install it using RStudio select Tools &gt;
+  Install Packages. Make sure that the </span><span lang=EN-GB
   style='font-family:"Courier New"'>Install from:</span><span lang=EN-GB>
   option is </span><span lang=EN-GB style='font-family:"Courier New"'>Package
   Archive File(.zip, ;.tar.gz)</span><span lang=EN-GB>. Browse to where you
   saved the downloaded file, select the file and click on </span><span
   lang=EN-GB style='font-family:"Courier New"'>Install</span><span lang=EN-GB>.
-  Otherwise, use the </span><span lang=EN-GB style='font-family:"Courier New"'>install.packages</span><span
+  Otherwise, use the </span><span class=SpellE><span lang=EN-GB
+  style='font-family:"Courier New"'>install.packages</span></span><span
   lang=EN-GB> function.</span></p>
   <h3><span lang=EN-GB style='mso-fareast-font-family:"Times New Roman"'>A
   Wheat data set<o:p></o:p></span></h3>
   <p class=Text><span lang=EN-GB>The Wheat data set from Gilmour et al. (1995)
   will be used in the practical sessions. It is available with the <a
-  href="https://cran.r-project.org/package=asremlPlus"><span style='font-family:
-  "Courier New"'>asremlPlus</span> package from CRAN</a>. If you have </span><span
-  lang=EN-GB style='font-family:"Courier New"'>asremlPlus</span><span
-  lang=EN-GB> installed then it can be accessed from R by loading the library
-  using </span><span lang=EN-GB style='font-family:"Courier New"'>library(asremlPlus)</span><span
+  href="https://cran.r-project.org/package=asremlPlus"><span class=SpellE><span
+  style='font-family:"Courier New"'>asremlPlus</span></span> package from CRAN</a>.
+  If you have </span><span class=SpellE><span lang=EN-GB style='font-family:
+  "Courier New"'>asremlPlus</span></span><span lang=EN-GB> installed then it
+  can be accessed from R by loading the library using </span><span lang=EN-GB
+  style='font-family:"Courier New"'>library(<span class=SpellE>asremlPlus</span>)</span><span
   lang=EN-GB> and then executing </span><span lang=EN-GB style='font-family:
   "Courier New"'>data(Wheat.dat)</span><span lang=EN-GB>. </span></p>
   <p class=Text><span lang=EN-GB>Otherwise, you can download the file <a
-  href="Wheat.dat.rda">Wheat.dat.rda</a> that contains the </span><span
-  lang=EN-GB style='font-family:"Courier New"'>data.frame</span><span
-  lang=EN-GB> Wheat.dat. Right click on the link and ask to </span><span
-  lang=EN-GB style='font-family:"Courier New"'>Save link as</span><span
-  lang=EN-GB>... The </span><span lang=EN-GB style='font-family:"Courier New"'>data.frame</span><span
+  href="Wheat.dat.rda"><span class=SpellE>Wheat.dat.rda</span></a> that
+  contains the </span><span class=SpellE><span lang=EN-GB style='font-family:
+  "Courier New"'>data.frame</span></span><span lang=EN-GB> Wheat.dat. Right
+  click on the link and ask to </span><span lang=EN-GB style='font-family:"Courier New"'>Save
+  link as</span><span lang=EN-GB>... The </span><span class=SpellE><span
+  lang=EN-GB style='font-family:"Courier New"'>data.frame</span></span><span
   lang=EN-GB> can then be loaded using </span><span lang=EN-GB
-  style='font-family:"Courier New"'>load(file = &quot;Wheat.dat.rda&quot;)</span><span
+  style='font-family:"Courier New"'>load(file = &quot;<span class=SpellE>Wheat.dat.rda</span>&quot;)</span><span
   lang=EN-GB>.</span></p>
   <h3><span lang=EN-GB style='mso-fareast-font-family:"Times New Roman"'>A test
   script<o:p></o:p></span></h3>
@@ -3267,11 +3285,12 @@ break-word'>
   in the </span><span lang=EN-GB style='font-family:"Courier New"'>doc</span><span
   lang=EN-GB> subdirectory of the directory in which the package is installed.
   In a standard installation, this will be in the library subdirectory of the R
-  installation directory. For dae, an overview of the package can be obtained
-  using </span><span lang=EN-GB style='font-family:"Courier New"'>?dae</span><span
-  lang=EN-GB> and a list of the available vignettes using </span><span
-  lang=EN-GB style='font-family:"Courier New"'>vignette(package =
-  &quot;dae&quot;)</span><span lang=EN-GB>.</span></p>
+  installation directory. For <span class=SpellE>dae</span>, an overview of the
+  package can be obtained using </span><span lang=EN-GB style='font-family:
+  "Courier New"'>?<span class=SpellE>dae</span></span><span lang=EN-GB> and a
+  list of the available vignettes using </span><span lang=EN-GB
+  style='font-family:"Courier New"'>vignette(package = &quot;<span
+  class=SpellE>dae</span>&quot;)</span><span lang=EN-GB>.</span></p>
   <h3><span lang=EN-GB style='mso-fareast-font-family:"Times New Roman"'>Background
   reading<o:p></o:p></span></h3>
   <p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
@@ -3295,7 +3314,7 @@ break-word'>
  <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
   <td width=471 valign=top style='width:353.0pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=Text><span lang=EN-GB style='font-size:9.0pt;mso-bidi-font-size:
-  10.0pt'>Date last modified: 26<sup>th</sup> March </span><span lang=EN-GB
+  10.0pt'>Date last modified: 9<sup>th</sup> April </span><span lang=EN-GB
   style='font-size:9.0pt'>2024</span><span lang=EN-GB> <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
