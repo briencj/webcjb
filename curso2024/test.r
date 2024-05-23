@@ -21,7 +21,7 @@ RCBD.lay <- designRandomize(allocated         = RCBD.sys["Lines"],
 
 #'## Plot the layout
 designGGPlot(RCBD.lay, labels = "Lines", cellalpha = 0.75,
-             axis.text.size = 20, size = 8, 
+             axis.text.size = 20, label.size = 8, 
              blockdefinition = cbind(1,t))
 
 #'## Get the anatomy of the layout
@@ -39,4 +39,4 @@ RC.lay <- RC.odw$design
 
 #'## Plot the layout
 designGGPlot(RC.lay, labels = "Lines", cellalpha = 0.75,
-             axis.text.size = 20, size = 8)
+             axis.text.size = 20, label.size = 8)
